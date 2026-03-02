@@ -1,3 +1,12 @@
+This repository presents the research outputs of the research project "Multimodal Knowledge Graphs as Infrastructures for Digital Twins of Financial Operational Risks: Mortgages and FX stocks".
+
+The ontology documentation can be found in the folder "version 4" in this repository. The public documentation, generated with WIDOCO is available at https://aneliamk.github.io/UKFIN/version4/index-en.html.
+
+All data processing can be found in the folder "Data".
+
+The resulting Multimodal Knowledge Graph is in the folder "MMKG".
+
+
 About Widoco output
 ===================
 The purpose of Widoco is to reuse and integrate existing tools for documentation, plus the set of features listed below:
