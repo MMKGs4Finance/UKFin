@@ -1,0 +1,4 @@
+fullName,personID,assetID,documentID ,addressID,role
+MILLER GILBERT ,MG0,45476383Asset,MG_Doc0,45476383Va,borrower
+MORROW JOSEPH,MJ0,45422765Asset,MJ_Doc0,45422765MH,borrower
+JUAREZ EMILY,JE0,45422752Asset,JE_Doc0,45422752Br,borrower
