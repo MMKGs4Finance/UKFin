@@ -1,0 +1,4654 @@
+@prefix agg: <http://jena.apache.org/ARQ/function/aggregate#> .
+@prefix : <https://w3id.org/financialDT#> .
+@prefix sail: <http://www.openrdf.org/config/sail#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geof: <http://www.opengis.net/def/function/geosparql/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions> .
+@prefix fil: <https://w3id.org/financialDT/financialInstitute#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix spif: <http://spinrdf.org/spif#> .
+@prefix path: <http://www.ontotext.com/path#> .
+@prefix array: <http://www.w3.org/2005/xpath-functions/array> .
+@prefix apf: <http://jena.apache.org/ARQ/property#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix rep: <http://www.openrdf.org/config/repository#> .
+@prefix map: <http://www.w3.org/2005/xpath-functions/map> .
+@prefix sr: <http://www.openrdf.org/config/repository/sail#> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix prod: <https://w3id.org/financialDT/product#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix afn: <http://jena.apache.org/ARQ/function#> .
+@prefix list: <http://jena.apache.org/ARQ/list#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ofn: <http://www.ontotext.com/sparql/functions/> .
+@prefix geoext: <http://rdf.useekm.com/ext#> .
+@prefix graphdb: <http://www.ontotext.com/config/graphdb#> .
+@prefix risk: <https://w3id.org/financialDT/risk#> .
+@prefix math: <http://www.w3.org/2005/xpath-functions/math> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix omgeo: <http://www.ontotext.com/owlim/geo#> .
+
+<https://w3id.org/financialDT/data> {
+  :45476383_1497 a fil:Account, fil:LoanAccount;
+    fil:hasAccountHolder :MG0 .
+  
+  :MG0 a fil:Person;
+    fil:hasID :MG_Doc0;
+    fil:locatedAt :45476383Va;
+    fil:owns :45476383Asset;
+    prod:hasExpenses :MG0_expense;
+    prod:hasIncome :MG0_Income;
+    prod:hasLiability :MG0_liability .
+  
+  :45422765_1497 a fil:Account, fil:LoanAccount;
+    fil:hasAccountHolder :MJ0 .
+  
+  :MJ0 a fil:Person;
+    fil:hasID :MJ_Doc0;
+    fil:locatedAt :45422765MH;
+    fil:owns :45422765Asset;
+    prod:hasExpenses :MJ0_expense;
+    prod:hasIncome :MJ0_Income;
+    prod:hasLiability :MJ0_liability .
+  
+  :45422752_1497 a fil:Account, fil:LoanAccount;
+    fil:hasAccountHolder :JE0 .
+  
+  :JE0 a fil:Person;
+    fil:hasID :JE_Doc0;
+    fil:locatedAt :45422752Br;
+    fil:owns :45422752Asset;
+    prod:hasExpenses :JE0_expense;
+    prod:hasIncome :JE0_Income;
+    prod:hasLiability :JE0_liability .
+  
+  :45476383Va a fil:Address .
+  
+  :45422765MH a fil:Address .
+  
+  :45422752Br a fil:Address .
+  
+  :12564B1B a fil:Address .
+  
+  :454227ML a fil:Address .
+  
+  :454227NJ a fil:Address .
+  
+  :454227KA a fil:Address .
+  
+  <https://w3id.org/Arrears_45422752_092017> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_102017> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_112017> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_122017> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_012018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_022018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_032018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_042018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_052018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_062018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_072018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_082018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_092018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_102018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_112018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_122018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_022019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_032019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_042019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_052019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_062019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_072019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_082019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_092019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_102019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_112019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_122019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_012020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_022020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_032020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_042020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_052020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_062020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_072020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_082020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_092020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_102020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_112020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_122020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_012021> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_022021> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_032021> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_042021> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_052021> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_062021> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_072021> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_082021> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422752_092021> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_092017> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_102017> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_112017> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_122017> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_012018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_022018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_032018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_042018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_052018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_062018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_072018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_082018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_092018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_102018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_112018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_122018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_012019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_022019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_032019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_042019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_052019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_062019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_072019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_082019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_092019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_102019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_112019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_122019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_012020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_022020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_032020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_042020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_052020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_062020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_072020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_082020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_092020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_102020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_112020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_122020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_012021> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_022021> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_032021> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_042021> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_052021> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_062021> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_072021> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_082021> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45422765_092021> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_092017> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_102017> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_112017> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_122017> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_012018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_022018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_032018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_042018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_052018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_062018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_072018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_082018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_092018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_102018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_112018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_122018> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_012019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_022019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_032019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_042019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_052019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_062019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_072019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_082019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_092019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_102019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_112019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_122019> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_012020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_022020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_032020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_042020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_052020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_062020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_072020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_082020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_092020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_102020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_112020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_122020> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_012021> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_022021> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_032021> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_042021> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_052021> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_062021> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_072021> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_082021> a prod:Arrears .
+  
+  <https://w3id.org/Arrears_45476383_092021> a prod:Arrears .
+  
+  :45476383Asset a prod:Asset;
+    fil:locatedAt :45476383Va .
+  
+  :c45476383_1497 a fil:MortgageContract;
+    fil:holdsCollateral :45476383Asset;
+    fil:issuedByOrg :FM1497;
+    fil:loanCurrency :cu003;
+    fil:opens :45476383_1497;
+    fil:signedBy :MG0, :FM1497;
+    prod:hasGuarantor :KA0;
+    prod:hasAmortisationType :FRM;
+    prod:mortgageInStage :UnderwritingStage .
+  
+  :45422765Asset a prod:Asset;
+    fil:locatedAt :45422765MH .
+  
+  :c45422765_1497 a fil:MortgageContract;
+    fil:holdsCollateral :45422765Asset;
+    fil:issuedByOrg :FM1497;
+    fil:loanCurrency :cu002;
+    fil:opens :45422765_1497;
+    fil:signedBy :MJ0, :FM1497;
+    prod:hasGuarantor :NJ0;
+    prod:hasAmortisationType :FRM;
+    prod:mortgageInStage :UnderwritingStage .
+  
+  :45422752Asset a prod:Asset;
+    fil:locatedAt :45422752Br .
+  
+  :c45422752_1497 a fil:MortgageContract;
+    fil:holdsCollateral :45422752Asset;
+    fil:issuedByOrg :FM1497;
+    fil:loanCurrency :cu001;
+    fil:opens :45422752_1497;
+    fil:signedBy :JE0, :FM1497;
+    prod:hasGuarantor :ML0;
+    prod:hasAmortisationType :FRM;
+    prod:mortgageInStage :UnderwritingStage .
+  
+  :1497branch a fil:Bank .
+  
+  :cu001 a fil:Currency .
+  
+  :cu002 a fil:Currency .
+  
+  :cu003 a fil:Currency .
+  
+  :docCheckID83 a prod:DocumentCheck;
+    prod:involves :MG_Doc0 .
+  
+  :MG_Doc0 a fil:DriverLicence, fil:LegalDocument .
+  
+  :docCheckID65 a prod:DocumentCheck;
+    prod:involves :MJ_Doc0 .
+  
+  :MJ_Doc0 a fil:DriverLicence, fil:LegalDocument .
+  
+  :docCheckID52 a prod:DocumentCheck;
+    prod:involves :JE_Doc0 .
+  
+  :JE_Doc0 a fil:DriverLicence, fil:LegalDocument .
+  
+  :MG0_expense a fil:Expense .
+  
+  :MJ0_expense a fil:Expense .
+  
+  :JE0_expense a fil:Expense .
+  
+  :MG0_Income a fil:Income .
+  
+  :MJ0_Income a fil:Income .
+  
+  :JE0_Income a fil:Income .
+  
+  <https://w3id.org/Interest_45422752_1497> a prod:Interest .
+  
+  <https://w3id.org/Interest_45422765_1497> a prod:Interest .
+  
+  <https://w3id.org/Interest_45476383_1497> a prod:Interest .
+  
+  :MG0_liability a fil:Liability .
+  
+  :MJ0_liability a fil:Liability .
+  
+  :JE0_liability a fil:Liability .
+  
+  :SCH2F8A a prod:LoanSchedule;
+    prod:belongsTo :c45476383_1497;
+    prod:definesPayment :45476383_092017, :45476383_102017, :45476383_112017, :45476383_122017,
+      :45476383_012018, :45476383_022018, :45476383_032018, :45476383_042018, :45476383_052018,
+      :45476383_062018, :45476383_072018, :45476383_082018, :45476383_092018, :45476383_102018,
+      :45476383_112018, :45476383_122018, :45476383_012019, :45476383_022019, :45476383_032019,
+      :45476383_042019, :45476383_052019, :45476383_062019, :45476383_072019, :45476383_082019,
+      :45476383_092019, :45476383_102019, :45476383_112019, :45476383_122019, :45476383_012020,
+      :45476383_022020, :45476383_032020, :45476383_042020, :45476383_052020, :45476383_062020,
+      :45476383_072020, :45476383_082020, :45476383_092020, :45476383_102020, :45476383_112020,
+      :45476383_122020, :45476383_012021, :45476383_022021, :45476383_032021, :45476383_042021,
+      :45476383_052021, :45476383_062021, :45476383_072021, :45476383_082021, :45476383_092021 .
+  
+  :45476383_092017 a risk:Payment .
+  
+  :45476383_102017 a risk:Payment .
+  
+  :45476383_112017 a risk:Payment .
+  
+  :45476383_122017 a risk:Payment .
+  
+  :45476383_012018 a risk:Payment .
+  
+  :45476383_022018 a risk:Payment .
+  
+  :45476383_032018 a risk:Payment .
+  
+  :45476383_042018 a risk:Payment .
+  
+  :45476383_052018 a risk:Payment .
+  
+  :45476383_062018 a risk:Payment .
+  
+  :45476383_072018 a risk:Payment .
+  
+  :45476383_082018 a risk:Payment .
+  
+  :45476383_092018 a risk:Payment .
+  
+  :45476383_102018 a risk:Payment .
+  
+  :45476383_112018 a risk:Payment .
+  
+  :45476383_122018 a risk:Payment .
+  
+  :45476383_012019 a risk:Payment .
+  
+  :45476383_022019 a risk:Payment .
+  
+  :45476383_032019 a risk:Payment .
+  
+  :45476383_042019 a risk:Payment .
+  
+  :45476383_052019 a risk:Payment .
+  
+  :45476383_062019 a risk:Payment .
+  
+  :45476383_072019 a risk:Payment .
+  
+  :45476383_082019 a risk:Payment .
+  
+  :45476383_092019 a risk:Payment .
+  
+  :45476383_102019 a risk:Payment .
+  
+  :45476383_112019 a risk:Payment .
+  
+  :45476383_122019 a risk:Payment .
+  
+  :45476383_012020 a risk:Payment .
+  
+  :45476383_022020 a risk:Payment .
+  
+  :45476383_032020 a risk:Payment .
+  
+  :45476383_042020 a risk:Payment .
+  
+  :45476383_052020 a risk:Payment .
+  
+  :45476383_062020 a risk:Payment .
+  
+  :45476383_072020 a risk:Payment .
+  
+  :45476383_082020 a risk:Payment .
+  
+  :45476383_092020 a risk:Payment .
+  
+  :45476383_102020 a risk:Payment .
+  
+  :45476383_112020 a risk:Payment .
+  
+  :45476383_122020 a risk:Payment .
+  
+  :45476383_012021 a risk:Payment .
+  
+  :45476383_022021 a risk:Payment .
+  
+  :45476383_032021 a risk:Payment .
+  
+  :45476383_042021 a risk:Payment .
+  
+  :45476383_052021 a risk:Payment .
+  
+  :45476383_062021 a risk:Payment .
+  
+  :45476383_072021 a risk:Payment .
+  
+  :45476383_082021 a risk:Payment .
+  
+  :45476383_092021 a risk:Payment .
+  
+  :SCH9Q4M a prod:LoanSchedule;
+    prod:belongsTo :c45422765_1497;
+    prod:definesPayment :45422765_092017, :45422765_102017, :45422765_112017, :45422765_122017,
+      :45422765_012018, :45422765_022018, :45422765_032018, :45422765_042018, :45422765_052018,
+      :45422765_062018, :45422765_072018, :45422765_082018, :45422765_092018, :45422765_102018,
+      :45422765_112018, :45422765_122018, :45422765_012019, :45422765_022019, :45422765_032019,
+      :45422765_042019, :45422765_052019, :45422765_062019, :45422765_072019, :45422765_082019,
+      :45422765_092019, :45422765_102019, :45422765_112019, :45422765_122019, :45422765_012020,
+      :45422765_022020, :45422765_032020, :45422765_042020, :45422765_052020, :45422765_062020,
+      :45422765_072020, :45422765_082020, :45422765_092020, :45422765_102020, :45422765_112020,
+      :45422765_122020, :45422765_012021, :45422765_022021, :45422765_032021, :45422765_042021,
+      :45422765_052021, :45422765_062021, :45422765_072021, :45422765_082021, :45422765_092021 .
+  
+  :45422765_092017 a risk:Payment .
+  
+  :45422765_102017 a risk:Payment .
+  
+  :45422765_112017 a risk:Payment .
+  
+  :45422765_122017 a risk:Payment .
+  
+  :45422765_012018 a risk:Payment .
+  
+  :45422765_022018 a risk:Payment .
+  
+  :45422765_032018 a risk:Payment .
+  
+  :45422765_042018 a risk:Payment .
+  
+  :45422765_052018 a risk:Payment .
+  
+  :45422765_062018 a risk:Payment .
+  
+  :45422765_072018 a risk:Payment .
+  
+  :45422765_082018 a risk:Payment .
+  
+  :45422765_092018 a risk:Payment .
+  
+  :45422765_102018 a risk:Payment .
+  
+  :45422765_112018 a risk:Payment .
+  
+  :45422765_122018 a risk:Payment .
+  
+  :45422765_012019 a risk:Payment .
+  
+  :45422765_022019 a risk:Payment .
+  
+  :45422765_032019 a risk:Payment .
+  
+  :45422765_042019 a risk:Payment .
+  
+  :45422765_052019 a risk:Payment .
+  
+  :45422765_062019 a risk:Payment .
+  
+  :45422765_072019 a risk:Payment .
+  
+  :45422765_082019 a risk:Payment .
+  
+  :45422765_092019 a risk:Payment .
+  
+  :45422765_102019 a risk:Payment .
+  
+  :45422765_112019 a risk:Payment .
+  
+  :45422765_122019 a risk:Payment .
+  
+  :45422765_012020 a risk:Payment .
+  
+  :45422765_022020 a risk:Payment .
+  
+  :45422765_032020 a risk:Payment .
+  
+  :45422765_042020 a risk:Payment .
+  
+  :45422765_052020 a risk:Payment .
+  
+  :45422765_062020 a risk:Payment .
+  
+  :45422765_072020 a risk:Payment .
+  
+  :45422765_082020 a risk:Payment .
+  
+  :45422765_092020 a risk:Payment .
+  
+  :45422765_102020 a risk:Payment .
+  
+  :45422765_112020 a risk:Payment .
+  
+  :45422765_122020 a risk:Payment .
+  
+  :45422765_012021 a risk:Payment .
+  
+  :45422765_022021 a risk:Payment .
+  
+  :45422765_032021 a risk:Payment .
+  
+  :45422765_042021 a risk:Payment .
+  
+  :45422765_052021 a risk:Payment .
+  
+  :45422765_062021 a risk:Payment .
+  
+  :45422765_072021 a risk:Payment .
+  
+  :45422765_082021 a risk:Payment .
+  
+  :45422765_092021 a risk:Payment .
+  
+  :SCH7T2C a prod:LoanSchedule;
+    prod:belongsTo :c45422752_1497;
+    prod:definesPayment :45422752_092017, :45422752_102017, :45422752_112017, :45422752_122017,
+      :45422752_012018, :45422752_022018, :45422752_032018, :45422752_042018, :45422752_052018,
+      :45422752_062018, :45422752_072018, :45422752_082018, :45422752_092018, :45422752_102018,
+      :45422752_112018, :45422752_122018, :45422752_022019, :45422752_032019, :45422752_042019,
+      :45422752_052019, :45422752_062019, :45422752_072019, :45422752_082019, :45422752_092019,
+      :45422752_102019, :45422752_112019, :45422752_122019, :45422752_012020, :45422752_022020,
+      :45422752_032020, :45422752_042020, :45422752_052020, :45422752_062020, :45422752_072020,
+      :45422752_082020, :45422752_092020, :45422752_102020, :45422752_112020, :45422752_122020,
+      :45422752_012021, :45422752_022021, :45422752_032021, :45422752_042021, :45422752_052021,
+      :45422752_062021, :45422752_072021, :45422752_082021, :45422752_092021 .
+  
+  :45422752_092017 a risk:Payment .
+  
+  :45422752_102017 a risk:Payment .
+  
+  :45422752_112017 a risk:Payment .
+  
+  :45422752_122017 a risk:Payment .
+  
+  :45422752_012018 a risk:Payment .
+  
+  :45422752_022018 a risk:Payment .
+  
+  :45422752_032018 a risk:Payment .
+  
+  :45422752_042018 a risk:Payment .
+  
+  :45422752_052018 a risk:Payment .
+  
+  :45422752_062018 a risk:Payment .
+  
+  :45422752_072018 a risk:Payment .
+  
+  :45422752_082018 a risk:Payment .
+  
+  :45422752_092018 a risk:Payment .
+  
+  :45422752_102018 a risk:Payment .
+  
+  :45422752_112018 a risk:Payment .
+  
+  :45422752_122018 a risk:Payment .
+  
+  :45422752_022019 a risk:Payment .
+  
+  :45422752_032019 a risk:Payment .
+  
+  :45422752_042019 a risk:Payment .
+  
+  :45422752_052019 a risk:Payment .
+  
+  :45422752_062019 a risk:Payment .
+  
+  :45422752_072019 a risk:Payment .
+  
+  :45422752_082019 a risk:Payment .
+  
+  :45422752_092019 a risk:Payment .
+  
+  :45422752_102019 a risk:Payment .
+  
+  :45422752_112019 a risk:Payment .
+  
+  :45422752_122019 a risk:Payment .
+  
+  :45422752_012020 a risk:Payment .
+  
+  :45422752_022020 a risk:Payment .
+  
+  :45422752_032020 a risk:Payment .
+  
+  :45422752_042020 a risk:Payment .
+  
+  :45422752_052020 a risk:Payment .
+  
+  :45422752_062020 a risk:Payment .
+  
+  :45422752_072020 a risk:Payment .
+  
+  :45422752_082020 a risk:Payment .
+  
+  :45422752_092020 a risk:Payment .
+  
+  :45422752_102020 a risk:Payment .
+  
+  :45422752_112020 a risk:Payment .
+  
+  :45422752_122020 a risk:Payment .
+  
+  :45422752_012021 a risk:Payment .
+  
+  :45422752_022021 a risk:Payment .
+  
+  :45422752_032021 a risk:Payment .
+  
+  :45422752_042021 a risk:Payment .
+  
+  :45422752_052021 a risk:Payment .
+  
+  :45422752_062021 a risk:Payment .
+  
+  :45422752_072021 a risk:Payment .
+  
+  :45422752_082021 a risk:Payment .
+  
+  :45422752_092021 a risk:Payment .
+  
+  :a45422752_122019 a prod:MortgageApplication;
+    prod:hasApplicant :JE0;
+    prod:mortgageInStage :ApplicationStage;
+    prod:requires :CC45422752_1497;
+    prod:startsContract :c45422752_1497 .
+  
+  :M1 a prod:Mortgage;
+    prod:hasApplication :a45422752_122019 .
+  
+  :a45422765_012019 a prod:MortgageApplication;
+    prod:hasApplicant :MJ0;
+    prod:mortgageInStage :ApplicationStage;
+    prod:startsContract :c45422765_1497 .
+  
+  :M2 a prod:Mortgage;
+    prod:hasApplication :a45422765_012019 .
+  
+  :a45476383_012019 a prod:MortgageApplication;
+    prod:hasApplicant :MG0;
+    prod:mortgageInStage :ApplicationStage;
+    prod:startsContract :c45476383_1497 .
+  
+  :M3 a prod:Mortgage;
+    prod:hasApplication :a45476383_012019 .
+  
+  :FM1497 a fil:Organisation;
+    fil:locatedAt :12564B1B;
+    fil:offersProduct prod:MG001, prod:FX001 .
+  
+  :ML0 a fil:Person;
+    fil:hasID :ML_Doc0;
+    fil:locatedAt :454227ML .
+  
+  :NJ0 a fil:Person;
+    fil:hasID :NJ_Doc0;
+    fil:locatedAt :454227NJ .
+  
+  :KA0 a fil:Person;
+    fil:hasID :KA_Doc0;
+    fil:locatedAt :454227KA .
+  
+  :SC175 a fil:Organisation;
+    fil:locatedAt :1562B2B;
+    fil:offersProduct prod:INC001 .
+  
+  :MG001 a prod:Product .
+  
+  :FX001 a prod:Product .
+  
+  :INC001 a prod:Product .
+  
+  :T45422752_092017 a risk:Transaction .
+  
+  :T45422752_102017 a risk:Transaction .
+  
+  :T45422752_112017 a risk:Transaction .
+  
+  :T45422752_122017 a risk:Transaction .
+  
+  :T45422752_012018 a risk:Transaction .
+  
+  :T45422752_022018 a risk:Transaction .
+  
+  :T45422752_032018 a risk:Transaction .
+  
+  :T45422752_042018 a risk:Transaction .
+  
+  :T45422752_052018 a risk:Transaction .
+  
+  :T45422752_062018 a risk:Transaction .
+  
+  :T45422752_072018 a risk:Transaction .
+  
+  :T45422752_082018 a risk:Transaction .
+  
+  :T45422752_092018 a risk:Transaction .
+  
+  :T45422752_102018 a risk:Transaction .
+  
+  :T45422752_112018 a risk:Transaction .
+  
+  :T45422752_122018 a risk:Transaction .
+  
+  :T45422752_022019 a risk:Transaction .
+  
+  :T45422752_032019 a risk:Transaction .
+  
+  :T45422752_042019 a risk:Transaction .
+  
+  :T45422752_052019 a risk:Transaction .
+  
+  :T45422752_062019 a risk:Transaction .
+  
+  :T45422752_072019 a risk:Transaction .
+  
+  :T45422752_082019 a risk:Transaction .
+  
+  :T45422752_092019 a risk:Transaction .
+  
+  :T45422752_102019 a risk:Transaction .
+  
+  :T45422752_112019 a risk:Transaction .
+  
+  :T45422752_122019 a risk:Transaction .
+  
+  :T45422752_012020 a risk:Transaction .
+  
+  :T45422752_022020 a risk:Transaction .
+  
+  :T45422752_032020 a risk:Transaction .
+  
+  :T45422752_042020 a risk:Transaction .
+  
+  :T45422752_052020 a risk:Transaction .
+  
+  :T45422752_062020 a risk:Transaction .
+  
+  :T45422752_072020 a risk:Transaction .
+  
+  :T45422752_082020 a risk:Transaction .
+  
+  :T45422752_092020 a risk:Transaction .
+  
+  :T45422752_102020 a risk:Transaction .
+  
+  :T45422752_112020 a risk:Transaction .
+  
+  :T45422752_122020 a risk:Transaction .
+  
+  :T45422752_012021 a risk:Transaction .
+  
+  :T45422752_022021 a risk:Transaction .
+  
+  :T45422752_032021 a risk:Transaction .
+  
+  :T45422752_042021 a risk:Transaction .
+  
+  :T45422752_052021 a risk:Transaction .
+  
+  :T45422752_062021 a risk:Transaction .
+  
+  :T45422752_072021 a risk:Transaction .
+  
+  :T45422752_082021 a risk:Transaction .
+  
+  :T45422752_092021 a risk:Transaction .
+  
+  :T45422765_092017 a risk:Transaction .
+  
+  :T45422765_102017 a risk:Transaction .
+  
+  :T45422765_112017 a risk:Transaction .
+  
+  :T45422765_122017 a risk:Transaction .
+  
+  :T45422765_012018 a risk:Transaction .
+  
+  :T45422765_022018 a risk:Transaction .
+  
+  :T45422765_032018 a risk:Transaction .
+  
+  :T45422765_042018 a risk:Transaction .
+  
+  :T45422765_052018 a risk:Transaction .
+  
+  :T45422765_062018 a risk:Transaction .
+  
+  :T45422765_072018 a risk:Transaction .
+  
+  :T45422765_082018 a risk:Transaction .
+  
+  :T45422765_092018 a risk:Transaction .
+  
+  :T45422765_102018 a risk:Transaction .
+  
+  :T45422765_112018 a risk:Transaction .
+  
+  :T45422765_122018 a risk:Transaction .
+  
+  :T45422765_012019 a risk:Transaction .
+  
+  :T45422765_022019 a risk:Transaction .
+  
+  :T45422765_032019 a risk:Transaction .
+  
+  :T45422765_042019 a risk:Transaction .
+  
+  :T45422765_052019 a risk:Transaction .
+  
+  :T45422765_062019 a risk:Transaction .
+  
+  :T45422765_072019 a risk:Transaction .
+  
+  :T45422765_082019 a risk:Transaction .
+  
+  :T45422765_092019 a risk:Transaction .
+  
+  :T45422765_102019 a risk:Transaction .
+  
+  :T45422765_112019 a risk:Transaction .
+  
+  :T45422765_122019 a risk:Transaction .
+  
+  :T45422765_012020 a risk:Transaction .
+  
+  :T45422765_022020 a risk:Transaction .
+  
+  :T45422765_032020 a risk:Transaction .
+  
+  :T45422765_042020 a risk:Transaction .
+  
+  :T45422765_052020 a risk:Transaction .
+  
+  :T45422765_062020 a risk:Transaction .
+  
+  :T45422765_072020 a risk:Transaction .
+  
+  :T45422765_082020 a risk:Transaction .
+  
+  :T45422765_092020 a risk:Transaction .
+  
+  :T45422765_102020 a risk:Transaction .
+  
+  :T45422765_112020 a risk:Transaction .
+  
+  :T45422765_122020 a risk:Transaction .
+  
+  :T45422765_012021 a risk:Transaction .
+  
+  :T45422765_022021 a risk:Transaction .
+  
+  :T45422765_032021 a risk:Transaction .
+  
+  :T45422765_042021 a risk:Transaction .
+  
+  :T45422765_052021 a risk:Transaction .
+  
+  :T45422765_062021 a risk:Transaction .
+  
+  :T45422765_072021 a risk:Transaction .
+  
+  :T45422765_082021 a risk:Transaction .
+  
+  :T45422765_092021 a risk:Transaction .
+  
+  :T45476383_092017 a risk:Transaction .
+  
+  :T45476383_102017 a risk:Transaction .
+  
+  :T45476383_112017 a risk:Transaction .
+  
+  :T45476383_122017 a risk:Transaction .
+  
+  :T45476383_012018 a risk:Transaction .
+  
+  :T45476383_022018 a risk:Transaction .
+  
+  :T45476383_032018 a risk:Transaction .
+  
+  :T45476383_042018 a risk:Transaction .
+  
+  :T45476383_052018 a risk:Transaction .
+  
+  :T45476383_062018 a risk:Transaction .
+  
+  :T45476383_072018 a risk:Transaction .
+  
+  :T45476383_082018 a risk:Transaction .
+  
+  :T45476383_092018 a risk:Transaction .
+  
+  :T45476383_102018 a risk:Transaction .
+  
+  :T45476383_112018 a risk:Transaction .
+  
+  :T45476383_122018 a risk:Transaction .
+  
+  :T45476383_012019 a risk:Transaction .
+  
+  :T45476383_022019 a risk:Transaction .
+  
+  :T45476383_032019 a risk:Transaction .
+  
+  :T45476383_042019 a risk:Transaction .
+  
+  :T45476383_052019 a risk:Transaction .
+  
+  :T45476383_062019 a risk:Transaction .
+  
+  :T45476383_072019 a risk:Transaction .
+  
+  :T45476383_082019 a risk:Transaction .
+  
+  :T45476383_092019 a risk:Transaction .
+  
+  :T45476383_102019 a risk:Transaction .
+  
+  :T45476383_112019 a risk:Transaction .
+  
+  :T45476383_122019 a risk:Transaction .
+  
+  :T45476383_012020 a risk:Transaction .
+  
+  :T45476383_022020 a risk:Transaction .
+  
+  :MG_Doc2 a fil:BirthCertificate, fil:LegalDocument .
+  
+  :MJ_Doc2 a fil:BirthCertificate, fil:LegalDocument .
+  
+  :JE_Doc2 a fil:BirthCertificate, fil:LegalDocument .
+  
+  :ML_Doc2 a fil:BirthCertificate, fil:LegalDocument .
+  
+  :NJ_Doc2 a fil:BirthCertificate, fil:LegalDocument .
+  
+  :KA_Doc2 a fil:BirthCertificate, fil:LegalDocument .
+  
+  :CC45476383_1497 a prod:CreditCheck .
+  
+  :CC45422765_1497 a prod:CreditCheck .
+  
+  :CC45422752_1497 a prod:CreditCheck .
+  
+  :ML_Doc0 a fil:DriverLicence, fil:LegalDocument .
+  
+  :NJ_Doc0 a fil:DriverLicence, fil:LegalDocument .
+  
+  :KA_Doc0 a fil:DriverLicence, fil:LegalDocument .
+  
+  :EVT1A3FF2 a risk:ForeclosureEvent;
+    prod:recoversAsset :45476383Asset;
+    prod:closes :45476383_1497, :c45476383_1497 .
+  
+  :MG_Doc1 a fil:LegalDocument, fil:Passport .
+  
+  :MJ_Doc1 a fil:LegalDocument, fil:Passport .
+  
+  :JE_Doc1 a fil:LegalDocument, fil:Passport .
+  
+  :ML_Doc1 a fil:LegalDocument, fil:Passport .
+  
+  :NJ_Doc1 a fil:LegalDocument, fil:Passport .
+  
+  :KA_Doc1 a fil:LegalDocument, fil:Passport .
+  
+  :MG_Doc3 a fil:LegalDocument .
+  
+  :MJ_Doc3 a fil:LegalDocument .
+  
+  :JE_Doc3 a fil:LegalDocument .
+  
+  :PI83asset1 a risk:PropertyInspection;
+    prod:provides :EVT1A3F .
+  
+  :EVT1A3F a risk:ValueAssessment;
+    prod:issues :VAR83;
+    risk:assesses :45476383Asset .
+  
+  :PI65asset1 a risk:PropertyInspection;
+    prod:provides :EVT4C7Q .
+  
+  :EVT4C7Q a risk:ValueAssessment;
+    prod:issues :VAR65;
+    risk:assesses :45422765Asset .
+  
+  :PI52asset1 a risk:PropertyInspection;
+    prod:provides :EVT9M2K .
+  
+  :EVT9M2K a risk:ValueAssessment;
+    prod:issues :VAR52;
+    risk:assesses :45422752Asset .
+  
+  :RecordCheck_EVT1A3F a prod:RecordCheck .
+  
+  :RecordCheck_EVT4C7Q a prod:RecordCheck .
+  
+  :RecordCheck_EVT9M2K a prod:RecordCheck .
+  
+  :45422752_RCrisk0 a risk:Risk;
+    risk:hasRiskSource :BadRecord .
+  
+  :45422765_RCrisk0 a risk:Risk;
+    risk:hasRiskSource :BadRecord .
+  
+  :45476383_RCrisk0 a risk:Risk;
+    risk:hasRiskSource :BadRecord .
+  
+  :45422752_DCrisk0 a risk:Risk;
+    risk:hasRiskSource :FraudulentDocument .
+  
+  :45422765_DCrisk0 a risk:Risk;
+    risk:hasRiskSource :FraudulentDocument .
+  
+  :45476383_DCrisk0 a risk:Risk;
+    risk:hasRiskSource :FraudulentDocument .
+  
+  :45422752_ATrisk0 a risk:Risk;
+    risk:hasRiskSource :DegradationInAssetValue .
+  
+  :45422765_ATrisk0 a risk:Risk;
+    risk:hasRiskSource :DegradationInAssetValue .
+  
+  :45476383_ATrisk0 a risk:Risk;
+    risk:hasRiskSource :DegradationInAssetValue .
+  
+  :45422752_CCrisk0 a risk:Risk;
+    risk:hasRiskSource :BadRecord .
+  
+  :45422765_CCrisk0 a risk:Risk;
+    risk:hasRiskSource :BadRecord .
+  
+  :45476383_CCrisk0 a risk:Risk;
+    risk:hasRiskSource :BadRecord .
+  
+  :45422765_ARrisk0 a risk:Risk;
+    risk:hasRiskSource :ArrearsLimitExceeded .
+  
+  :45422765_ARrisk1 a risk:Risk;
+    risk:hasRiskSource :ArrearsLimitExceeded .
+  
+  :45422765_ARrisk2 a risk:Risk;
+    risk:hasRiskSource :ArrearsLimitExceeded .
+  
+  :45422765_ARrisk3 a risk:Risk;
+    risk:hasRiskSource :ArrearsLimitExceeded .
+  
+  :45422765_ARrisk4 a risk:Risk;
+    risk:hasRiskSource :ArrearsLimitExceeded .
+  
+  :45422765_ARrisk5 a risk:Risk;
+    risk:hasRiskSource :ArrearsLimitExceeded .
+  
+  :45422765_MPrisk0 a risk:Risk;
+    risk:hasRiskSource :MissingPaymentEvent .
+  
+  :45422765_LPrisk0 a risk:Risk;
+    risk:hasRiskSource :LatePaymentEvent .
+  
+  :45422765_MPrisk1 a risk:Risk;
+    risk:hasRiskSource :MissingPaymentEvent .
+  
+  :45422765_MPrisk2 a risk:Risk;
+    risk:hasRiskSource :MissingPaymentEvent .
+  
+  :45476383_ARrisk0 a risk:Risk;
+    risk:hasRiskSource :ArrearsLimitExceeded .
+  
+  :45476383_ARrisk1 a risk:Risk;
+    risk:hasRiskSource :ArrearsLimitExceeded .
+  
+  :45476383_MPrisk0 a risk:Risk;
+    risk:hasRiskSource :MissingPaymentEvent .
+  
+  :45476383_ARrisk2 a risk:Risk;
+    risk:hasRiskSource :ArrearsLimitExceeded .
+  
+  :45476383_ARrisk3 a risk:Risk;
+    risk:hasRiskSource :ArrearsLimitExceeded .
+  
+  :45476383_MPrisk1 a risk:Risk;
+    risk:hasRiskSource :MissingPaymentEvent, :MissingPaymentEvent%20 .
+  
+  :45476383_ARrisk4 a risk:Risk;
+    risk:hasRiskSource :ArrearsLimitExceeded .
+  
+  :45476383_ARrisk5 a risk:Risk;
+    risk:hasRiskSource :ArrearsLimitExceeded%20 .
+  
+  :45476383_ARrisk6 a risk:Risk;
+    risk:hasRiskSource :ArrearsLimitExceeded%20 .
+  
+  :45476383_ARrisk7 a risk:Risk;
+    risk:hasRiskSource :ArrearsLimitExceeded%20 .
+  
+  :45476383_ARrisk8 a risk:Risk;
+    risk:hasRiskSource :ArrearsLimitExceeded%20 .
+  
+  :45476383_ARrisk9 a risk:Risk;
+    risk:hasRiskSource :ArrearsLimitExceeded%20 .
+  
+  :45476383_ARrisk10 a risk:Risk;
+    risk:hasRiskSource :ArrearsLimitExceeded%20 .
+  
+  :45476383_ARrisk11 a risk:Risk;
+    risk:hasRiskSource :ArrearsLimitExceeded%20 .
+  
+  :45476383_ARrisk12 a risk:Risk;
+    risk:hasRiskSource :ArrearsLimitExceeded%20 .
+  
+  :45476383_MPrisk2 a risk:Risk;
+    risk:hasRiskSource :MissingPaymentEvent%20 .
+  
+  :45476383_MPrisk3 a risk:Risk;
+    risk:hasRiskSource :MissingPaymentEvent%20 .
+  
+  :45476383_MPrisk4 a risk:Risk;
+    risk:hasRiskSource :MissingPaymentEvent%20 .
+  
+  :45422752 prod:hasArrears <https://w3id.org/Arrears_45422752_092017>, <https://w3id.org/Arrears_45422752_102017>,
+      <https://w3id.org/Arrears_45422752_112017>, <https://w3id.org/Arrears_45422752_122017>,
+      <https://w3id.org/Arrears_45422752_012018>, <https://w3id.org/Arrears_45422752_022018>,
+      <https://w3id.org/Arrears_45422752_032018>, <https://w3id.org/Arrears_45422752_042018>,
+      <https://w3id.org/Arrears_45422752_052018>, <https://w3id.org/Arrears_45422752_062018>,
+      <https://w3id.org/Arrears_45422752_072018>, <https://w3id.org/Arrears_45422752_082018>,
+      <https://w3id.org/Arrears_45422752_092018>, <https://w3id.org/Arrears_45422752_102018>,
+      <https://w3id.org/Arrears_45422752_112018>, <https://w3id.org/Arrears_45422752_122018>,
+      <https://w3id.org/Arrears_45422752_022019>, <https://w3id.org/Arrears_45422752_032019>,
+      <https://w3id.org/Arrears_45422752_042019>, <https://w3id.org/Arrears_45422752_052019>,
+      <https://w3id.org/Arrears_45422752_062019>, <https://w3id.org/Arrears_45422752_072019>,
+      <https://w3id.org/Arrears_45422752_082019>, <https://w3id.org/Arrears_45422752_092019>,
+      <https://w3id.org/Arrears_45422752_102019>, <https://w3id.org/Arrears_45422752_112019>,
+      <https://w3id.org/Arrears_45422752_122019>, <https://w3id.org/Arrears_45422752_012020>,
+      <https://w3id.org/Arrears_45422752_022020>, <https://w3id.org/Arrears_45422752_032020>,
+      <https://w3id.org/Arrears_45422752_042020>, <https://w3id.org/Arrears_45422752_052020>,
+      <https://w3id.org/Arrears_45422752_062020>, <https://w3id.org/Arrears_45422752_072020>,
+      <https://w3id.org/Arrears_45422752_082020>, <https://w3id.org/Arrears_45422752_092020>,
+      <https://w3id.org/Arrears_45422752_102020>, <https://w3id.org/Arrears_45422752_112020>,
+      <https://w3id.org/Arrears_45422752_122020>, <https://w3id.org/Arrears_45422752_012021>,
+      <https://w3id.org/Arrears_45422752_022021>, <https://w3id.org/Arrears_45422752_032021>,
+      <https://w3id.org/Arrears_45422752_042021>, <https://w3id.org/Arrears_45422752_052021>,
+      <https://w3id.org/Arrears_45422752_062021>, <https://w3id.org/Arrears_45422752_072021>,
+      <https://w3id.org/Arrears_45422752_082021>, <https://w3id.org/Arrears_45422752_092021> .
+  
+  :45422765 prod:hasArrears <https://w3id.org/Arrears_45422765_092017>, <https://w3id.org/Arrears_45422765_102017>,
+      <https://w3id.org/Arrears_45422765_112017>, <https://w3id.org/Arrears_45422765_122017>,
+      <https://w3id.org/Arrears_45422765_012018>, <https://w3id.org/Arrears_45422765_022018>,
+      <https://w3id.org/Arrears_45422765_032018>, <https://w3id.org/Arrears_45422765_042018>,
+      <https://w3id.org/Arrears_45422765_052018>, <https://w3id.org/Arrears_45422765_062018>,
+      <https://w3id.org/Arrears_45422765_072018>, <https://w3id.org/Arrears_45422765_082018>,
+      <https://w3id.org/Arrears_45422765_092018>, <https://w3id.org/Arrears_45422765_102018>,
+      <https://w3id.org/Arrears_45422765_112018>, <https://w3id.org/Arrears_45422765_122018>,
+      <https://w3id.org/Arrears_45422765_012019>, <https://w3id.org/Arrears_45422765_022019>,
+      <https://w3id.org/Arrears_45422765_032019>, <https://w3id.org/Arrears_45422765_042019>,
+      <https://w3id.org/Arrears_45422765_052019>, <https://w3id.org/Arrears_45422765_062019>,
+      <https://w3id.org/Arrears_45422765_072019>, <https://w3id.org/Arrears_45422765_082019>,
+      <https://w3id.org/Arrears_45422765_092019>, <https://w3id.org/Arrears_45422765_102019>,
+      <https://w3id.org/Arrears_45422765_112019>, <https://w3id.org/Arrears_45422765_122019>,
+      <https://w3id.org/Arrears_45422765_012020>, <https://w3id.org/Arrears_45422765_022020>,
+      <https://w3id.org/Arrears_45422765_032020>, <https://w3id.org/Arrears_45422765_042020>,
+      <https://w3id.org/Arrears_45422765_052020>, <https://w3id.org/Arrears_45422765_062020>,
+      <https://w3id.org/Arrears_45422765_072020>, <https://w3id.org/Arrears_45422765_082020>,
+      <https://w3id.org/Arrears_45422765_092020>, <https://w3id.org/Arrears_45422765_102020>,
+      <https://w3id.org/Arrears_45422765_112020>, <https://w3id.org/Arrears_45422765_122020>,
+      <https://w3id.org/Arrears_45422765_012021>, <https://w3id.org/Arrears_45422765_022021>,
+      <https://w3id.org/Arrears_45422765_032021>, <https://w3id.org/Arrears_45422765_042021>,
+      <https://w3id.org/Arrears_45422765_052021>, <https://w3id.org/Arrears_45422765_062021>,
+      <https://w3id.org/Arrears_45422765_072021>, <https://w3id.org/Arrears_45422765_082021>,
+      <https://w3id.org/Arrears_45422765_092021> .
+  
+  :45476383 prod:hasArrears <https://w3id.org/Arrears_45476383_092017>, <https://w3id.org/Arrears_45476383_102017>,
+      <https://w3id.org/Arrears_45476383_112017>, <https://w3id.org/Arrears_45476383_122017>,
+      <https://w3id.org/Arrears_45476383_012018>, <https://w3id.org/Arrears_45476383_022018>,
+      <https://w3id.org/Arrears_45476383_032018>, <https://w3id.org/Arrears_45476383_042018>,
+      <https://w3id.org/Arrears_45476383_052018>, <https://w3id.org/Arrears_45476383_062018>,
+      <https://w3id.org/Arrears_45476383_072018>, <https://w3id.org/Arrears_45476383_082018>,
+      <https://w3id.org/Arrears_45476383_092018>, <https://w3id.org/Arrears_45476383_102018>,
+      <https://w3id.org/Arrears_45476383_112018>, <https://w3id.org/Arrears_45476383_122018>,
+      <https://w3id.org/Arrears_45476383_012019>, <https://w3id.org/Arrears_45476383_022019>,
+      <https://w3id.org/Arrears_45476383_032019>, <https://w3id.org/Arrears_45476383_042019>,
+      <https://w3id.org/Arrears_45476383_052019>, <https://w3id.org/Arrears_45476383_062019>,
+      <https://w3id.org/Arrears_45476383_072019>, <https://w3id.org/Arrears_45476383_082019>,
+      <https://w3id.org/Arrears_45476383_092019>, <https://w3id.org/Arrears_45476383_102019>,
+      <https://w3id.org/Arrears_45476383_112019>, <https://w3id.org/Arrears_45476383_122019>,
+      <https://w3id.org/Arrears_45476383_012020>, <https://w3id.org/Arrears_45476383_022020>,
+      <https://w3id.org/Arrears_45476383_032020>, <https://w3id.org/Arrears_45476383_042020>,
+      <https://w3id.org/Arrears_45476383_052020>, <https://w3id.org/Arrears_45476383_062020>,
+      <https://w3id.org/Arrears_45476383_072020>, <https://w3id.org/Arrears_45476383_082020>,
+      <https://w3id.org/Arrears_45476383_092020>, <https://w3id.org/Arrears_45476383_102020>,
+      <https://w3id.org/Arrears_45476383_112020>, <https://w3id.org/Arrears_45476383_122020>,
+      <https://w3id.org/Arrears_45476383_012021>, <https://w3id.org/Arrears_45476383_022021>,
+      <https://w3id.org/Arrears_45476383_032021>, <https://w3id.org/Arrears_45476383_042021>,
+      <https://w3id.org/Arrears_45476383_052021>, <https://w3id.org/Arrears_45476383_062021>,
+      <https://w3id.org/Arrears_45476383_072021>, <https://w3id.org/Arrears_45476383_082021>,
+      <https://w3id.org/Arrears_45476383_092021> .
+  
+  :a45476383_062019 prod:requires :CC45476383_1497 .
+  
+  :a45422765_062018 prod:requires :CC45422765_1497 .
+  
+  :a45476383_032018 prod:requires :PI83asset1 .
+  
+  :a45422765_022018 prod:requires :PI65asset1 .
+  
+  :a45422752_122020 prod:requires :PI52asset1 .
+  
+  :45422752_RCrisk0 risk:concerns :EVT1A3F .
+  
+  :45422765_RCrisk0 risk:concerns :EVT4C7Q .
+  
+  :45476383_RCrisk0 risk:concerns :EVT9M2K;
+    risk:controlledBy :AdjustInterestRate%20 .
+  
+  :45422752_DCrisk0 risk:concerns :DocumentCheck_docCheckID52 .
+  
+  :45422765_DCrisk0 risk:concerns :DocumentCheck_docCheckID65 .
+  
+  :45476383_DCrisk0 risk:concerns :DocumentCheck_docCheckID83 .
+  
+  :45422752_ATrisk0 risk:concerns :45422752Asset;
+    risk:controlledBy :IncreaseCollateral%20 .
+  
+  :45422765_ATrisk0 risk:concerns :45422765Asset;
+    risk:controlledBy :IncreaseCollateral%20 .
+  
+  :45476383_ATrisk0 risk:concerns :45476383Asset;
+    risk:controlledBy :IncreaseCollateral%20 .
+  
+  :45422752_CCrisk0 risk:concerns :CC45422752_1497 .
+  
+  :45422765_CCrisk0 risk:concerns :CC45422765_1497 .
+  
+  :45476383_CCrisk0 risk:concerns :CC45476383_1497;
+    risk:controlledBy :AdjustInterestRate%20 .
+  
+  :45422765_ARrisk0 risk:controlledBy :AdjustInterestRate%20 .
+  
+  :45422765_ARrisk1 risk:controlledBy :AdjustInterestRate%20 .
+  
+  :45422765_ARrisk2 risk:controlledBy :AdjustInterestRate%20 .
+  
+  :45422765_ARrisk3 risk:controlledBy :AdjustInterestRate%20 .
+  
+  :45422765_ARrisk4 risk:controlledBy :AdjustInterestRate%20 .
+  
+  :45422765_ARrisk5 risk:controlledBy :AdjustInterestRate%20 .
+  
+  :45422765_MPrisk0 risk:controlledBy :ReschedulePayment%20 .
+  
+  :45422765_LPrisk0 risk:controlledBy :AdjustInterestRate%20 .
+  
+  :45422765_MPrisk1 risk:controlledBy :ReschedulePayment%20 .
+  
+  :45422765_MPrisk2 risk:controlledBy :ReschedulePayment%20 .
+  
+  :45476383_ARrisk0 risk:controlledBy :AdjustInterestRate%20 .
+  
+  :45476383_ARrisk1 risk:controlledBy :AdjustInterestRate%20 .
+  
+  :45476383_MPrisk0 risk:controlledBy :ReschedulePayment%20 .
+  
+  :45476383_ARrisk2 risk:controlledBy :AdjustInterestRate%20 .
+  
+  :45476383_ARrisk3 risk:controlledBy :AdjustInterestRate%20 .
+  
+  :45476383_MPrisk1 risk:controlledBy :ReschedulePayment%20 .
+  
+  :45476383_ARrisk4 risk:controlledBy :AdjustInterestRate%20 .
+  
+  :45476383_ARrisk5 risk:controlledBy :AdjustInterestRate%20 .
+  
+  :45476383_ARrisk6 risk:controlledBy :AdjustInterestRate%20 .
+  
+  :45476383_ARrisk7 risk:controlledBy :AdjustInterestRate%20 .
+  
+  :45476383_ARrisk8 risk:controlledBy :AdjustInterestRate%20 .
+  
+  :45476383_ARrisk9 risk:controlledBy :AdjustInterestRate%20 .
+  
+  :45476383_ARrisk10 risk:controlledBy :AdjustInterestRate%20 .
+  
+  :45476383_ARrisk11 risk:controlledBy :AdjustInterestRate%20 .
+  
+  :45476383_ARrisk12 risk:controlledBy :AdjustInterestRate%20 .
+  
+  :45476383_MPrisk2 risk:controlledBy :ReschedulePayment%20 .
+  
+  :45476383_MPrisk3 risk:controlledBy :ReschedulePayment%20 .
+  
+  :45476383_MPrisk4 risk:controlledBy :ContractTermination%20 .
+  
+  :a45422752_122019 risk:hasRiskLevel :LowLevelRisk;
+    prod:applicationID "a45422752_122019";
+    prod:applicationStatus "P";
+    prod:combinedLoanToValueRatio 78.0;
+    prod:debtToIncomeRatio 28.0;
+    prod:loanPurpose "R";
+    prod:loanToValueRatio 78.0;
+    prod:requestedAmount 166000.0 .
+  
+  :a45422765_012019 risk:hasRiskLevel :LowLevelRisk;
+    prod:applicationID "a45422765_012019";
+    prod:applicationStatus "P";
+    prod:combinedLoanToValueRatio 83.0;
+    prod:debtToIncomeRatio 41.0;
+    prod:loanPurpose "R";
+    prod:loanToValueRatio 83.0;
+    prod:requestedAmount 228000.0 .
+  
+  :a45476383_012019 risk:hasRiskLevel :LowLevelRisk;
+    prod:applicationID "a45476383_012019";
+    prod:applicationStatus "P";
+    prod:combinedLoanToValueRatio 80.0;
+    prod:debtToIncomeRatio 35.0;
+    prod:loanPurpose "R";
+    prod:loanToValueRatio 80.0;
+    prod:requestedAmount 148000.0 .
+  
+  :45476383_1497 fil:accountID "45476383_1497";
+    fil:accountStatus "Active";
+    fil:balanceAmount 185000.0;
+    fil:currentInterest 0.0375;
+    fil:loanBalanceAmount 210480.0;
+    fil:loanID "45476383" .
+  
+  :45422765_1497 fil:accountID "45422765_1497";
+    fil:accountStatus "Active";
+    fil:balanceAmount 242500.0;
+    fil:currentInterest 0.03125;
+    fil:loanBalanceAmount 307200.0;
+    fil:loanID "45422765" .
+  
+  :45422752_1497 fil:accountID "45422752_1497";
+    fil:accountStatus "Active";
+    fil:balanceAmount 193800.0;
+    fil:currentInterest 0.0375;
+    fil:loanBalanceAmount 236160.0;
+    fil:loanID "45422752" .
+  
+  :45476383Va fil:addressID "45476383Va";
+    fil:city "Vatican";
+    fil:country "United States";
+    fil:postalCode "B120";
+    fil:street "The Holy See, Apostolic Palace" .
+  
+  :45422765MH fil:addressID "45422765MH";
+    fil:city "Maple Hill";
+    fil:country "United States";
+    fil:postalCode "97452";
+    fil:street "137 Willow Crest Drive_x000B_" .
+  
+  :45422752Br fil:addressID "45422752Br";
+    fil:city "Brookvale";
+    fil:country "United States";
+    fil:postalCode "80429";
+    fil:street "2197 Copper Ridge Way_x000B_Brookvale" .
+  
+  :12564B1B fil:addressID "12564B1B";
+    fil:city "Sprinfield";
+    fil:country "United States";
+    fil:postalCode "B115";
+    fil:street "123 Steert" .
+  
+  :454227ML fil:addressID "454227ML";
+    fil:city "Sprinfield";
+    fil:country "United States";
+    fil:postalCode "B12 00D";
+    fil:street "321 Street" .
+  
+  :454227NJ fil:addressID "454227NJ";
+    fil:city "Sprinfield";
+    fil:country "United States";
+    fil:postalCode "B1178";
+    fil:street "65 No where steet" .
+  
+  :454227KA fil:addressID "454227KA";
+    fil:city "Sprinfield";
+    fil:country "United States";
+    fil:postalCode "AD LS11";
+    fil:street "18 anystreet" .
+  
+  :c45476383_1497 fil:arrearsLimitCount 2;
+    fil:contractID "c45476383_1497";
+    fil:contractStatus "accepted";
+    fil:downPayment 37000.0;
+    fil:firstPaymentDate "2017-09-15"^^xsd:date;
+    fil:loanID "45476383_1497";
+    fil:loanTermMonths 240;
+    fil:maturityDate "2037-09-15"^^xsd:date;
+    fil:mortgageInterestRate 0.0375;
+    fil:prepayPenalty false;
+    fil:principalAmount 148000.0 .
+  
+  :c45422765_1497 fil:arrearsLimitCount 2;
+    fil:contractID "c45422765_1497";
+    fil:contractStatus "accepted";
+    fil:downPayment 46698.8;
+    fil:firstPaymentDate "2017-09-15"^^xsd:date;
+    fil:loanID "45422765_1497";
+    fil:loanTermMonths 180;
+    fil:maturityDate "2032-09-15"^^xsd:date;
+    fil:mortgageInterestRate 0.03125;
+    fil:prepayPenalty false;
+    fil:principalAmount 307200.0 .
+  
+  :c45422752_1497 fil:arrearsLimitCount 3;
+    fil:contractID "c45422752_1497";
+    fil:contractStatus "accepted";
+    fil:downPayment 46820.51;
+    fil:firstPaymentDate "2017-09-15"^^xsd:date;
+    fil:loanID "45422752_1497";
+    fil:loanTermMonths 240;
+    fil:maturityDate "2037-09-15"^^xsd:date;
+    fil:mortgageInterestRate 0.0375;
+    fil:prepayPenalty false;
+    fil:principalAmount 236160.0 .
+  
+  :MG_Doc2 fil:birthDate "1999-11-21"^^xsd:date;
+    fil:documentID "MG_Doc2";
+    fil:expiryDate "2025-08-11"^^xsd:date;
+    fil:firstName "GILBERT ";
+    fil:issueDate "2012-08-12"^^xsd:date;
+    fil:lastName "MILLER ";
+    fil:personID "MG0" .
+  
+  :MJ_Doc2 fil:birthDate "1994-07-28"^^xsd:date;
+    fil:documentID "MJ_Doc2";
+    fil:expiryDate "2025-07-12"^^xsd:date;
+    fil:firstName "JOSEPH";
+    fil:issueDate "2010-07-07"^^xsd:date;
+    fil:lastName "MORROW ";
+    fil:personID "MJ0" .
+  
+  :JE_Doc2 fil:birthDate "1977-07-20"^^xsd:date;
+    fil:documentID "JE_Doc2";
+    fil:expiryDate "2028-07-12"^^xsd:date;
+    fil:firstName "EMILY";
+    fil:issueDate "2012-07-10"^^xsd:date;
+    fil:lastName "JUAREZ ";
+    fil:personID "JE0" .
+  
+  :ML_Doc2 fil:birthDate "1990-08-15"^^xsd:date;
+    fil:documentID "ML_Doc2";
+    fil:expiryDate "2030-01-01"^^xsd:date;
+    fil:firstName "Like";
+    fil:issueDate "2015-01-01"^^xsd:date;
+    fil:lastName "Mike ";
+    fil:personID "ML0" .
+  
+  :NJ_Doc2 fil:birthDate "2000-10-10"^^xsd:date;
+    fil:documentID "NJ_Doc2";
+    fil:expiryDate "2030-01-02"^^xsd:date;
+    fil:firstName "July";
+    fil:issueDate "2015-01-02"^^xsd:date;
+    fil:lastName "Nicol ";
+    fil:personID "NJ0" .
+  
+  :KA_Doc2 fil:birthDate "1996-05-05"^^xsd:date;
+    fil:documentID "KA_Doc2";
+    fil:expiryDate "2030-01-03"^^xsd:date;
+    fil:firstName "April";
+    fil:issueDate "2015-01-03"^^xsd:date;
+    fil:lastName "Kim ";
+    fil:personID "KA0" .
+  
+  :1497branch fil:branchID "1497branch";
+    fil:loanID "45476383_1497", "45422765_1497", "45422752_1497";
+    fil:orgID "FM1497" .
+  
+  :MG_Doc0 fil:documentID "MG_Doc0";
+    fil:expiryDate "2022-06-12"^^xsd:date, "2025-07-12"^^xsd:date;
+    fil:firstName "GILBERT ";
+    fil:issueDate "2012-06-12"^^xsd:date, "2012-07-12"^^xsd:date;
+    fil:lastName "MILLER ";
+    fil:personID "MG0" .
+  
+  :MJ_Doc0 fil:documentID "MJ_Doc0";
+    fil:expiryDate "2020-06-12"^^xsd:date, "2025-07-12"^^xsd:date;
+    fil:firstName "JOSEPH";
+    fil:issueDate "2010-06-12"^^xsd:date, "2010-07-12"^^xsd:date;
+    fil:lastName "MORROW ";
+    fil:personID "MJ0" .
+  
+  :JE_Doc0 fil:documentID "JE_Doc0";
+    fil:expiryDate "2023-12-12"^^xsd:date, "2028-07-12"^^xsd:date;
+    fil:firstName "EMILY";
+    fil:issueDate "2003-12-12"^^xsd:date, "2013-07-12"^^xsd:date;
+    fil:lastName "JUAREZ ";
+    fil:personID "JE0" .
+  
+  :ML_Doc0 fil:documentID "ML_Doc0";
+    fil:expiryDate "2030-01-01"^^xsd:date;
+    fil:firstName "Like";
+    fil:issueDate "2015-01-01"^^xsd:date;
+    fil:lastName "Mike ";
+    fil:personID "ML0" .
+  
+  :NJ_Doc0 fil:documentID "NJ_Doc0";
+    fil:expiryDate "2030-01-02"^^xsd:date;
+    fil:firstName "July";
+    fil:issueDate "2015-02-01"^^xsd:date, "2015-01-02"^^xsd:date;
+    fil:lastName "Nicol ";
+    fil:personID "NJ0" .
+  
+  :KA_Doc0 fil:documentID "KA_Doc0";
+    fil:expiryDate "2030-01-03"^^xsd:date;
+    fil:firstName "April";
+    fil:issueDate "2015-01-03"^^xsd:date;
+    fil:lastName "Kim ";
+    fil:personID "KA0" .
+  
+  :MG_Doc1 fil:documentID "MG_Doc1";
+    fil:expiryDate "2025-08-12"^^xsd:date;
+    fil:firstName "GILBERT ";
+    fil:issueDate "2012-07-10"^^xsd:date;
+    fil:lastName "MILLER ";
+    fil:passportNumber "199373860";
+    fil:personID "MG0" .
+  
+  :MJ_Doc1 fil:documentID "MJ_Doc1";
+    fil:expiryDate "2025-06-12"^^xsd:date;
+    fil:firstName "JOSEPH";
+    fil:issueDate "2010-09-12"^^xsd:date;
+    fil:lastName "MORROW ";
+    fil:passportNumber "926807835";
+    fil:personID "MJ0" .
+  
+  :JE_Doc1 fil:documentID "JE_Doc1";
+    fil:expiryDate "2028-07-12"^^xsd:date;
+    fil:firstName "EMILY";
+    fil:issueDate "2012-07-12"^^xsd:date;
+    fil:lastName "JUAREZ ";
+    fil:passportNumber "306607483";
+    fil:personID "JE0" .
+  
+  :ML_Doc1 fil:documentID "ML_Doc1";
+    fil:expiryDate "2030-01-01"^^xsd:date;
+    fil:firstName "Like";
+    fil:issueDate "2015-01-01"^^xsd:date;
+    fil:lastName "Mike ";
+    fil:passportNumber "996584225";
+    fil:personID "ML0" .
+  
+  :NJ_Doc1 fil:documentID "NJ_Doc1";
+    fil:expiryDate "2030-01-02"^^xsd:date;
+    fil:firstName "July";
+    fil:issueDate "2015-01-02"^^xsd:date;
+    fil:lastName "Nicol ";
+    fil:passportNumber "336985417";
+    fil:personID "NJ0" .
+  
+  :KA_Doc1 fil:documentID "KA_Doc1";
+    fil:expiryDate "2030-01-03"^^xsd:date;
+    fil:firstName "April";
+    fil:issueDate "2015-01-03"^^xsd:date;
+    fil:lastName "Kim ";
+    fil:passportNumber "112569847";
+    fil:personID "KA0" .
+  
+  :MG_Doc3 fil:documentID "MG_Doc3";
+    fil:expiryDate "2020-09-12"^^xsd:date;
+    fil:issueDate "2012-07-11"^^xsd:date .
+  
+  :MJ_Doc3 fil:documentID "MJ_Doc3";
+    fil:expiryDate "2021-07-12"^^xsd:date;
+    fil:issueDate "2010-12-12"^^xsd:date .
+  
+  :JE_Doc3 fil:documentID "JE_Doc3";
+    fil:expiryDate "2028-07-12"^^xsd:date;
+    fil:issueDate "2012-07-12"^^xsd:date .
+  
+  :MG0_expense fil:expenseAmount 14000.0;
+    fil:expenseID "MG0_expense" .
+  
+  :MJ0_expense fil:expenseAmount 28000.0;
+    fil:expenseID "MJ0_expense" .
+  
+  :JE0_expense fil:expenseAmount 21500.0;
+    fil:expenseID "JE0_expense" .
+  
+  :MG0_Income fil:incomeAmount 114000.0;
+    fil:incomeID "MG0_Income";
+    fil:personID "MG0" .
+  
+  :MJ0_Income fil:incomeAmount 128000.0;
+    fil:incomeID "MJ0_Income";
+    fil:personID "MJ0" .
+  
+  :JE0_Income fil:incomeAmount 121500.0;
+    fil:incomeID "JE0_Income";
+    fil:personID "JE0" .
+  
+  :MG0_liability fil:liabilityAmount 24000.0;
+    fil:liabilityID "MG0_liability" .
+  
+  :MJ0_liability fil:liabilityAmount 88000.0;
+    fil:liabilityID "MJ0_liability" .
+  
+  :JE0_liability fil:liabilityAmount 51500.0;
+    fil:liabilityID "JE0_liability" .
+  
+  :FM1497 fil:orgID "FM1497";
+    fil:orgName "Fannie Mae";
+    fil:orgType "R" .
+  
+  :SC175 fil:orgID "SC175";
+    fil:orgName "Safe Cash";
+    fil:orgType "R" .
+  
+  :MG0 fil:personID "MG0" .
+  
+  :MJ0 fil:personID "MJ0" .
+  
+  :JE0 fil:personID "JE0" .
+  
+  :ML0 fil:personID "ML0" .
+  
+  :NJ0 fil:personID "NJ0" .
+  
+  :KA0 fil:personID "KA0" .
+  
+  :RecordCheck_EVT1A3F prod:applicationID "a45476383_012018";
+    prod:eventID "RecordCheck_EVT1A3F";
+    prod:recordCheckStatus "Verified" .
+  
+  :RecordCheck_EVT4C7Q prod:applicationID "a45422765_012021";
+    prod:eventID "RecordCheck_EVT4C7Q";
+    prod:recordCheckStatus "Verified" .
+  
+  :RecordCheck_EVT9M2K prod:applicationID "a45422752_102020";
+    prod:eventID "RecordCheck_EVT9M2K";
+    prod:recordCheckStatus "Verified" .
+  
+  :45476383Asset prod:assetID "45476383Asset";
+    prod:marketValue 389000.0;
+    prod:valuationDate "2016-10-15"^^xsd:date .
+  
+  :45422765Asset prod:assetID "45422765Asset";
+    prod:marketValue 372500.0;
+    prod:valuationDate "2017-01-16"^^xsd:date .
+  
+  :45422752Asset prod:assetID "45422752Asset";
+    prod:marketValue 401200.0;
+    prod:valuationDate "2016-12-17"^^xsd:date .
+  
+  :CC45476383_1497 prod:creditCheckStatus "Pass";
+    prod:eventID "CC45476383_1497" .
+  
+  :CC45422765_1497 prod:creditCheckStatus "Pass";
+    prod:eventID "CC45422765_1497" .
+  
+  :CC45422752_1497 prod:creditCheckStatus "Pass";
+    prod:eventID "CC45422752_1497" .
+  
+  :docCheckID83 prod:documentCheckStatus "Pass";
+    prod:eventID "docCheckID83" .
+  
+  :docCheckID65 prod:documentCheckStatus "Pass";
+    prod:eventID "docCheckID65" .
+  
+  :docCheckID52 prod:documentCheckStatus "Pass";
+    prod:eventID "docCheckID52" .
+  
+  <https://w3id.org/Interest_45422752_1497> prod:interestRate 0.0375;
+    prod:interestStatus "Fixed" .
+  
+  <https://w3id.org/Interest_45422765_1497> prod:interestRate 0.03125;
+    prod:interestStatus "Fixed" .
+  
+  <https://w3id.org/Interest_45476383_1497> prod:interestRate 0.0375;
+    prod:interestStatus "Fixed" .
+  
+  <https://w3id.org/Arrears_45422752_092017> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_102017> prod:limitCount -200.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_112017> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_122017> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_012018> prod:limitCount -200.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_022018> prod:limitCount -200.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_032018> prod:limitCount -200.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_042018> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_052018> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_062018> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_072018> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_082018> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_092018> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_102018> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_112018> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_122018> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_022019> prod:limitCount -1306.71;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_032019> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_042019> prod:limitCount -79.17;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_052019> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_062019> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_072019> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_082019> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_092019> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_102019> prod:limitCount -103.37;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_112019> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_122019> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_012020> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_022020> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_032020> prod:limitCount -749.97;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_042020> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_052020> prod:limitCount -335.81;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_062020> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_072020> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_082020> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_092020> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_102020> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_112020> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_122020> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_012021> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_022021> prod:limitCount -515.81;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_032021> prod:limitCount -1015.81;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_042021> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_052021> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_062021> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_072021> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_082021> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422752_092021> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_092017> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_102017> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_112017> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_122017> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_012018> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_022018> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_032018> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_042018> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_052018> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_062018> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_072018> prod:limitCount 214.03;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_082018> prod:limitCount 211.26;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_092018> prod:limitCount 208.47;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_102018> prod:limitCount 205.68;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_112018> prod:limitCount 202.89;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_122018> prod:limitCount -1720.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_012019> prod:limitCount 197.27;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_022019> prod:limitCount 1280.0;
+    prod:missedCount 1 .
+  
+  <https://w3id.org/Arrears_45422765_032019> prod:limitCount -1280.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_042019> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_052019> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_062019> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_072019> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_082019> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_092019> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_102019> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_112019> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_122019> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_012020> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_022020> prod:limitCount 1280.0;
+    prod:missedCount 1 .
+  
+  <https://w3id.org/Arrears_45422765_032020> prod:limitCount -220.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_042020> prod:limitCount -220.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_052020> prod:limitCount -220.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_062020> prod:limitCount -220.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_072020> prod:limitCount -220.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_082020> prod:limitCount -200.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_092020> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_102020> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_112020> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_122020> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_012021> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_022021> prod:limitCount 1280.0;
+    prod:missedCount 1 .
+  
+  <https://w3id.org/Arrears_45422765_032021> prod:limitCount -220.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_042021> prod:limitCount -220.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_052021> prod:limitCount -220.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_062021> prod:limitCount -220.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_072021> prod:limitCount -200.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_082021> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45422765_092021> prod:limitCount 0.0;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45476383_092017> prod:limitCount -2.53;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45476383_102017> prod:limitCount -2.53;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45476383_112017> prod:limitCount -2.53;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45476383_122017> prod:limitCount -2.53;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45476383_012018> prod:limitCount -2.53;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45476383_022018> prod:limitCount 77.47;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45476383_032018> prod:limitCount 77.47;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45476383_042018> prod:limitCount 877.47;
+    prod:missedCount 1 .
+  
+  <https://w3id.org/Arrears_45476383_052018> prod:limitCount -2.53;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45476383_062018> prod:limitCount -2.53;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45476383_072018> prod:limitCount -2.53;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45476383_082018> prod:limitCount -2.53;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45476383_092018> prod:limitCount -322.53;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45476383_102018> prod:limitCount -322.53;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45476383_112018> prod:limitCount 77.47;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45476383_122018> prod:limitCount 77.47;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45476383_012019> prod:limitCount 877.47;
+    prod:missedCount 1 .
+  
+  <https://w3id.org/Arrears_45476383_022019> prod:limitCount 77.47;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45476383_032019> prod:limitCount 77.47;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45476383_042019> prod:limitCount 77.47;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45476383_052019> prod:limitCount 77.47;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45476383_062019> prod:limitCount 877.47;
+    prod:missedCount 1 .
+  
+  <https://w3id.org/Arrears_45476383_072019> prod:limitCount 477.47;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45476383_082019> prod:limitCount 477.47;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45476383_092019> prod:limitCount 677.47;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45476383_102019> prod:limitCount 627.47;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45476383_112019> prod:limitCount 627.47;
+    prod:missedCount 0 .
+  
+  <https://w3id.org/Arrears_45476383_122019> prod:limitCount 0.0;
+    prod:missedCount 1 .
+  
+  <https://w3id.org/Arrears_45476383_012020> prod:limitCount 0.0;
+    prod:missedCount 2 .
+  
+  <https://w3id.org/Arrears_45476383_022020> prod:limitCount 0.0;
+    prod:missedCount 3 .
+  
+  <https://w3id.org/Arrears_45476383_032020> prod:limitCount 0.0;
+    prod:missedCount 3 .
+  
+  <https://w3id.org/Arrears_45476383_042020> prod:limitCount 0.0;
+    prod:missedCount 3 .
+  
+  <https://w3id.org/Arrears_45476383_052020> prod:limitCount 0.0;
+    prod:missedCount 3 .
+  
+  <https://w3id.org/Arrears_45476383_062020> prod:limitCount 0.0;
+    prod:missedCount 3 .
+  
+  <https://w3id.org/Arrears_45476383_072020> prod:limitCount 0.0;
+    prod:missedCount 3 .
+  
+  <https://w3id.org/Arrears_45476383_082020> prod:limitCount 0.0;
+    prod:missedCount 3 .
+  
+  <https://w3id.org/Arrears_45476383_092020> prod:limitCount 0.0;
+    prod:missedCount 3 .
+  
+  <https://w3id.org/Arrears_45476383_102020> prod:limitCount 0.0;
+    prod:missedCount 3 .
+  
+  <https://w3id.org/Arrears_45476383_112020> prod:limitCount 0.0;
+    prod:missedCount 3 .
+  
+  <https://w3id.org/Arrears_45476383_122020> prod:limitCount 0.0;
+    prod:missedCount 3 .
+  
+  <https://w3id.org/Arrears_45476383_012021> prod:limitCount 0.0;
+    prod:missedCount 3 .
+  
+  <https://w3id.org/Arrears_45476383_022021> prod:limitCount 0.0;
+    prod:missedCount 3 .
+  
+  <https://w3id.org/Arrears_45476383_032021> prod:limitCount 0.0;
+    prod:missedCount 3 .
+  
+  <https://w3id.org/Arrears_45476383_042021> prod:limitCount 0.0;
+    prod:missedCount 3 .
+  
+  <https://w3id.org/Arrears_45476383_052021> prod:limitCount 0.0;
+    prod:missedCount 3 .
+  
+  <https://w3id.org/Arrears_45476383_062021> prod:limitCount 0.0;
+    prod:missedCount 3 .
+  
+  <https://w3id.org/Arrears_45476383_072021> prod:limitCount 0.0;
+    prod:missedCount 3 .
+  
+  <https://w3id.org/Arrears_45476383_082021> prod:limitCount 0.0;
+    prod:missedCount 3 .
+  
+  <https://w3id.org/Arrears_45476383_092021> prod:limitCount 0.0;
+    prod:missedCount 3 .
+  
+  :SCH2F8A prod:remainingCredit 210480.0, 209600.0, 208720.0, 207840.0, 206960.0, 206080.0,
+      205280.0, 204480.0, 203600.0, 202720.0, 201840.0, 200960.0, 199760.0, 198560.0, 197760.0,
+      196960.0, 196160.0, 195360.0, 194560.0, 193760.0, 193360.0, 192960.0, 192760.0, 192510.0,
+      192260.0;
+    prod:scheduleID "SCH2F8A" .
+  
+  :SCH9Q4M prod:remainingCredit 307200.0, 305920.0, 304640.0, 303360.0, 302080.0, 300800.0,
+      299520.0, 298240.0, 296960.0, 295680.0, 294400.0, 293334.03, 292265.29, 291193.76,
+      290119.44, 289042.33, 286042.33, 284959.6, 282399.6, 281119.6, 279839.6, 278559.6,
+      277279.6, 275999.6, 274719.6, 273439.6, 272159.6, 270879.6, 269599.6, 268099.6, 266599.6,
+      265099.6, 263599.6, 262099.6, 260619.6, 259339.6, 258059.6, 256779.6, 255499.6, 254219.6,
+      252719.6, 251219.6, 249719.6, 248219.6, 246739.6, 245459.6;
+    prod:scheduleID "SCH9Q4M" .
+  
+  :SCH7T2C prod:remainingCredit 0.0, 236160.0, 235175.81, 233991.62, 233007.43, 232023.24,
+      230839.05, 229654.86, 228470.67, 227486.48, 226502.29, 225518.1, 224533.91, 223549.72,
+      222565.53, 221581.34, 220597.15, 219612.96, 217322.06, 216337.87, 215274.51, 214290.32,
+      213306.13, 212321.94, 211337.75, 210353.56, 209266.0, 208281.81, 207297.62, 206313.43,
+      205329.24, 203595.08, 202610.89, 201290.89, 200306.7, 199322.51, 198338.32, 197354.13,
+      196369.94, 195385.75, 194401.56, 193417.37, 191917.37, 189917.37, 188933.18, 187948.99,
+      186964.8, 185980.61;
+    prod:scheduleID "SCH7T2C" .
+  
+  :45476383_092017 risk:actualPrincipal 880.0;
+    risk:dueDate "2017-09-15"^^xsd:date .
+  
+  :45476383_102017 risk:actualPrincipal 880.0;
+    risk:dueDate "2017-10-15"^^xsd:date .
+  
+  :45476383_112017 risk:actualPrincipal 880.0;
+    risk:dueDate "2017-11-15"^^xsd:date .
+  
+  :45476383_122017 risk:actualPrincipal 880.0;
+    risk:dueDate "2017-12-15"^^xsd:date .
+  
+  :45476383_012018 risk:actualPrincipal 880.0;
+    risk:dueDate "2018-01-15"^^xsd:date .
+  
+  :45476383_022018 risk:actualPrincipal 800.0;
+    risk:dueDate "2018-02-15"^^xsd:date .
+  
+  :45476383_032018 risk:actualPrincipal 800.0;
+    risk:dueDate "2018-03-15"^^xsd:date .
+  
+  :45476383_042018 risk:actualPrincipal 0.0;
+    risk:dueDate "2018-04-15"^^xsd:date .
+  
+  :45476383_052018 risk:actualPrincipal 880.0;
+    risk:dueDate "2018-05-15"^^xsd:date .
+  
+  :45476383_062018 risk:actualPrincipal 880.0;
+    risk:dueDate "2018-06-15"^^xsd:date .
+  
+  :45476383_072018 risk:actualPrincipal 880.0;
+    risk:dueDate "2018-07-15"^^xsd:date .
+  
+  :45476383_082018 risk:actualPrincipal 880.0;
+    risk:dueDate "2018-08-15"^^xsd:date .
+  
+  :45476383_092018 risk:actualPrincipal 1200.0;
+    risk:dueDate "2018-09-15"^^xsd:date .
+  
+  :45476383_102018 risk:actualPrincipal 1200.0;
+    risk:dueDate "2018-10-15"^^xsd:date .
+  
+  :45476383_112018 risk:actualPrincipal 800.0;
+    risk:dueDate "2018-11-15"^^xsd:date .
+  
+  :45476383_122018 risk:actualPrincipal 800.0;
+    risk:dueDate "2018-12-15"^^xsd:date .
+  
+  :45476383_012019 risk:actualPrincipal 0.0;
+    risk:dueDate "2019-01-15"^^xsd:date .
+  
+  :45476383_022019 risk:actualPrincipal 800.0;
+    risk:dueDate "2019-02-15"^^xsd:date .
+  
+  :45476383_032019 risk:actualPrincipal 800.0;
+    risk:dueDate "2019-03-15"^^xsd:date .
+  
+  :45476383_042019 risk:actualPrincipal 800.0;
+    risk:dueDate "2019-04-15"^^xsd:date .
+  
+  :45476383_052019 risk:actualPrincipal 800.0;
+    risk:dueDate "2019-05-15"^^xsd:date .
+  
+  :45476383_062019 risk:actualPrincipal 0.0;
+    risk:dueDate "2019-06-15"^^xsd:date .
+  
+  :45476383_072019 risk:actualPrincipal 400.0;
+    risk:dueDate "2019-07-15"^^xsd:date .
+  
+  :45476383_082019 risk:actualPrincipal 400.0;
+    risk:dueDate "2019-08-15"^^xsd:date .
+  
+  :45476383_092019 risk:actualPrincipal 200.0;
+    risk:dueDate "2019-09-15"^^xsd:date .
+  
+  :45476383_102019 risk:actualPrincipal 250.0;
+    risk:dueDate "2019-10-15"^^xsd:date .
+  
+  :45476383_112019 risk:actualPrincipal 250.0;
+    risk:dueDate "2019-11-15"^^xsd:date .
+  
+  :45476383_122019 risk:actualPrincipal 0.0;
+    risk:dueDate "2019-12-15"^^xsd:date .
+  
+  :45476383_012020 risk:actualPrincipal 0.0;
+    risk:dueDate "2020-01-15"^^xsd:date .
+  
+  :45476383_022020 risk:actualPrincipal 0.0;
+    risk:dueDate "2020-02-15"^^xsd:date .
+  
+  :45476383_032020 risk:actualPrincipal 0.0;
+    risk:dueDate "2020-03-15"^^xsd:date .
+  
+  :45476383_042020 risk:actualPrincipal 0.0;
+    risk:dueDate "2020-04-15"^^xsd:date .
+  
+  :45476383_052020 risk:actualPrincipal 0.0;
+    risk:dueDate "2020-05-15"^^xsd:date .
+  
+  :45476383_062020 risk:actualPrincipal 0.0;
+    risk:dueDate "2020-06-15"^^xsd:date .
+  
+  :45476383_072020 risk:actualPrincipal 0.0;
+    risk:dueDate "2020-07-15"^^xsd:date .
+  
+  :45476383_082020 risk:actualPrincipal 0.0;
+    risk:dueDate "2020-08-15"^^xsd:date .
+  
+  :45476383_092020 risk:actualPrincipal 0.0;
+    risk:dueDate "2020-09-15"^^xsd:date .
+  
+  :45476383_102020 risk:actualPrincipal 0.0;
+    risk:dueDate "2020-10-15"^^xsd:date .
+  
+  :45476383_112020 risk:actualPrincipal 0.0;
+    risk:dueDate "2020-11-15"^^xsd:date .
+  
+  :45476383_122020 risk:actualPrincipal 0.0;
+    risk:dueDate "2020-12-15"^^xsd:date .
+  
+  :45476383_012021 risk:actualPrincipal 0.0;
+    risk:dueDate "2021-01-15"^^xsd:date .
+  
+  :45476383_022021 risk:actualPrincipal 0.0;
+    risk:dueDate "2021-02-15"^^xsd:date .
+  
+  :45476383_032021 risk:actualPrincipal 0.0;
+    risk:dueDate "2021-03-15"^^xsd:date .
+  
+  :45476383_042021 risk:actualPrincipal 0.0;
+    risk:dueDate "2021-04-15"^^xsd:date .
+  
+  :45476383_052021 risk:actualPrincipal 0.0;
+    risk:dueDate "2021-05-15"^^xsd:date .
+  
+  :45476383_062021 risk:actualPrincipal 0.0;
+    risk:dueDate "2021-06-15"^^xsd:date .
+  
+  :45476383_072021 risk:actualPrincipal 0.0;
+    risk:dueDate "2021-07-15"^^xsd:date .
+  
+  :45476383_082021 risk:actualPrincipal 0.0;
+    risk:dueDate "2021-08-15"^^xsd:date .
+  
+  :45476383_092021 risk:actualPrincipal 0.0;
+    risk:dueDate "2021-09-15"^^xsd:date .
+  
+  :45422765_092017 risk:actualPrincipal 1280.0;
+    risk:dueDate "2017-09-15"^^xsd:date .
+  
+  :45422765_102017 risk:actualPrincipal 1280.0;
+    risk:dueDate "2017-10-15"^^xsd:date .
+  
+  :45422765_112017 risk:actualPrincipal 1280.0;
+    risk:dueDate "2017-11-15"^^xsd:date .
+  
+  :45422765_122017 risk:actualPrincipal 1280.0;
+    risk:dueDate "2017-12-15"^^xsd:date .
+  
+  :45422765_012018 risk:actualPrincipal 1280.0;
+    risk:dueDate "2018-01-15"^^xsd:date .
+  
+  :45422765_022018 risk:actualPrincipal 1280.0;
+    risk:dueDate "2018-02-15"^^xsd:date .
+  
+  :45422765_032018 risk:actualPrincipal 1280.0;
+    risk:dueDate "2018-03-15"^^xsd:date .
+  
+  :45422765_042018 risk:actualPrincipal 1280.0;
+    risk:dueDate "2018-04-15"^^xsd:date .
+  
+  :45422765_052018 risk:actualPrincipal 1280.0;
+    risk:dueDate "2018-05-15"^^xsd:date .
+  
+  :45422765_062018 risk:actualPrincipal 1280.0;
+    risk:dueDate "2018-06-15"^^xsd:date .
+  
+  :45422765_072018 risk:actualPrincipal 1065.97;
+    risk:dueDate "2018-07-15"^^xsd:date .
+  
+  :45422765_082018 risk:actualPrincipal 1068.74;
+    risk:dueDate "2018-08-15"^^xsd:date .
+  
+  :45422765_092018 risk:actualPrincipal 1071.53;
+    risk:dueDate "2018-09-15"^^xsd:date .
+  
+  :45422765_102018 risk:actualPrincipal 1074.32;
+    risk:dueDate "2018-10-15"^^xsd:date .
+  
+  :45422765_112018 risk:actualPrincipal 1077.11;
+    risk:dueDate "2018-11-15"^^xsd:date .
+  
+  :45422765_122018 risk:actualPrincipal 3000.0;
+    risk:dueDate "2018-12-15"^^xsd:date .
+  
+  :45422765_012019 risk:actualPrincipal 1082.73;
+    risk:dueDate "2019-01-15"^^xsd:date .
+  
+  :45422765_022019 risk:actualPrincipal 0.0;
+    risk:dueDate "2019-02-15"^^xsd:date .
+  
+  :45422765_032019 risk:actualPrincipal 2560.0;
+    risk:dueDate "2019-03-15"^^xsd:date .
+  
+  :45422765_042019 risk:actualPrincipal 1280.0;
+    risk:dueDate "2019-04-15"^^xsd:date .
+  
+  :45422765_052019 risk:actualPrincipal 1280.0;
+    risk:dueDate "2019-05-15"^^xsd:date .
+  
+  :45422765_062019 risk:actualPrincipal 1280.0;
+    risk:dueDate "2019-06-15"^^xsd:date .
+  
+  :45422765_072019 risk:actualPrincipal 1280.0;
+    risk:dueDate "2019-07-15"^^xsd:date .
+  
+  :45422765_082019 risk:actualPrincipal 1280.0 .
+  
+  :45422765_092019 risk:actualPrincipal 1280.0 .
+  
+  :45422765_102019 risk:actualPrincipal 1280.0 .
+  
+  :45422765_112019 risk:actualPrincipal 1280.0 .
+  
+  :45422765_122019 risk:actualPrincipal 1280.0 .
+  
+  :45422765_012020 risk:actualPrincipal 1280.0 .
+  
+  :45422765_022020 risk:actualPrincipal 0.0 .
+  
+  :45422765_032020 risk:actualPrincipal 1500.0 .
+  
+  :45422765_042020 risk:actualPrincipal 1500.0 .
+  
+  :45422765_052020 risk:actualPrincipal 1500.0 .
+  
+  :45422765_062020 risk:actualPrincipal 1500.0 .
+  
+  :45422765_072020 risk:actualPrincipal 1500.0 .
+  
+  :45422765_082020 risk:actualPrincipal 1480.0 .
+  
+  :45422765_092020 risk:actualPrincipal 1280.0 .
+  
+  :45422765_102020 risk:actualPrincipal 1280.0 .
+  
+  :45422765_112020 risk:actualPrincipal 1280.0 .
+  
+  :45422765_122020 risk:actualPrincipal 1280.0 .
+  
+  :45422765_012021 risk:actualPrincipal 1280.0 .
+  
+  :45422765_022021 risk:actualPrincipal 0.0 .
+  
+  :45422765_032021 risk:actualPrincipal 1500.0 .
+  
+  :45422765_042021 risk:actualPrincipal 1500.0 .
+  
+  :45422765_052021 risk:actualPrincipal 1500.0 .
+  
+  :45422765_062021 risk:actualPrincipal 1500.0 .
+  
+  :45422765_072021 risk:actualPrincipal 1480.0 .
+  
+  :45422765_082021 risk:actualPrincipal 1280.0 .
+  
+  :45422765_092021 risk:actualPrincipal 1280.0 .
+  
+  :45422752_092017 risk:actualPrincipal 984.19 .
+  
+  :45422752_102017 risk:actualPrincipal 1184.19 .
+  
+  :45422752_112017 risk:actualPrincipal 984.19 .
+  
+  :45422752_122017 risk:actualPrincipal 984.19 .
+  
+  :45422752_012018 risk:actualPrincipal 1184.19 .
+  
+  :45422752_022018 risk:actualPrincipal 1184.19 .
+  
+  :45422752_032018 risk:actualPrincipal 1184.19 .
+  
+  :45422752_042018 risk:actualPrincipal 984.19 .
+  
+  :45422752_052018 risk:actualPrincipal 984.19 .
+  
+  :45422752_062018 risk:actualPrincipal 984.19 .
+  
+  :45422752_072018 risk:actualPrincipal 984.19 .
+  
+  :45422752_082018 risk:actualPrincipal 984.19 .
+  
+  :45422752_092018 risk:actualPrincipal 984.19 .
+  
+  :45422752_102018 risk:actualPrincipal 984.19 .
+  
+  :45422752_112018 risk:actualPrincipal 984.19 .
+  
+  :45422752_122018 risk:actualPrincipal 984.19 .
+  
+  :45422752_022019 risk:actualPrincipal 2290.9 .
+  
+  :45422752_032019 risk:actualPrincipal 984.19 .
+  
+  :45422752_042019 risk:actualPrincipal 1063.36 .
+  
+  :45422752_052019 risk:actualPrincipal 984.19 .
+  
+  :45422752_062019 risk:actualPrincipal 984.19 .
+  
+  :45422752_072019 risk:actualPrincipal 984.19 .
+  
+  :45422752_082019 risk:actualPrincipal 984.19 .
+  
+  :45422752_092019 risk:actualPrincipal 984.19 .
+  
+  :45422752_102019 risk:actualPrincipal 1087.56 .
+  
+  :45422752_112019 risk:actualPrincipal 984.19 .
+  
+  :45422752_122019 risk:actualPrincipal 984.19 .
+  
+  :45422752_012020 risk:actualPrincipal 984.19 .
+  
+  :45422752_022020 risk:actualPrincipal 984.19 .
+  
+  :45422752_032020 risk:actualPrincipal 1734.16 .
+  
+  :45422752_042020 risk:actualPrincipal 984.19 .
+  
+  :45422752_052020 risk:actualPrincipal 1320.0 .
+  
+  :45422752_062020 risk:actualPrincipal 984.19 .
+  
+  :45422752_072020 risk:actualPrincipal 984.19 .
+  
+  :45422752_082020 risk:actualPrincipal 984.19 .
+  
+  :45422752_092020 risk:actualPrincipal 984.19 .
+  
+  :45422752_102020 risk:actualPrincipal 984.19 .
+  
+  :45422752_112020 risk:actualPrincipal 984.19 .
+  
+  :45422752_122020 risk:actualPrincipal 984.19 .
+  
+  :45422752_012021 risk:actualPrincipal 984.19 .
+  
+  :45422752_022021 risk:actualPrincipal 1500.0 .
+  
+  :45422752_032021 risk:actualPrincipal 2000.0 .
+  
+  :45422752_042021 risk:actualPrincipal 984.19 .
+  
+  :45422752_052021 risk:actualPrincipal 984.19 .
+  
+  :45422752_062021 risk:actualPrincipal 984.19 .
+  
+  :45422752_072021 risk:actualPrincipal 984.19 .
+  
+  :45422752_082021 risk:actualPrincipal 984.19 .
+  
+  :45422752_092021 risk:actualPrincipal 185980.61 .
+  
+  :EVT1A3F risk:assessedValueAmount 325000.0 .
+  
+  :EVT4C7Q risk:assessedValueAmount 410000.0 .
+  
+  :EVT9M2K risk:assessedValueAmount 287500.0 .
+  
+  :45422765_082019 risk:dueDate "2019-08-15"^^xsd:date;
+    risk:paymentDate "2019-08-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_082019";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 277279.6 .
+  
+  :45422765_092019 risk:dueDate "2019-09-15"^^xsd:date;
+    risk:paymentDate "2019-09-20"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_092019";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 275999.6 .
+  
+  :45422765_102019 risk:dueDate "2019-10-15"^^xsd:date;
+    risk:paymentDate "2019-10-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_102019";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 274719.6 .
+  
+  :45422765_112019 risk:dueDate "2019-11-15"^^xsd:date;
+    risk:paymentDate "2019-11-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_112019";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 273439.6 .
+  
+  :45422765_122019 risk:dueDate "2019-12-15"^^xsd:date;
+    risk:paymentDate "2019-12-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_122019";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 272159.6 .
+  
+  :45422765_012020 risk:dueDate "2020-01-15"^^xsd:date;
+    risk:paymentDate "2020-01-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_012020";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 270879.6 .
+  
+  :45422765_022020 risk:dueDate "2020-02-15"^^xsd:date;
+    risk:paymentDate "2020-02-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_022020";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 269599.6 .
+  
+  :45422765_032020 risk:dueDate "2020-03-15"^^xsd:date;
+    risk:paymentDate "2020-03-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_032020";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 269599.6 .
+  
+  :45422765_042020 risk:dueDate "2020-04-15"^^xsd:date;
+    risk:paymentDate "2020-04-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_042020";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 268099.6 .
+  
+  :45422765_052020 risk:dueDate "2020-05-15"^^xsd:date;
+    risk:paymentDate "2020-05-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_052020";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 266599.6 .
+  
+  :45422765_062020 risk:dueDate "2020-06-15"^^xsd:date;
+    risk:paymentDate "2020-06-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_062020";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 265099.6 .
+  
+  :45422765_072020 risk:dueDate "2020-07-15"^^xsd:date;
+    risk:paymentDate "2020-07-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_072020";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 263599.6 .
+  
+  :45422765_082020 risk:dueDate "2020-08-15"^^xsd:date;
+    risk:paymentDate "2020-08-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_082020";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 262099.6 .
+  
+  :45422765_092020 risk:dueDate "2020-09-15"^^xsd:date;
+    risk:paymentDate "2020-09-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_092020";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 260619.6 .
+  
+  :45422765_102020 risk:dueDate "2020-10-15"^^xsd:date;
+    risk:paymentDate "2020-10-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_102020";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 259339.6 .
+  
+  :45422765_112020 risk:dueDate "2020-11-15"^^xsd:date;
+    risk:paymentDate "2020-11-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_112020";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 258059.6 .
+  
+  :45422765_122020 risk:dueDate "2020-12-15"^^xsd:date;
+    risk:paymentDate "2020-12-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_122020";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 256779.6 .
+  
+  :45422765_012021 risk:dueDate "2021-01-15"^^xsd:date;
+    risk:paymentDate "2021-01-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_012021";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 255499.6 .
+  
+  :45422765_022021 risk:dueDate "2021-02-15"^^xsd:date;
+    risk:paymentDate "2021-02-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_022021";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 254219.6 .
+  
+  :45422765_032021 risk:dueDate "2021-03-15"^^xsd:date;
+    risk:paymentDate "2021-03-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_032021";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 254219.6 .
+  
+  :45422765_042021 risk:dueDate "2021-04-15"^^xsd:date;
+    risk:paymentDate "2021-04-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_042021";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 252719.6 .
+  
+  :45422765_052021 risk:dueDate "2021-05-15"^^xsd:date;
+    risk:paymentDate "2021-05-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_052021";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 251219.6 .
+  
+  :45422765_062021 risk:dueDate "2021-06-15"^^xsd:date;
+    risk:paymentDate "2021-06-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_062021";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 249719.6 .
+  
+  :45422765_072021 risk:dueDate "2021-07-15"^^xsd:date;
+    risk:paymentDate "2021-07-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_072021";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 248219.6 .
+  
+  :45422765_082021 risk:dueDate "2021-08-15"^^xsd:date;
+    risk:paymentDate "2021-08-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_082021";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 246739.6 .
+  
+  :45422765_092021 risk:dueDate "2021-09-15"^^xsd:date;
+    risk:paymentDate "2021-09-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_092021";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 245459.6 .
+  
+  :45422752_092017 risk:dueDate "2017-09-15"^^xsd:date;
+    risk:paymentDate "2017-09-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_092017";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 236160.0 .
+  
+  :45422752_102017 risk:dueDate "2017-10-15"^^xsd:date;
+    risk:paymentDate "2017-10-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_102017";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 235175.81 .
+  
+  :45422752_112017 risk:dueDate "2017-11-15"^^xsd:date;
+    risk:paymentDate "2017-11-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_112017";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 233991.62 .
+  
+  :45422752_122017 risk:dueDate "2017-12-15"^^xsd:date;
+    risk:paymentDate "2017-12-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_122017";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 233007.43 .
+  
+  :45422752_012018 risk:dueDate "2018-01-15"^^xsd:date;
+    risk:paymentDate "2018-01-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_012018";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 232023.24 .
+  
+  :45422752_022018 risk:dueDate "2018-02-15"^^xsd:date;
+    risk:paymentDate "2018-02-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_022018";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 230839.05 .
+  
+  :45422752_032018 risk:dueDate "2018-03-15"^^xsd:date;
+    risk:paymentDate "2018-03-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_032018";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 229654.86 .
+  
+  :45422752_042018 risk:dueDate "2018-04-15"^^xsd:date;
+    risk:paymentDate "2018-04-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_042018";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 228470.67 .
+  
+  :45422752_052018 risk:dueDate "2018-05-15"^^xsd:date;
+    risk:paymentDate "2018-05-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_052018";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 227486.48 .
+  
+  :45422752_062018 risk:dueDate "2018-06-15"^^xsd:date;
+    risk:paymentDate "2018-06-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_062018";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 226502.29 .
+  
+  :45422752_072018 risk:dueDate "2018-07-15"^^xsd:date;
+    risk:paymentDate "2018-07-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_072018";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 225518.1 .
+  
+  :45422752_082018 risk:dueDate "2018-08-15"^^xsd:date;
+    risk:paymentDate "2018-08-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_082018";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 224533.91 .
+  
+  :45422752_092018 risk:dueDate "2018-09-15"^^xsd:date;
+    risk:paymentDate "2018-09-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_092018";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 223549.72 .
+  
+  :45422752_102018 risk:dueDate "2018-10-15"^^xsd:date;
+    risk:paymentDate "2018-10-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_102018";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 222565.53 .
+  
+  :45422752_112018 risk:dueDate "2018-11-15"^^xsd:date;
+    risk:paymentDate "2018-11-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_112018";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 221581.34 .
+  
+  :45422752_122018 risk:dueDate "2018-12-15"^^xsd:date;
+    risk:paymentDate "2018-12-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_122018";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 220597.15 .
+  
+  :45422752_022019 risk:dueDate "2019-02-15"^^xsd:date;
+    risk:paymentDate "2019-02-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_022019";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 219612.96 .
+  
+  :45422752_032019 risk:dueDate "2019-03-15"^^xsd:date;
+    risk:paymentDate "2019-03-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_032019";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 217322.06 .
+  
+  :45422752_042019 risk:dueDate "2019-04-15"^^xsd:date;
+    risk:paymentDate "2019-04-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_042019";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 216337.87 .
+  
+  :45422752_052019 risk:dueDate "2019-05-15"^^xsd:date;
+    risk:paymentDate "2019-05-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_052019";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 215274.51 .
+  
+  :45422752_062019 risk:dueDate "2019-06-15"^^xsd:date;
+    risk:paymentDate "2019-06-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_062019";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 214290.32 .
+  
+  :45422752_072019 risk:dueDate "2019-07-15"^^xsd:date;
+    risk:paymentDate "2019-07-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_072019";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 213306.13 .
+  
+  :45422752_082019 risk:dueDate "2019-08-15"^^xsd:date;
+    risk:paymentDate "2019-08-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_082019";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 212321.94 .
+  
+  :45422752_092019 risk:dueDate "2019-09-15"^^xsd:date;
+    risk:paymentDate "2019-09-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_092019";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 211337.75 .
+  
+  :45422752_102019 risk:dueDate "2019-10-15"^^xsd:date;
+    risk:paymentDate "2019-10-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_102019";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 210353.56 .
+  
+  :45422752_112019 risk:dueDate "2019-11-15"^^xsd:date;
+    risk:paymentDate "2019-11-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_112019";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 209266.0 .
+  
+  :45422752_122019 risk:dueDate "2019-12-15"^^xsd:date;
+    risk:paymentDate "2019-12-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_122019";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 208281.81 .
+  
+  :45422752_012020 risk:dueDate "2020-01-15"^^xsd:date;
+    risk:paymentDate "2020-01-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_012020";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 207297.62 .
+  
+  :45422752_022020 risk:dueDate "2020-02-15"^^xsd:date;
+    risk:paymentDate "2020-02-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_022020";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 206313.43 .
+  
+  :45422752_032020 risk:dueDate "2020-03-15"^^xsd:date;
+    risk:paymentDate "2020-03-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_032020";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 205329.24 .
+  
+  :45422752_042020 risk:dueDate "2020-04-15"^^xsd:date;
+    risk:paymentDate "2020-04-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_042020";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 203595.08 .
+  
+  :45422752_052020 risk:dueDate "2020-05-15"^^xsd:date;
+    risk:paymentDate "2020-05-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_052020";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 202610.89 .
+  
+  :45422752_062020 risk:dueDate "2020-06-15"^^xsd:date;
+    risk:paymentDate "2020-06-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_062020";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 201290.89 .
+  
+  :45422752_072020 risk:dueDate "2020-07-15"^^xsd:date;
+    risk:paymentDate "2020-07-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_072020";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 200306.7 .
+  
+  :45422752_082020 risk:dueDate "2020-08-15"^^xsd:date;
+    risk:paymentDate "2020-08-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_082020";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 199322.51 .
+  
+  :45422752_092020 risk:dueDate "2020-09-15"^^xsd:date;
+    risk:paymentDate "2020-09-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_092020";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 198338.32 .
+  
+  :45422752_102020 risk:dueDate "2020-10-15"^^xsd:date;
+    risk:paymentDate "2020-10-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_102020";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 197354.13 .
+  
+  :45422752_112020 risk:dueDate "2020-11-15"^^xsd:date;
+    risk:paymentDate "2020-11-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_112020";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 196369.94 .
+  
+  :45422752_122020 risk:dueDate "2020-12-15"^^xsd:date;
+    risk:paymentDate "2020-12-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_122020";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 195385.75 .
+  
+  :45422752_012021 risk:dueDate "2021-01-15"^^xsd:date;
+    risk:paymentDate "2021-01-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_012021";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 194401.56 .
+  
+  :45422752_022021 risk:dueDate "2021-02-15"^^xsd:date;
+    risk:paymentDate "2021-02-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_022021";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 193417.37 .
+  
+  :45422752_032021 risk:dueDate "2021-03-15"^^xsd:date;
+    risk:paymentDate "2021-03-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_032021";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 191917.37 .
+  
+  :45422752_042021 risk:dueDate "2021-04-15"^^xsd:date;
+    risk:paymentDate "2021-04-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_042021";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 189917.37 .
+  
+  :45422752_052021 risk:dueDate "2021-05-15"^^xsd:date;
+    risk:paymentDate "2021-05-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_052021";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 188933.18 .
+  
+  :45422752_062021 risk:dueDate "2021-06-15"^^xsd:date;
+    risk:paymentDate "2021-06-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_062021";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 187948.99 .
+  
+  :45422752_072021 risk:dueDate "2021-07-15"^^xsd:date;
+    risk:paymentDate "2021-07-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_072021";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 186964.8 .
+  
+  :45422752_082021 risk:dueDate "2021-08-15"^^xsd:date;
+    risk:paymentDate "2021-08-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_082021";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 185980.61 .
+  
+  :45422752_092021 risk:dueDate "2021-09-15"^^xsd:date;
+    risk:paymentDate "2021-09-01"^^xsd:date;
+    risk:paymentHistoryCode "45422752hist20172175";
+    risk:paymentID "45422752_092021";
+    risk:scheduledPrincipal 984.19;
+    risk:totalPrincipal 0.0 .
+  
+  :45422752_RCrisk0 risk:impact 0;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45422752_RCrisk0";
+    risk:riskScore 1 .
+  
+  :45422765_RCrisk0 risk:impact 0;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45422765_RCrisk0";
+    risk:riskScore 1 .
+  
+  :45476383_RCrisk0 risk:impact 5;
+    risk:likelihood "MediumRiskLevel";
+    risk:riskID "45476383_RCrisk0";
+    risk:riskScore 4 .
+  
+  :45422752_DCrisk0 risk:impact 0;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45422752_DCrisk0";
+    risk:riskScore 1 .
+  
+  :45422765_DCrisk0 risk:impact 0;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45422765_DCrisk0";
+    risk:riskScore 1 .
+  
+  :45476383_DCrisk0 risk:impact 0;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45476383_DCrisk0";
+    risk:riskScore 1 .
+  
+  :45422752_ATrisk0 risk:impact 2;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45422752_ATrisk0";
+    risk:riskScore 2 .
+  
+  :45422765_ATrisk0 risk:impact 2;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45422765_ATrisk0";
+    risk:riskScore 2 .
+  
+  :45476383_ATrisk0 risk:impact 2;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45476383_ATrisk0";
+    risk:riskScore 2 .
+  
+  :45422752_CCrisk0 risk:impact 1;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45422752_CCrisk0";
+    risk:riskScore 2 .
+  
+  :45422765_CCrisk0 risk:impact 0;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45422765_CCrisk0";
+    risk:riskScore 1 .
+  
+  :45476383_CCrisk0 risk:impact 5;
+    risk:likelihood "MediumRiskLevel";
+    risk:riskID "45476383_CCrisk0";
+    risk:riskScore 4 .
+  
+  :45422765_ARrisk0 risk:impact 3;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45422765_ARrisk0";
+    risk:riskScore 1 .
+  
+  :45422765_ARrisk1 risk:impact 3;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45422765_ARrisk1";
+    risk:riskScore 1 .
+  
+  :45422765_ARrisk2 risk:impact 3;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45422765_ARrisk2";
+    risk:riskScore 1 .
+  
+  :45422765_ARrisk3 risk:impact 3;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45422765_ARrisk3";
+    risk:riskScore 1 .
+  
+  :45422765_ARrisk4 risk:impact 3;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45422765_ARrisk4";
+    risk:riskScore 1 .
+  
+  :45422765_ARrisk5 risk:impact 3;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45422765_ARrisk5";
+    risk:riskScore 1 .
+  
+  :45422765_MPrisk0 risk:impact 10;
+    risk:likelihood "HighRiskLevel";
+    risk:riskID "45422765_MPrisk0";
+    risk:riskScore 1 .
+  
+  :45422765_LPrisk0 risk:impact 5;
+    risk:likelihood "MediumRiskLevel";
+    risk:riskID "45422765_LPrisk0";
+    risk:riskScore 1 .
+  
+  :45422765_MPrisk1 risk:impact 10;
+    risk:likelihood "HighRiskLevel";
+    risk:riskID "45422765_MPrisk1";
+    risk:riskScore 1 .
+  
+  :45422765_MPrisk2 risk:impact 10;
+    risk:likelihood "HighRiskLevel";
+    risk:riskID "45422765_MPrisk2";
+    risk:riskScore 1 .
+  
+  :45476383_ARrisk0 risk:impact 3;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45476383_ARrisk0";
+    risk:riskScore 1 .
+  
+  :45476383_ARrisk1 risk:impact 3;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45476383_ARrisk1";
+    risk:riskScore 1 .
+  
+  :45476383_MPrisk0 risk:impact 10;
+    risk:likelihood "HighRiskLevel";
+    risk:riskID "45476383_MPrisk0";
+    risk:riskScore 1 .
+  
+  :45476383_ARrisk2 risk:impact 3;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45476383_ARrisk2";
+    risk:riskScore 1 .
+  
+  :45476383_ARrisk3 risk:impact 3;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45476383_ARrisk3";
+    risk:riskScore 1 .
+  
+  :45476383_MPrisk1 risk:impact 10;
+    risk:likelihood "HighRiskLevel";
+    risk:riskID "45476383_MPrisk1";
+    risk:riskScore 1 .
+  
+  :45476383_ARrisk4 risk:impact 3;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45476383_ARrisk4";
+    risk:riskScore 1 .
+  
+  :45476383_ARrisk5 risk:impact 3;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45476383_ARrisk5";
+    risk:riskScore 1 .
+  
+  :45476383_ARrisk6 risk:impact 3;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45476383_ARrisk6";
+    risk:riskScore 1 .
+  
+  :45476383_ARrisk7 risk:impact 3;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45476383_ARrisk7";
+    risk:riskScore 1 .
+  
+  :45476383_ARrisk8 risk:impact 3;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45476383_ARrisk8";
+    risk:riskScore 1 .
+  
+  :45476383_ARrisk9 risk:impact 3;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45476383_ARrisk9";
+    risk:riskScore 1 .
+  
+  :45476383_ARrisk10 risk:impact 3;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45476383_ARrisk10";
+    risk:riskScore 1 .
+  
+  :45476383_ARrisk11 risk:impact 3;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45476383_ARrisk11";
+    risk:riskScore 1 .
+  
+  :45476383_ARrisk12 risk:impact 3;
+    risk:likelihood "LowRiskLevel";
+    risk:riskID "45476383_ARrisk12";
+    risk:riskScore 1 .
+  
+  :45476383_MPrisk2 risk:impact 10;
+    risk:likelihood "HighRiskLevel";
+    risk:riskID "45476383_MPrisk2";
+    risk:riskScore 1 .
+  
+  :45476383_MPrisk3 risk:impact 10;
+    risk:likelihood "HighRiskLevel";
+    risk:riskID "45476383_MPrisk3";
+    risk:riskScore 1 .
+  
+  :45476383_MPrisk4 risk:impact 10;
+    risk:likelihood "HighRiskLevel";
+    risk:riskID "45476383_MPrisk4";
+    risk:riskScore 1 .
+  
+  :45476383_092017 risk:paymentDate "2017-09-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_092017";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 210480.0 .
+  
+  :45476383_102017 risk:paymentDate "2017-10-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_102017";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 209600.0 .
+  
+  :45476383_112017 risk:paymentDate "2017-11-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_112017";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 208720.0 .
+  
+  :45476383_122017 risk:paymentDate "2017-12-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_122017";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 207840.0 .
+  
+  :45476383_012018 risk:paymentDate "2018-01-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_012018";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 206960.0 .
+  
+  :45476383_022018 risk:paymentDate "2018-02-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_022018";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 206080.0 .
+  
+  :45476383_032018 risk:paymentDate "2018-03-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_032018";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 205280.0 .
+  
+  :45476383_042018 risk:paymentDate "2018-04-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_042018";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 204480.0 .
+  
+  :45476383_052018 risk:paymentDate "2018-05-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_052018";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 204480.0 .
+  
+  :45476383_062018 risk:paymentDate "2018-06-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_062018";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 203600.0 .
+  
+  :45476383_072018 risk:paymentDate "2018-07-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_072018";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 202720.0 .
+  
+  :45476383_082018 risk:paymentDate "2018-08-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_082018";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 201840.0 .
+  
+  :45476383_092018 risk:paymentDate "2018-09-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_092018";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 200960.0 .
+  
+  :45476383_102018 risk:paymentDate "2018-10-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_102018";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 199760.0 .
+  
+  :45476383_112018 risk:paymentDate "2018-11-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_112018";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 198560.0 .
+  
+  :45476383_122018 risk:paymentDate "2018-12-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_122018";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 197760.0 .
+  
+  :45476383_012019 risk:paymentDate "2019-01-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_012019";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 196960.0 .
+  
+  :45476383_022019 risk:paymentDate "2019-02-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_022019";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 196960.0 .
+  
+  :45476383_032019 risk:paymentDate "2019-03-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_032019";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 196160.0 .
+  
+  :45476383_042019 risk:paymentDate "2019-04-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_042019";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 195360.0 .
+  
+  :45476383_052019 risk:paymentDate "2019-05-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_052019";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 194560.0 .
+  
+  :45476383_062019 risk:paymentDate "2019-06-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_062019";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 193760.0 .
+  
+  :45476383_072019 risk:paymentDate "2019-07-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_072019";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 193760.0 .
+  
+  :45476383_082019 risk:paymentDate "2019-08-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_082019";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 193360.0 .
+  
+  :45476383_092019 risk:paymentDate "2019-09-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_092019";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 192960.0 .
+  
+  :45476383_102019 risk:paymentDate "2019-10-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_102019";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 192760.0 .
+  
+  :45476383_112019 risk:paymentDate "2019-11-01"^^xsd:date;
+    risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_112019";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 192510.0 .
+  
+  :45422765_092017 risk:paymentDate "2017-09-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_092017";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 307200.0 .
+  
+  :45422765_102017 risk:paymentDate "2017-10-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_102017";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 305920.0 .
+  
+  :45422765_112017 risk:paymentDate "2017-11-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_112017";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 304640.0 .
+  
+  :45422765_122017 risk:paymentDate "2017-12-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_122017";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 303360.0 .
+  
+  :45422765_012018 risk:paymentDate "2018-01-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_012018";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 302080.0 .
+  
+  :45422765_022018 risk:paymentDate "2018-02-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_022018";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 300800.0 .
+  
+  :45422765_032018 risk:paymentDate "2018-03-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_032018";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 299520.0 .
+  
+  :45422765_042018 risk:paymentDate "2018-04-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_042018";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 298240.0 .
+  
+  :45422765_052018 risk:paymentDate "2018-05-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_052018";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 296960.0 .
+  
+  :45422765_062018 risk:paymentDate "2018-06-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_062018";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 295680.0 .
+  
+  :45422765_072018 risk:paymentDate "2018-07-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_072018";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 294400.0 .
+  
+  :45422765_082018 risk:paymentDate "2018-08-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_082018";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 293334.03 .
+  
+  :45422765_092018 risk:paymentDate "2018-09-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_092018";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 292265.29 .
+  
+  :45422765_102018 risk:paymentDate "2018-10-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_102018";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 291193.76 .
+  
+  :45422765_112018 risk:paymentDate "2018-11-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_112018";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 290119.44 .
+  
+  :45422765_122018 risk:paymentDate "2018-12-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_122018";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 289042.33 .
+  
+  :45422765_012019 risk:paymentDate "2019-01-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_012019";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 286042.33 .
+  
+  :45422765_022019 risk:paymentDate "2019-02-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_022019";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 284959.6 .
+  
+  :45422765_032019 risk:paymentDate "2019-03-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_032019";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 284959.6 .
+  
+  :45422765_042019 risk:paymentDate "2019-04-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_042019";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 282399.6 .
+  
+  :45422765_052019 risk:paymentDate "2019-05-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_052019";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 281119.6 .
+  
+  :45422765_062019 risk:paymentDate "2019-06-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_062019";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 279839.6 .
+  
+  :45422765_072019 risk:paymentDate "2019-07-01"^^xsd:date;
+    risk:paymentHistoryCode "45422765hist20171752";
+    risk:paymentID "45422765_072019";
+    risk:scheduledPrincipal 1280.0;
+    risk:totalPrincipal 278559.6 .
+  
+  :45476383_122019 risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_122019";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 192260.0 .
+  
+  :45476383_012020 risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_012020";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 192260.0 .
+  
+  :45476383_022020 risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_022020";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 192260.0 .
+  
+  :45476383_032020 risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_032020";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 192260.0 .
+  
+  :45476383_042020 risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_042020";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 192260.0 .
+  
+  :45476383_052020 risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_052020";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 192260.0 .
+  
+  :45476383_062020 risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_062020";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 192260.0 .
+  
+  :45476383_072020 risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_072020";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 192260.0 .
+  
+  :45476383_082020 risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_082020";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 192260.0 .
+  
+  :45476383_092020 risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_092020";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 192260.0 .
+  
+  :45476383_102020 risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_102020";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 192260.0 .
+  
+  :45476383_112020 risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_112020";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 192260.0 .
+  
+  :45476383_122020 risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_122020";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 192260.0 .
+  
+  :45476383_012021 risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_012021";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 192260.0 .
+  
+  :45476383_022021 risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_022021";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 192260.0 .
+  
+  :45476383_032021 risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_032021";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 192260.0 .
+  
+  :45476383_042021 risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_042021";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 192260.0 .
+  
+  :45476383_052021 risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_052021";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 192260.0 .
+  
+  :45476383_062021 risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_062021";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 192260.0 .
+  
+  :45476383_072021 risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_072021";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 192260.0 .
+  
+  :45476383_082021 risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_082021";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 192260.0 .
+  
+  :45476383_092021 risk:paymentHistoryCode "45476383hist20173564";
+    risk:paymentID "45476383_092021";
+    risk:scheduledPrincipal 877.47;
+    risk:totalPrincipal 192260.0 .
+  
+  :EVT1A3FF2 risk:requiredAmount 192260.0 .
+  
+  :T45422752_092017 risk:transactionAmount 984.19 .
+  
+  :T45422752_102017 risk:transactionAmount 1184.19 .
+  
+  :T45422752_112017 risk:transactionAmount 984.19 .
+  
+  :T45422752_122017 risk:transactionAmount 984.19 .
+  
+  :T45422752_012018 risk:transactionAmount 1184.19 .
+  
+  :T45422752_022018 risk:transactionAmount 1184.19 .
+  
+  :T45422752_032018 risk:transactionAmount 1184.19 .
+  
+  :T45422752_042018 risk:transactionAmount 984.19 .
+  
+  :T45422752_052018 risk:transactionAmount 984.19 .
+  
+  :T45422752_062018 risk:transactionAmount 984.19 .
+  
+  :T45422752_072018 risk:transactionAmount 984.19 .
+  
+  :T45422752_082018 risk:transactionAmount 984.19 .
+  
+  :T45422752_092018 risk:transactionAmount 984.19 .
+  
+  :T45422752_102018 risk:transactionAmount 984.19 .
+  
+  :T45422752_112018 risk:transactionAmount 984.19 .
+  
+  :T45422752_122018 risk:transactionAmount 984.19 .
+  
+  :T45422752_022019 risk:transactionAmount 2290.9 .
+  
+  :T45422752_032019 risk:transactionAmount 984.19 .
+  
+  :T45422752_042019 risk:transactionAmount 1063.36 .
+  
+  :T45422752_052019 risk:transactionAmount 984.19 .
+  
+  :T45422752_062019 risk:transactionAmount 984.19 .
+  
+  :T45422752_072019 risk:transactionAmount 984.19 .
+  
+  :T45422752_082019 risk:transactionAmount 984.19 .
+  
+  :T45422752_092019 risk:transactionAmount 984.19 .
+  
+  :T45422752_102019 risk:transactionAmount 1087.56 .
+  
+  :T45422752_112019 risk:transactionAmount 984.19 .
+  
+  :T45422752_122019 risk:transactionAmount 984.19 .
+  
+  :T45422752_012020 risk:transactionAmount 984.19 .
+  
+  :T45422752_022020 risk:transactionAmount 984.19 .
+  
+  :T45422752_032020 risk:transactionAmount 1734.16 .
+  
+  :T45422752_042020 risk:transactionAmount 984.19 .
+  
+  :T45422752_052020 risk:transactionAmount 1320.0 .
+  
+  :T45422752_062020 risk:transactionAmount 984.19 .
+  
+  :T45422752_072020 risk:transactionAmount 984.19 .
+  
+  :T45422752_082020 risk:transactionAmount 984.19 .
+  
+  :T45422752_092020 risk:transactionAmount 984.19 .
+  
+  :T45422752_102020 risk:transactionAmount 984.19 .
+  
+  :T45422752_112020 risk:transactionAmount 984.19 .
+  
+  :T45422752_122020 risk:transactionAmount 984.19 .
+  
+  :T45422752_012021 risk:transactionAmount 984.19 .
+  
+  :T45422752_022021 risk:transactionAmount 1500.0 .
+  
+  :T45422752_032021 risk:transactionAmount 2000.0 .
+  
+  :T45422752_042021 risk:transactionAmount 984.19 .
+  
+  :T45422752_052021 risk:transactionAmount 984.19 .
+  
+  :T45422752_062021 risk:transactionAmount 984.19 .
+  
+  :T45422752_072021 risk:transactionAmount 984.19 .
+  
+  :T45422752_082021 risk:transactionAmount 984.19 .
+  
+  :T45422752_092021 risk:transactionAmount 185980.61 .
+  
+  :T45422765_092017 risk:transactionAmount 1280.0 .
+  
+  :T45422765_102017 risk:transactionAmount 1280.0 .
+  
+  :T45422765_112017 risk:transactionAmount 1280.0 .
+  
+  :T45422765_122017 risk:transactionAmount 1280.0 .
+  
+  :T45422765_012018 risk:transactionAmount 1280.0 .
+  
+  :T45422765_022018 risk:transactionAmount 1280.0 .
+  
+  :T45422765_032018 risk:transactionAmount 1280.0 .
+  
+  :T45422765_042018 risk:transactionAmount 1280.0 .
+  
+  :T45422765_052018 risk:transactionAmount 1280.0 .
+  
+  :T45422765_062018 risk:transactionAmount 1280.0;
+    risk:transactionDate "2018-06-01"^^xsd:date;
+    risk:transactionID "T45422765_062018" .
+  
+  :T45422765_072018 risk:transactionAmount 1065.97;
+    risk:transactionDate "2018-07-01"^^xsd:date;
+    risk:transactionID "T45422765_072018" .
+  
+  :T45422765_082018 risk:transactionAmount 1068.74;
+    risk:transactionDate "2018-08-01"^^xsd:date;
+    risk:transactionID "T45422765_082018" .
+  
+  :T45422765_092018 risk:transactionAmount 1071.53;
+    risk:transactionDate "2018-09-01"^^xsd:date;
+    risk:transactionID "T45422765_092018" .
+  
+  :T45422765_102018 risk:transactionAmount 1074.32;
+    risk:transactionDate "2018-10-01"^^xsd:date;
+    risk:transactionID "T45422765_102018" .
+  
+  :T45422765_112018 risk:transactionAmount 1077.11;
+    risk:transactionDate "2018-11-01"^^xsd:date;
+    risk:transactionID "T45422765_112018" .
+  
+  :T45422765_122018 risk:transactionAmount 3000.0;
+    risk:transactionDate "2018-12-01"^^xsd:date;
+    risk:transactionID "T45422765_122018" .
+  
+  :T45422765_012019 risk:transactionAmount 1082.73;
+    risk:transactionDate "2019-01-01"^^xsd:date;
+    risk:transactionID "T45422765_012019" .
+  
+  :T45422765_022019 risk:transactionAmount 0.0;
+    risk:transactionDate "2019-02-01"^^xsd:date;
+    risk:transactionID "T45422765_022019" .
+  
+  :T45422765_032019 risk:transactionAmount 2560.0;
+    risk:transactionDate "2019-03-01"^^xsd:date;
+    risk:transactionID "T45422765_032019" .
+  
+  :T45422765_042019 risk:transactionAmount 1280.0;
+    risk:transactionDate "2019-04-01"^^xsd:date;
+    risk:transactionID "T45422765_042019" .
+  
+  :T45422765_052019 risk:transactionAmount 1280.0;
+    risk:transactionDate "2019-05-01"^^xsd:date;
+    risk:transactionID "T45422765_052019" .
+  
+  :T45422765_062019 risk:transactionAmount 1280.0;
+    risk:transactionDate "2019-06-01"^^xsd:date;
+    risk:transactionID "T45422765_062019" .
+  
+  :T45422765_072019 risk:transactionAmount 1280.0;
+    risk:transactionDate "2019-07-01"^^xsd:date;
+    risk:transactionID "T45422765_072019" .
+  
+  :T45422765_082019 risk:transactionAmount 1280.0;
+    risk:transactionDate "2019-08-01"^^xsd:date;
+    risk:transactionID "T45422765_082019" .
+  
+  :T45422765_092019 risk:transactionAmount 1280.0;
+    risk:transactionDate "2019-09-01"^^xsd:date;
+    risk:transactionID "T45422765_092019" .
+  
+  :T45422765_102019 risk:transactionAmount 1280.0;
+    risk:transactionDate "2019-10-01"^^xsd:date;
+    risk:transactionID "T45422765_102019" .
+  
+  :T45422765_112019 risk:transactionAmount 1280.0;
+    risk:transactionDate "2019-11-01"^^xsd:date;
+    risk:transactionID "T45422765_112019" .
+  
+  :T45422765_122019 risk:transactionAmount 1280.0;
+    risk:transactionDate "2019-12-01"^^xsd:date;
+    risk:transactionID "T45422765_122019" .
+  
+  :T45422765_012020 risk:transactionAmount 1280.0;
+    risk:transactionDate "2020-01-01"^^xsd:date;
+    risk:transactionID "T45422765_012020" .
+  
+  :T45422765_022020 risk:transactionAmount 0.0;
+    risk:transactionDate "2020-02-01"^^xsd:date;
+    risk:transactionID "T45422765_022020" .
+  
+  :T45422765_032020 risk:transactionAmount 1500.0;
+    risk:transactionDate "2020-03-01"^^xsd:date;
+    risk:transactionID "T45422765_032020" .
+  
+  :T45422765_042020 risk:transactionAmount 1500.0;
+    risk:transactionDate "2020-04-01"^^xsd:date;
+    risk:transactionID "T45422765_042020" .
+  
+  :T45422765_052020 risk:transactionAmount 1500.0;
+    risk:transactionDate "2020-05-01"^^xsd:date;
+    risk:transactionID "T45422765_052020" .
+  
+  :T45422765_062020 risk:transactionAmount 1500.0;
+    risk:transactionDate "2020-06-01"^^xsd:date;
+    risk:transactionID "T45422765_062020" .
+  
+  :T45422765_072020 risk:transactionAmount 1500.0;
+    risk:transactionDate "2020-07-01"^^xsd:date;
+    risk:transactionID "T45422765_072020" .
+  
+  :T45422765_082020 risk:transactionAmount 1480.0;
+    risk:transactionDate "2020-08-01"^^xsd:date;
+    risk:transactionID "T45422765_082020" .
+  
+  :T45422765_092020 risk:transactionAmount 1280.0;
+    risk:transactionDate "2020-09-01"^^xsd:date;
+    risk:transactionID "T45422765_092020" .
+  
+  :T45422765_102020 risk:transactionAmount 1280.0;
+    risk:transactionDate "2020-10-01"^^xsd:date;
+    risk:transactionID "T45422765_102020" .
+  
+  :T45422765_112020 risk:transactionAmount 1280.0;
+    risk:transactionDate "2020-11-01"^^xsd:date;
+    risk:transactionID "T45422765_112020" .
+  
+  :T45422765_122020 risk:transactionAmount 1280.0;
+    risk:transactionDate "2020-12-01"^^xsd:date;
+    risk:transactionID "T45422765_122020" .
+  
+  :T45422765_012021 risk:transactionAmount 1280.0;
+    risk:transactionDate "2021-01-01"^^xsd:date;
+    risk:transactionID "T45422765_012021" .
+  
+  :T45422765_022021 risk:transactionAmount 0.0;
+    risk:transactionDate "2021-02-01"^^xsd:date;
+    risk:transactionID "T45422765_022021" .
+  
+  :T45422765_032021 risk:transactionAmount 1500.0;
+    risk:transactionDate "2021-03-01"^^xsd:date;
+    risk:transactionID "T45422765_032021" .
+  
+  :T45422765_042021 risk:transactionAmount 1500.0;
+    risk:transactionDate "2021-04-01"^^xsd:date;
+    risk:transactionID "T45422765_042021" .
+  
+  :T45422765_052021 risk:transactionAmount 1500.0;
+    risk:transactionDate "2021-05-01"^^xsd:date;
+    risk:transactionID "T45422765_052021" .
+  
+  :T45422765_062021 risk:transactionAmount 1500.0;
+    risk:transactionDate "2021-06-01"^^xsd:date;
+    risk:transactionID "T45422765_062021" .
+  
+  :T45422765_072021 risk:transactionAmount 1480.0;
+    risk:transactionDate "2021-07-01"^^xsd:date;
+    risk:transactionID "T45422765_072021" .
+  
+  :T45422765_082021 risk:transactionAmount 1280.0;
+    risk:transactionDate "2021-08-01"^^xsd:date;
+    risk:transactionID "T45422765_082021" .
+  
+  :T45422765_092021 risk:transactionAmount 1280.0;
+    risk:transactionDate "2021-09-01"^^xsd:date;
+    risk:transactionID "T45422765_092021" .
+  
+  :T45476383_092017 risk:transactionAmount 880.0;
+    risk:transactionDate "2017-09-01"^^xsd:date;
+    risk:transactionID "T45476383_092017" .
+  
+  :T45476383_102017 risk:transactionAmount 880.0;
+    risk:transactionDate "2017-10-01"^^xsd:date;
+    risk:transactionID "T45476383_102017" .
+  
+  :T45476383_112017 risk:transactionAmount 880.0;
+    risk:transactionDate "2017-11-01"^^xsd:date;
+    risk:transactionID "T45476383_112017" .
+  
+  :T45476383_122017 risk:transactionAmount 880.0;
+    risk:transactionDate "2017-12-01"^^xsd:date;
+    risk:transactionID "T45476383_122017" .
+  
+  :T45476383_012018 risk:transactionAmount 880.0;
+    risk:transactionDate "2018-01-01"^^xsd:date;
+    risk:transactionID "T45476383_012018" .
+  
+  :T45476383_022018 risk:transactionAmount 800.0;
+    risk:transactionDate "2018-02-01"^^xsd:date;
+    risk:transactionID "T45476383_022018" .
+  
+  :T45476383_032018 risk:transactionAmount 800.0;
+    risk:transactionDate "2018-03-01"^^xsd:date;
+    risk:transactionID "T45476383_032018" .
+  
+  :T45476383_042018 risk:transactionAmount 0.0;
+    risk:transactionDate "2018-04-01"^^xsd:date;
+    risk:transactionID "T45476383_042018" .
+  
+  :T45476383_052018 risk:transactionAmount 880.0;
+    risk:transactionDate "2018-05-01"^^xsd:date;
+    risk:transactionID "T45476383_052018" .
+  
+  :T45476383_062018 risk:transactionAmount 880.0;
+    risk:transactionDate "2018-06-01"^^xsd:date;
+    risk:transactionID "T45476383_062018" .
+  
+  :T45476383_072018 risk:transactionAmount 880.0;
+    risk:transactionDate "2018-07-01"^^xsd:date;
+    risk:transactionID "T45476383_072018" .
+  
+  :T45476383_082018 risk:transactionAmount 880.0;
+    risk:transactionDate "2018-08-01"^^xsd:date;
+    risk:transactionID "T45476383_082018" .
+  
+  :T45476383_092018 risk:transactionAmount 1200.0;
+    risk:transactionDate "2018-09-01"^^xsd:date;
+    risk:transactionID "T45476383_092018" .
+  
+  :T45476383_102018 risk:transactionAmount 1200.0;
+    risk:transactionDate "2018-10-01"^^xsd:date;
+    risk:transactionID "T45476383_102018" .
+  
+  :T45476383_112018 risk:transactionAmount 800.0;
+    risk:transactionDate "2018-11-01"^^xsd:date;
+    risk:transactionID "T45476383_112018" .
+  
+  :T45476383_122018 risk:transactionAmount 800.0;
+    risk:transactionDate "2018-12-01"^^xsd:date;
+    risk:transactionID "T45476383_122018" .
+  
+  :T45476383_012019 risk:transactionAmount 0.0;
+    risk:transactionDate "2019-01-01"^^xsd:date;
+    risk:transactionID "T45476383_012019" .
+  
+  :T45476383_022019 risk:transactionAmount 800.0;
+    risk:transactionDate "2019-02-01"^^xsd:date;
+    risk:transactionID "T45476383_022019" .
+  
+  :T45476383_032019 risk:transactionAmount 800.0;
+    risk:transactionDate "2019-03-01"^^xsd:date;
+    risk:transactionID "T45476383_032019" .
+  
+  :T45476383_042019 risk:transactionAmount 800.0;
+    risk:transactionDate "2019-04-01"^^xsd:date;
+    risk:transactionID "T45476383_042019" .
+  
+  :T45476383_052019 risk:transactionAmount 800.0;
+    risk:transactionDate "2019-05-01"^^xsd:date;
+    risk:transactionID "T45476383_052019" .
+  
+  :T45476383_062019 risk:transactionAmount 0.0;
+    risk:transactionDate "2019-06-01"^^xsd:date;
+    risk:transactionID "T45476383_062019" .
+  
+  :T45476383_072019 risk:transactionAmount 400.0;
+    risk:transactionDate "2019-07-01"^^xsd:date;
+    risk:transactionID "T45476383_072019" .
+  
+  :T45476383_082019 risk:transactionAmount 400.0;
+    risk:transactionDate "2019-08-01"^^xsd:date;
+    risk:transactionID "T45476383_082019" .
+  
+  :T45476383_092019 risk:transactionAmount 200.0;
+    risk:transactionDate "2019-09-01"^^xsd:date;
+    risk:transactionID "T45476383_092019" .
+  
+  :T45476383_102019 risk:transactionAmount 250.0;
+    risk:transactionDate "2019-10-01"^^xsd:date;
+    risk:transactionID "T45476383_102019" .
+  
+  :T45476383_112019 risk:transactionAmount 250.0;
+    risk:transactionDate "2019-11-01"^^xsd:date;
+    risk:transactionID "T45476383_112019" .
+  
+  :T45476383_122019 risk:transactionAmount 0.0;
+    risk:transactionDate "2019-12-01"^^xsd:date;
+    risk:transactionID "T45476383_122019" .
+  
+  :T45476383_012020 risk:transactionAmount 0.0;
+    risk:transactionDate "2020-01-01"^^xsd:date;
+    risk:transactionID "T45476383_012020" .
+  
+  :T45476383_022020 risk:transactionAmount 0.0;
+    risk:transactionDate "2020-02-01"^^xsd:date;
+    risk:transactionID "T45476383_022020" .
+  
+  :T45422752_092017 risk:transactionDate "2017-09-01"^^xsd:date;
+    risk:transactionID "T45422752_092017" .
+  
+  :T45422752_102017 risk:transactionDate "2017-10-01"^^xsd:date;
+    risk:transactionID "T45422752_102017" .
+  
+  :T45422752_112017 risk:transactionDate "2017-11-01"^^xsd:date;
+    risk:transactionID "T45422752_112017" .
+  
+  :T45422752_122017 risk:transactionDate "2017-12-01"^^xsd:date;
+    risk:transactionID "T45422752_122017" .
+  
+  :T45422752_012018 risk:transactionDate "2018-01-01"^^xsd:date;
+    risk:transactionID "T45422752_012018" .
+  
+  :T45422752_022018 risk:transactionDate "2018-02-01"^^xsd:date;
+    risk:transactionID "T45422752_022018" .
+  
+  :T45422752_032018 risk:transactionDate "2018-03-01"^^xsd:date;
+    risk:transactionID "T45422752_032018" .
+  
+  :T45422752_042018 risk:transactionDate "2018-04-01"^^xsd:date;
+    risk:transactionID "T45422752_042018" .
+  
+  :T45422752_052018 risk:transactionDate "2018-05-01"^^xsd:date;
+    risk:transactionID "T45422752_052018" .
+  
+  :T45422752_062018 risk:transactionDate "2018-06-01"^^xsd:date;
+    risk:transactionID "T45422752_062018" .
+  
+  :T45422752_072018 risk:transactionDate "2018-07-01"^^xsd:date;
+    risk:transactionID "T45422752_072018" .
+  
+  :T45422752_082018 risk:transactionDate "2018-08-01"^^xsd:date;
+    risk:transactionID "T45422752_082018" .
+  
+  :T45422752_092018 risk:transactionDate "2018-09-01"^^xsd:date;
+    risk:transactionID "T45422752_092018" .
+  
+  :T45422752_102018 risk:transactionDate "2018-10-01"^^xsd:date;
+    risk:transactionID "T45422752_102018" .
+  
+  :T45422752_112018 risk:transactionDate "2018-11-01"^^xsd:date;
+    risk:transactionID "T45422752_112018" .
+  
+  :T45422752_122018 risk:transactionDate "2018-12-01"^^xsd:date;
+    risk:transactionID "T45422752_122018" .
+  
+  :T45422752_022019 risk:transactionDate "2019-02-01"^^xsd:date;
+    risk:transactionID "T45422752_022019" .
+  
+  :T45422752_032019 risk:transactionDate "2019-03-01"^^xsd:date;
+    risk:transactionID "T45422752_032019" .
+  
+  :T45422752_042019 risk:transactionDate "2019-04-01"^^xsd:date;
+    risk:transactionID "T45422752_042019" .
+  
+  :T45422752_052019 risk:transactionDate "2019-05-01"^^xsd:date;
+    risk:transactionID "T45422752_052019" .
+  
+  :T45422752_062019 risk:transactionDate "2019-06-01"^^xsd:date;
+    risk:transactionID "T45422752_062019" .
+  
+  :T45422752_072019 risk:transactionDate "2019-07-01"^^xsd:date;
+    risk:transactionID "T45422752_072019" .
+  
+  :T45422752_082019 risk:transactionDate "2019-08-01"^^xsd:date;
+    risk:transactionID "T45422752_082019" .
+  
+  :T45422752_092019 risk:transactionDate "2019-09-01"^^xsd:date;
+    risk:transactionID "T45422752_092019" .
+  
+  :T45422752_102019 risk:transactionDate "2019-10-01"^^xsd:date;
+    risk:transactionID "T45422752_102019" .
+  
+  :T45422752_112019 risk:transactionDate "2019-11-01"^^xsd:date;
+    risk:transactionID "T45422752_112019" .
+  
+  :T45422752_122019 risk:transactionDate "2019-12-01"^^xsd:date;
+    risk:transactionID "T45422752_122019" .
+  
+  :T45422752_012020 risk:transactionDate "2020-01-01"^^xsd:date;
+    risk:transactionID "T45422752_012020" .
+  
+  :T45422752_022020 risk:transactionDate "2020-02-01"^^xsd:date;
+    risk:transactionID "T45422752_022020" .
+  
+  :T45422752_032020 risk:transactionDate "2020-03-01"^^xsd:date;
+    risk:transactionID "T45422752_032020" .
+  
+  :T45422752_042020 risk:transactionDate "2020-04-01"^^xsd:date;
+    risk:transactionID "T45422752_042020" .
+  
+  :T45422752_052020 risk:transactionDate "2020-05-01"^^xsd:date;
+    risk:transactionID "T45422752_052020" .
+  
+  :T45422752_062020 risk:transactionDate "2020-06-01"^^xsd:date;
+    risk:transactionID "T45422752_062020" .
+  
+  :T45422752_072020 risk:transactionDate "2020-07-01"^^xsd:date;
+    risk:transactionID "T45422752_072020" .
+  
+  :T45422752_082020 risk:transactionDate "2020-08-01"^^xsd:date;
+    risk:transactionID "T45422752_082020" .
+  
+  :T45422752_092020 risk:transactionDate "2020-09-01"^^xsd:date;
+    risk:transactionID "T45422752_092020" .
+  
+  :T45422752_102020 risk:transactionDate "2020-10-01"^^xsd:date;
+    risk:transactionID "T45422752_102020" .
+  
+  :T45422752_112020 risk:transactionDate "2020-11-01"^^xsd:date;
+    risk:transactionID "T45422752_112020" .
+  
+  :T45422752_122020 risk:transactionDate "2020-12-01"^^xsd:date;
+    risk:transactionID "T45422752_122020" .
+  
+  :T45422752_012021 risk:transactionDate "2021-01-01"^^xsd:date;
+    risk:transactionID "T45422752_012021" .
+  
+  :T45422752_022021 risk:transactionDate "2021-02-01"^^xsd:date;
+    risk:transactionID "T45422752_022021" .
+  
+  :T45422752_032021 risk:transactionDate "2021-03-01"^^xsd:date;
+    risk:transactionID "T45422752_032021" .
+  
+  :T45422752_042021 risk:transactionDate "2021-04-01"^^xsd:date;
+    risk:transactionID "T45422752_042021" .
+  
+  :T45422752_052021 risk:transactionDate "2021-05-01"^^xsd:date;
+    risk:transactionID "T45422752_052021" .
+  
+  :T45422752_062021 risk:transactionDate "2021-06-01"^^xsd:date;
+    risk:transactionID "T45422752_062021" .
+  
+  :T45422752_072021 risk:transactionDate "2021-07-01"^^xsd:date;
+    risk:transactionID "T45422752_072021" .
+  
+  :T45422752_082021 risk:transactionDate "2021-08-01"^^xsd:date;
+    risk:transactionID "T45422752_082021" .
+  
+  :T45422752_092021 risk:transactionDate "2021-09-01"^^xsd:date;
+    risk:transactionID "T45422752_092021" .
+  
+  :T45422765_092017 risk:transactionDate "2017-09-01"^^xsd:date;
+    risk:transactionID "T45422765_092017" .
+  
+  :T45422765_102017 risk:transactionDate "2017-10-01"^^xsd:date;
+    risk:transactionID "T45422765_102017" .
+  
+  :T45422765_112017 risk:transactionDate "2017-11-01"^^xsd:date;
+    risk:transactionID "T45422765_112017" .
+  
+  :T45422765_122017 risk:transactionDate "2017-12-01"^^xsd:date;
+    risk:transactionID "T45422765_122017" .
+  
+  :T45422765_012018 risk:transactionDate "2018-01-01"^^xsd:date;
+    risk:transactionID "T45422765_012018" .
+  
+  :T45422765_022018 risk:transactionDate "2018-02-01"^^xsd:date;
+    risk:transactionID "T45422765_022018" .
+  
+  :T45422765_032018 risk:transactionDate "2018-03-01"^^xsd:date;
+    risk:transactionID "T45422765_032018" .
+  
+  :T45422765_042018 risk:transactionDate "2018-04-01"^^xsd:date;
+    risk:transactionID "T45422765_042018" .
+  
+  :T45422765_052018 risk:transactionDate "2018-05-01"^^xsd:date;
+    risk:transactionID "T45422765_052018" .
+  
+  :45476383_092017 risk:transactionID "T45476383_092017" .
+  
+  :45476383_102017 risk:transactionID "T45476383_102017" .
+  
+  :45476383_112017 risk:transactionID "T45476383_112017" .
+  
+  :45476383_122017 risk:transactionID "T45476383_122017" .
+  
+  :45476383_012018 risk:transactionID "T45476383_012018" .
+  
+  :45476383_022018 risk:transactionID "T45476383_022018" .
+  
+  :45476383_032018 risk:transactionID "T45476383_032018" .
+  
+  :45476383_042018 risk:transactionID "T45476383_042018" .
+  
+  :45476383_052018 risk:transactionID "T45476383_052018" .
+  
+  :45476383_062018 risk:transactionID "T45476383_062018" .
+  
+  :45476383_072018 risk:transactionID "T45476383_072018" .
+  
+  :45476383_082018 risk:transactionID "T45476383_082018" .
+  
+  :45476383_092018 risk:transactionID "T45476383_092018" .
+  
+  :45476383_102018 risk:transactionID "T45476383_102018" .
+  
+  :45476383_112018 risk:transactionID "T45476383_112018" .
+  
+  :45476383_122018 risk:transactionID "T45476383_122018" .
+  
+  :45476383_012019 risk:transactionID "T45476383_012019" .
+  
+  :45476383_022019 risk:transactionID "T45476383_022019" .
+  
+  :45476383_032019 risk:transactionID "T45476383_032019" .
+  
+  :45476383_042019 risk:transactionID "T45476383_042019" .
+  
+  :45476383_052019 risk:transactionID "T45476383_052019" .
+  
+  :45476383_062019 risk:transactionID "T45476383_062019" .
+  
+  :45476383_072019 risk:transactionID "T45476383_072019" .
+  
+  :45476383_082019 risk:transactionID "T45476383_082019" .
+  
+  :45476383_092019 risk:transactionID "T45476383_092019" .
+  
+  :45476383_102019 risk:transactionID "T45476383_102019" .
+  
+  :45476383_112019 risk:transactionID "T45476383_112019" .
+  
+  :45476383_122019 risk:transactionID "T45476383_122019" .
+  
+  :45476383_012020 risk:transactionID "T45476383_012020" .
+  
+  :45476383_022020 risk:transactionID "T45476383_022020" .
+  
+  :45422765_092017 risk:transactionID "T45422765_092017" .
+  
+  :45422765_102017 risk:transactionID "T45422765_102017" .
+  
+  :45422765_112017 risk:transactionID "T45422765_112017" .
+  
+  :45422765_122017 risk:transactionID "T45422765_122017" .
+  
+  :45422765_012018 risk:transactionID "T45422765_012018" .
+  
+  :45422765_022018 risk:transactionID "T45422765_022018" .
+  
+  :45422765_032018 risk:transactionID "T45422765_032018" .
+  
+  :45422765_042018 risk:transactionID "T45422765_042018" .
+  
+  :45422765_052018 risk:transactionID "T45422765_052018" .
+  
+  :45422765_062018 risk:transactionID "T45422765_062018" .
+  
+  :45422765_072018 risk:transactionID "T45422765_072018" .
+  
+  :45422765_082018 risk:transactionID "T45422765_082018" .
+  
+  :45422765_092018 risk:transactionID "T45422765_092018" .
+  
+  :45422765_102018 risk:transactionID "T45422765_102018" .
+  
+  :45422765_112018 risk:transactionID "T45422765_112018" .
+  
+  :45422765_122018 risk:transactionID "T45422765_122018" .
+  
+  :45422765_012019 risk:transactionID "T45422765_012019" .
+  
+  :45422765_022019 risk:transactionID "T45422765_022019" .
+  
+  :45422765_032019 risk:transactionID "T45422765_032019" .
+  
+  :45422765_042019 risk:transactionID "T45422765_042019" .
+  
+  :45422765_052019 risk:transactionID "T45422765_052019" .
+  
+  :45422765_062019 risk:transactionID "T45422765_062019" .
+  
+  :45422765_072019 risk:transactionID "T45422765_072019" .
+  
+  :45422765_082019 risk:transactionID "T45422765_082019" .
+  
+  :45422765_092019 risk:transactionID "T45422765_092019" .
+  
+  :45422765_102019 risk:transactionID "T45422765_102019" .
+  
+  :45422765_112019 risk:transactionID "T45422765_112019" .
+  
+  :45422765_122019 risk:transactionID "T45422765_122019" .
+  
+  :45422765_012020 risk:transactionID "T45422765_012020" .
+  
+  :45422765_022020 risk:transactionID "T45422765_022020" .
+  
+  :45422765_032020 risk:transactionID "T45422765_032020" .
+  
+  :45422765_042020 risk:transactionID "T45422765_042020" .
+  
+  :45422765_052020 risk:transactionID "T45422765_052020" .
+  
+  :45422765_062020 risk:transactionID "T45422765_062020" .
+  
+  :45422765_072020 risk:transactionID "T45422765_072020" .
+  
+  :45422765_082020 risk:transactionID "T45422765_082020" .
+  
+  :45422765_092020 risk:transactionID "T45422765_092020" .
+  
+  :45422765_102020 risk:transactionID "T45422765_102020" .
+  
+  :45422765_112020 risk:transactionID "T45422765_112020" .
+  
+  :45422765_122020 risk:transactionID "T45422765_122020" .
+  
+  :45422765_012021 risk:transactionID "T45422765_012021" .
+  
+  :45422765_022021 risk:transactionID "T45422765_022021" .
+  
+  :45422765_032021 risk:transactionID "T45422765_032021" .
+  
+  :45422765_042021 risk:transactionID "T45422765_042021" .
+  
+  :45422765_052021 risk:transactionID "T45422765_052021" .
+  
+  :45422765_062021 risk:transactionID "T45422765_062021" .
+  
+  :45422765_072021 risk:transactionID "T45422765_072021" .
+  
+  :45422765_082021 risk:transactionID "T45422765_082021" .
+  
+  :45422765_092021 risk:transactionID "T45422765_092021" .
+  
+  :45422752_092017 risk:transactionID "T45422752_092017" .
+  
+  :45422752_102017 risk:transactionID "T45422752_102017" .
+  
+  :45422752_112017 risk:transactionID "T45422752_112017" .
+  
+  :45422752_122017 risk:transactionID "T45422752_122017" .
+  
+  :45422752_012018 risk:transactionID "T45422752_012018" .
+  
+  :45422752_022018 risk:transactionID "T45422752_022018" .
+  
+  :45422752_032018 risk:transactionID "T45422752_032018" .
+  
+  :45422752_042018 risk:transactionID "T45422752_042018" .
+  
+  :45422752_052018 risk:transactionID "T45422752_052018" .
+  
+  :45422752_062018 risk:transactionID "T45422752_062018" .
+  
+  :45422752_072018 risk:transactionID "T45422752_072018" .
+  
+  :45422752_082018 risk:transactionID "T45422752_082018" .
+  
+  :45422752_092018 risk:transactionID "T45422752_092018" .
+  
+  :45422752_102018 risk:transactionID "T45422752_102018" .
+  
+  :45422752_112018 risk:transactionID "T45422752_112018" .
+  
+  :45422752_122018 risk:transactionID "T45422752_122018" .
+  
+  :45422752_022019 risk:transactionID "T45422752_022019" .
+  
+  :45422752_032019 risk:transactionID "T45422752_032019" .
+  
+  :45422752_042019 risk:transactionID "T45422752_042019" .
+  
+  :45422752_052019 risk:transactionID "T45422752_052019" .
+  
+  :45422752_062019 risk:transactionID "T45422752_062019" .
+  
+  :45422752_072019 risk:transactionID "T45422752_072019" .
+  
+  :45422752_082019 risk:transactionID "T45422752_082019" .
+  
+  :45422752_092019 risk:transactionID "T45422752_092019" .
+  
+  :45422752_102019 risk:transactionID "T45422752_102019" .
+  
+  :45422752_112019 risk:transactionID "T45422752_112019" .
+  
+  :45422752_122019 risk:transactionID "T45422752_122019" .
+  
+  :45422752_012020 risk:transactionID "T45422752_012020" .
+  
+  :45422752_022020 risk:transactionID "T45422752_022020" .
+  
+  :45422752_032020 risk:transactionID "T45422752_032020" .
+  
+  :45422752_042020 risk:transactionID "T45422752_042020" .
+  
+  :45422752_052020 risk:transactionID "T45422752_052020" .
+  
+  :45422752_062020 risk:transactionID "T45422752_062020" .
+  
+  :45422752_072020 risk:transactionID "T45422752_072020" .
+  
+  :45422752_082020 risk:transactionID "T45422752_082020" .
+  
+  :45422752_092020 risk:transactionID "T45422752_092020" .
+  
+  :45422752_102020 risk:transactionID "T45422752_102020" .
+  
+  :45422752_112020 risk:transactionID "T45422752_112020" .
+  
+  :45422752_122020 risk:transactionID "T45422752_122020" .
+  
+  :45422752_012021 risk:transactionID "T45422752_012021" .
+  
+  :45422752_022021 risk:transactionID "T45422752_022021" .
+  
+  :45422752_032021 risk:transactionID "T45422752_032021" .
+  
+  :45422752_042021 risk:transactionID "T45422752_042021" .
+  
+  :45422752_052021 risk:transactionID "T45422752_052021" .
+  
+  :45422752_062021 risk:transactionID "T45422752_062021" .
+  
+  :45422752_072021 risk:transactionID "T45422752_072021" .
+  
+  :45422752_082021 risk:transactionID "T45422752_082021" .
+  
+  :45422752_092021 risk:transactionID "T45422752_092021" .
+  
+  <https://w3id.org/Interest_45422752_1497> prod:loanID "45422752_1497" .
+  
+  <https://w3id.org/Interest_45422765_1497> prod:loanID "45422765_1497" .
+  
+  <https://w3id.org/Interest_45476383_1497> prod:loanID "45476383_1497" .
+  
+  :SCH2F8A prod:loanID "45476383_1497" .
+  
+  :SCH9Q4M prod:loanID "45422765_1497" .
+  
+  :SCH7T2C prod:loanID "45422752_1497" .
+  
+  :a45422752_122019 prod:loanID "45422752_1497" .
+  
+  :a45422765_012019 prod:loanID "45422765_1497" .
+  
+  :a45476383_012019 prod:loanID "45476383_1497" .
+  
+  :EVT1A3FF2 risk:eventID "EVT1A3FF2" .
+  
+  :PI83asset1 risk:eventID "PI83asset1" .
+  
+  :EVT1A3F risk:eventID "EVT1A3F";
+    risk:applicationID "a45476383_042019" .
+  
+  :PI65asset1 risk:eventID "PI65asset1" .
+  
+  :EVT4C7Q risk:eventID "EVT4C7Q";
+    risk:applicationID "a45422765_052018" .
+  
+  :PI52asset1 risk:eventID "PI52asset1" .
+  
+  :EVT9M2K risk:eventID "EVT9M2K";
+    risk:applicationID "a45422752_102017" .
+}

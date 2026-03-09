@@ -1,0 +1,3355 @@
+@prefix agg: <http://jena.apache.org/ARQ/function/aggregate#> .
+@prefix : <https://w3id.org/financialDT#> .
+@prefix sail: <http://www.openrdf.org/config/sail#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geof: <http://www.opengis.net/def/function/geosparql/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions> .
+@prefix fil: <https://w3id.org/financialDT/financialInstitute#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix spif: <http://spinrdf.org/spif#> .
+@prefix path: <http://www.ontotext.com/path#> .
+@prefix array: <http://www.w3.org/2005/xpath-functions/array> .
+@prefix apf: <http://jena.apache.org/ARQ/property#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix rep: <http://www.openrdf.org/config/repository#> .
+@prefix map: <http://www.w3.org/2005/xpath-functions/map> .
+@prefix sr: <http://www.openrdf.org/config/repository/sail#> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix prod: <https://w3id.org/financialDT/product#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix afn: <http://jena.apache.org/ARQ/function#> .
+@prefix list: <http://jena.apache.org/ARQ/list#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ofn: <http://www.ontotext.com/sparql/functions/> .
+@prefix geoext: <http://rdf.useekm.com/ext#> .
+@prefix graphdb: <http://www.ontotext.com/config/graphdb#> .
+@prefix risk: <https://w3id.org/financialDT/risk#> .
+@prefix math: <http://www.w3.org/2005/xpath-functions/math> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix omgeo: <http://www.ontotext.com/owlim/geo#> .
+
+<https://w3id.org/financialDT/ontology> {
+  <https://w3id.org/financialDT> a owl:Ontology .
+  
+  <http://purl.org/dc/terms/creator> a owl:AnnotationProperty .
+  
+  <http://purl.org/dc/terms/description> a owl:AnnotationProperty .
+  
+  <http://purl.org/dc/terms/license> a owl:AnnotationProperty .
+  
+  <http://purl.org/dc/terms/contributor> a owl:AnnotationProperty .
+  
+  <http://purl.org/dc/terms/created> a owl:AnnotationProperty .
+  
+  <http://purl.org/dc/terms/isVersionOf> a owl:AnnotationProperty .
+  
+  <http://purl.org/dc/terms/modified> a owl:AnnotationProperty .
+  
+  <http://purl.org/dc/terms/rights> a owl:AnnotationProperty .
+  
+  xsd:pattern a owl:AnnotationProperty .
+  
+  <http://www.w3.org/2004/02/skos/core#changeNote> a owl:AnnotationProperty .
+  
+  <http://www.w3.org/2004/02/skos/core#definition> a owl:AnnotationProperty .
+  
+  <http://www.w3.org/2004/02/skos/core#editorialNote> a owl:AnnotationProperty .
+  
+  <http://www.w3.org/2004/02/skos/core#historyNote> a owl:AnnotationProperty .
+  
+  <http://www.w3.org/2004/02/skos/core#note> a owl:AnnotationProperty .
+  
+  <http://www.w3.org/2004/02/skos/core#prefLabel> a owl:AnnotationProperty .
+  
+  <http://www.w3.org/2004/02/skos/core#scopeNote> a owl:AnnotationProperty .
+  
+  xsd:date a rdfs:Datatype .
+  
+  xsd:duration a rdfs:Datatype .
+  
+  xsd:gDay a rdfs:Datatype .
+  
+  xsd:gMonth a rdfs:Datatype .
+  
+  xsd:gYear a rdfs:Datatype .
+  
+  xsd:gYearMonth a rdfs:Datatype .
+  
+  fil:collateralOf a owl:ObjectProperty;
+    rdfs:domain prod:Asset;
+    rdfs:range fil:MortgageContract;
+    owl:inverseOf fil:holdsCollateral .
+  
+  fil:holdsCollateral a owl:ObjectProperty;
+    rdfs:domain fil:MortgageContract;
+    rdfs:range prod:Asset .
+  
+  prod:Asset a owl:Class .
+  
+  fil:MortgageContract a owl:Class;
+    rdfs:subClassOf fil:ContractDocument, _:node266, _:node267 .
+  
+  fil:hasAccountHolder a owl:ObjectProperty;
+    rdfs:domain fil:Account;
+    rdfs:range fil:Person;
+    owl:inverseOf fil:holdsAccount .
+  
+  fil:holdsAccount a owl:ObjectProperty;
+    rdfs:domain fil:Person;
+    rdfs:range fil:Account .
+  
+  fil:Account a owl:Class .
+  
+  fil:Person a owl:Class;
+    rdfs:subClassOf _:node268, _:node269 .
+  
+  fil:hasBalance a owl:ObjectProperty;
+    rdfs:domain fil:LoanAccount;
+    rdfs:range prod:CreditBalance .
+  
+  fil:LoanAccount a owl:Class;
+    rdfs:subClassOf fil:LoanOrCreditAccount, _:node264, _:node265 .
+  
+  prod:CreditBalance a owl:Class;
+    rdfs:subClassOf prod:Balance .
+  
+  fil:hasID a owl:ObjectProperty;
+    rdfs:domain fil:Person;
+    rdfs:range fil:IdentityDocument;
+    owl:inverseOf fil:idOf .
+  
+  fil:idOf a owl:ObjectProperty;
+    rdfs:domain fil:IdentityDocument;
+    rdfs:range fil:Person .
+  
+  fil:IdentityDocument a owl:Class;
+    rdfs:subClassOf fil:LegalDocument .
+  
+  fil:hasLocation a owl:ObjectProperty;
+    rdfs:domain fil:Address;
+    rdfs:range _:node1;
+    owl:inverseOf fil:locatedAt .
+  
+  fil:locatedAt a owl:ObjectProperty;
+    rdfs:domain _:node5;
+    rdfs:range fil:Address .
+  
+  fil:Address a owl:Class;
+    rdfs:subClassOf fil:Location .
+  
+  _:node1 a owl:Class .
+  
+  fil:Organisation a owl:Class .
+  
+  fil:hasRole a owl:ObjectProperty;
+    rdfs:domain fil:Person;
+    rdfs:range prod:Role;
+    owl:inverseOf fil:roleOf .
+  
+  fil:roleOf a owl:ObjectProperty;
+    rdfs:domain prod:Role;
+    rdfs:range fil:Person .
+  
+  prod:Role a owl:Class .
+  
+  fil:issuedByOrg a owl:ObjectProperty;
+    rdfs:domain fil:ContractDocument;
+    rdfs:range fil:Organisation;
+    owl:inverseOf fil:orgIssues .
+  
+  fil:orgIssues a owl:ObjectProperty;
+    rdfs:domain fil:Organisation;
+    rdfs:range fil:ContractDocument .
+  
+  fil:ContractDocument a owl:Class;
+    rdfs:subClassOf fil:LegalDocument .
+  
+  fil:loanCurrency a owl:ObjectProperty;
+    rdfs:domain fil:MortgageContract;
+    rdfs:range fil:Currency .
+  
+  fil:Currency a owl:Class;
+    rdfs:subClassOf fil:FinancialInstrument .
+  
+  _:node5 a owl:Class .
+  
+  fil:offersProduct a owl:ObjectProperty;
+    rdfs:domain fil:Organisation;
+    rdfs:range prod:FinancialProduct;
+    owl:inverseOf fil:productOfferedBy .
+  
+  fil:productOfferedBy a owl:ObjectProperty;
+    rdfs:domain prod:FinancialProduct;
+    rdfs:range fil:Organisation .
+  
+  prod:FinancialProduct a owl:Class;
+    rdfs:subClassOf prod:Product .
+  
+  fil:openedBy a owl:ObjectProperty;
+    rdfs:domain fil:LoanAccount;
+    rdfs:range fil:MortgageContract;
+    owl:inverseOf fil:opens .
+  
+  fil:opens a owl:ObjectProperty;
+    rdfs:domain fil:MortgageContract;
+    rdfs:range fil:LoanAccount .
+  
+  fil:ownedBy a owl:ObjectProperty;
+    rdfs:domain prod:Asset;
+    rdfs:range fil:Person;
+    owl:inverseOf fil:owns .
+  
+  fil:owns a owl:ObjectProperty;
+    rdfs:domain fil:Person;
+    rdfs:range prod:Asset .
+  
+  fil:paidBy a owl:ObjectProperty;
+    rdfs:domain fil:LoanAccount;
+    rdfs:range risk:Payment;
+    owl:inverseOf fil:pays .
+  
+  fil:pays a owl:ObjectProperty;
+    rdfs:domain risk:Payment;
+    rdfs:range fil:LoanAccount .
+  
+  risk:Payment a owl:Class;
+    rdfs:subClassOf risk:Transaction .
+  
+  fil:signedBy a owl:ObjectProperty;
+    rdfs:domain fil:ContractDocument;
+    rdfs:range _:node9;
+    owl:inverseOf fil:signs .
+  
+  fil:signs a owl:ObjectProperty;
+    rdfs:domain _:node12;
+    rdfs:range fil:ContractDocument .
+  
+  _:node9 a owl:Class .
+  
+  _:node12 a owl:Class .
+  
+  prod:applicantOf a owl:ObjectProperty;
+    rdfs:domain fil:Person;
+    rdfs:range prod:MortgageApplication;
+    owl:inverseOf prod:hasApplicant .
+  
+  prod:hasApplicant a owl:ObjectProperty;
+    rdfs:domain prod:MortgageApplication;
+    rdfs:range fil:Person .
+  
+  prod:MortgageApplication a owl:Class;
+    rdfs:subClassOf _:node275, _:node276, _:node277 .
+  
+  prod:applicationOf a owl:ObjectProperty;
+    rdfs:domain prod:MortgageApplication;
+    rdfs:range prod:Mortgage;
+    owl:inverseOf prod:hasApplication .
+  
+  prod:hasApplication a owl:ObjectProperty;
+    rdfs:domain prod:Mortgage;
+    rdfs:range prod:MortgageApplication .
+  
+  prod:Mortgage a owl:Class;
+    rdfs:subClassOf prod:FinancialProduct, _:node274 .
+  
+  prod:assetRecoveredBy a owl:ObjectProperty;
+    rdfs:domain prod:Asset;
+    rdfs:range risk:ForeclosureEvent;
+    owl:inverseOf prod:recoversAsset .
+  
+  prod:recoversAsset a owl:ObjectProperty;
+    rdfs:domain risk:ForeclosureEvent;
+    rdfs:range prod:Asset .
+  
+  risk:ForeclosureEvent a owl:Class;
+    rdfs:subClassOf risk:Occurrence .
+  
+  prod:belongsTo a owl:ObjectProperty;
+    rdfs:domain prod:LoanSchedule;
+    rdfs:range fil:MortgageContract .
+  
+  prod:LoanSchedule a owl:Class;
+    rdfs:subClassOf _:node273 .
+  
+  prod:causesRiskSource a owl:ObjectProperty;
+    rdfs:domain _:node15;
+    rdfs:range risk:InsecureApplication;
+    owl:inverseOf prod:riskCausedBy .
+  
+  prod:riskCausedBy a owl:ObjectProperty;
+    rdfs:domain risk:InsecureApplication;
+    rdfs:range _:node114 .
+  
+  _:node15 a owl:Class .
+  
+  risk:BadRecord a owl:Class;
+    rdfs:subClassOf risk:RiskSource .
+  
+  risk:DegradationInAssetValue a owl:Class;
+    rdfs:subClassOf risk:RiskSource .
+  
+  risk:FraudulentDocument a owl:Class;
+    rdfs:subClassOf risk:RiskSource .
+  
+  risk:InsecureApplication a owl:Class;
+    rdfs:subClassOf risk:RiskSource .
+  
+  prod:changedBy a owl:ObjectProperty;
+    rdfs:domain risk:RiskLevel;
+    rdfs:range prod:DocumentCheck;
+    owl:inverseOf prod:changes .
+  
+  prod:changes a owl:ObjectProperty;
+    rdfs:domain prod:DocumentCheck;
+    rdfs:range risk:RiskLevel .
+  
+  risk:RiskLevel a owl:Class .
+  
+  prod:DocumentCheck a owl:Class;
+    rdfs:subClassOf prod:CreditCheck .
+  
+  prod:closedBy a owl:ObjectProperty;
+    rdfs:domain _:node19;
+    rdfs:range risk:ForeclosureEvent;
+    owl:inverseOf prod:closes .
+  
+  prod:closes a owl:ObjectProperty;
+    rdfs:domain risk:ForeclosureEvent;
+    rdfs:range _:node22 .
+  
+  _:node19 a owl:Class .
+  
+  _:node22 a owl:Class .
+  
+  prod:coveredBy a owl:ObjectProperty;
+    rdfs:domain risk:MortgageRisk;
+    rdfs:range risk:PurchaseInsurance;
+    owl:inverseOf prod:covers .
+  
+  prod:covers a owl:ObjectProperty;
+    rdfs:domain risk:PurchaseInsurance;
+    rdfs:range risk:MortgageRisk .
+  
+  risk:MortgageRisk a owl:Class;
+    rdfs:subClassOf risk:Risk .
+  
+  risk:PurchaseInsurance a owl:Class;
+    rdfs:subClassOf risk:ControlAction .
+  
+  prod:decreasedBy a owl:ObjectProperty;
+    rdfs:domain prod:CreditBalance;
+    rdfs:range _:node25;
+    owl:inverseOf prod:decreases .
+  
+  prod:decreases a owl:ObjectProperty;
+    rdfs:domain _:node28;
+    rdfs:range prod:CreditBalance .
+  
+  _:node25 a owl:Class .
+  
+  risk:DuePayment a owl:Class;
+    rdfs:subClassOf risk:Payment .
+  
+  _:node28 a owl:Class .
+  
+  prod:definedBy a owl:ObjectProperty;
+    rdfs:domain risk:Payment;
+    rdfs:range prod:LoanSchedule;
+    owl:inverseOf prod:definesPayment .
+  
+  prod:definesPayment a owl:ObjectProperty;
+    rdfs:domain prod:LoanSchedule;
+    rdfs:range risk:Payment .
+  
+  prod:guarantees a owl:ObjectProperty;
+    rdfs:domain fil:Person;
+    rdfs:range fil:MortgageContract;
+    owl:inverseOf prod:hasGuarantor .
+  
+  prod:hasGuarantor a owl:ObjectProperty;
+    rdfs:domain fil:MortgageContract;
+    rdfs:range fil:Person .
+  
+  prod:hasAmortisationType a owl:ObjectProperty;
+    rdfs:domain fil:MortgageContract;
+    rdfs:range prod:Amortisation .
+  
+  prod:Amortisation a owl:Class .
+  
+  prod:hasArrears a owl:ObjectProperty;
+    rdfs:domain fil:LoanAccount;
+    rdfs:range prod:Arrears .
+  
+  prod:Arrears a owl:Class .
+  
+  prod:hasExpenses a owl:ObjectProperty;
+    rdfs:domain prod:Borrower;
+    rdfs:range fil:Expense .
+  
+  prod:Borrower a owl:Class;
+    rdfs:subClassOf prod:Role, _:node270, _:node271, _:node272 .
+  
+  fil:Expense a owl:Class .
+  
+  prod:hasIncome a owl:ObjectProperty;
+    rdfs:domain prod:Borrower;
+    rdfs:range fil:Income .
+  
+  fil:Income a owl:Class .
+  
+  prod:hasLiability a owl:ObjectProperty;
+    rdfs:domain prod:Borrower;
+    rdfs:range fil:Liability .
+  
+  fil:Liability a owl:Class .
+  
+  prod:hasNextStage a owl:ObjectProperty;
+    rdfs:domain prod:LifeCycleStage;
+    rdfs:range prod:LifeCycleStage;
+    owl:inverseOf prod:hasPreviousStage .
+  
+  prod:hasPreviousStage a owl:ObjectProperty;
+    rdfs:domain prod:LifeCycleStage;
+    rdfs:range prod:LifeCycleStage .
+  
+  prod:LifeCycleStage a owl:Class .
+  
+  prod:hasRisk a owl:ObjectProperty;
+    rdfs:domain _:node31;
+    rdfs:range _:node40;
+    owl:inverseOf prod:isRiskOf .
+  
+  prod:isRiskOf a owl:ObjectProperty;
+    rdfs:domain _:node73;
+    rdfs:range _:node81 .
+  
+  _:node31 a owl:Class .
+  
+  fil:Document a owl:Class .
+  
+  fil:Record a owl:Class;
+    rdfs:subClassOf fil:Document .
+  
+  prod:MissingPayment a owl:Class .
+  
+  prod:RecordCheck a owl:Class;
+    rdfs:subClassOf prod:CreditCheck .
+  
+  risk:LatePayment a owl:Class;
+    rdfs:subClassOf risk:Payment .
+  
+  _:node40 a owl:Class .
+  
+  risk:ArrearsRisk a owl:Class;
+    rdfs:subClassOf risk:Risk .
+  
+  risk:AssetRisk a owl:Class;
+    rdfs:subClassOf risk:Risk .
+  
+  risk:CreditCheckRisk a owl:Class;
+    rdfs:subClassOf risk:Risk .
+  
+  risk:DocumentCheckRisk a owl:Class;
+    rdfs:subClassOf risk:Risk .
+  
+  risk:LatePaymentRisk a owl:Class;
+    rdfs:subClassOf risk:Risk .
+  
+  risk:MissingPaymentRisk a owl:Class;
+    rdfs:subClassOf risk:Risk .
+  
+  prod:hasRisk2 a owl:ObjectProperty;
+    rdfs:domain prod:RecordCheck;
+    rdfs:range risk:CreditCheckRisk .
+  
+  prod:hasStage a owl:ObjectProperty;
+    rdfs:domain prod:FinancialProduct;
+    rdfs:range prod:LifeCycleStage .
+  
+  prod:implementedBy a owl:ObjectProperty;
+    rdfs:domain risk:RiskTreatment;
+    rdfs:range risk:ControlAction;
+    owl:inverseOf prod:implements .
+  
+  prod:implements a owl:ObjectProperty;
+    rdfs:domain risk:ControlAction;
+    rdfs:range risk:RiskTreatment .
+  
+  risk:RiskTreatment a owl:Class .
+  
+  risk:ControlAction a owl:Class .
+  
+  prod:inStage a owl:ObjectProperty;
+    rdfs:domain _:node48;
+    rdfs:range prod:LifeCycleStage .
+  
+  _:node48 a owl:Class .
+  
+  risk:Occurrence a owl:Class .
+  
+  risk:Risk a owl:Class .
+  
+  prod:increasedBy a owl:ObjectProperty;
+    rdfs:domain _:node51;
+    rdfs:range _:node55;
+    owl:inverseOf prod:increases .
+  
+  prod:increases a owl:ObjectProperty;
+    rdfs:domain _:node59;
+    rdfs:range _:node63 .
+  
+  _:node51 a owl:Class .
+  
+  prod:Interest a owl:Class .
+  
+  _:node55 a owl:Class .
+  
+  fil:DefaultNotice a owl:Class;
+    rdfs:subClassOf fil:Notice .
+  
+  risk:MissedPayment a owl:Class;
+    rdfs:subClassOf risk:Payment .
+  
+  _:node59 a owl:Class .
+  
+  _:node63 a owl:Class .
+  
+  prod:involves a owl:ObjectProperty;
+    rdfs:domain _:node67;
+    rdfs:range _:node70;
+    owl:inverseOf prod:stepOf .
+  
+  prod:stepOf a owl:ObjectProperty;
+    rdfs:domain _:node118;
+    rdfs:range _:node121 .
+  
+  _:node67 a owl:Class .
+  
+  _:node70 a owl:Class .
+  
+  _:node73 a owl:Class .
+  
+  _:node81 a owl:Class .
+  
+  prod:isRiskSourceFor a owl:ObjectProperty;
+    rdfs:domain _:node90;
+    rdfs:range _:node94 .
+  
+  _:node90 a owl:Class .
+  
+  risk:ArrearsLimitExceeded a owl:Class;
+    rdfs:subClassOf risk:RiskSource .
+  
+  risk:LatePaymentEvent a owl:Class;
+    rdfs:subClassOf risk:RiskSource .
+  
+  risk:MissingPaymentEvent a owl:Class;
+    rdfs:subClassOf risk:RiskSource .
+  
+  _:node94 a owl:Class .
+  
+  prod:issuedBy a owl:ObjectProperty;
+    rdfs:domain risk:PurchaseInsurance;
+    rdfs:range fil:InsuranceCompany .
+  
+  fil:InsuranceCompany a owl:Class;
+    rdfs:subClassOf fil:Organisation .
+  
+  prod:issuedByVA a owl:ObjectProperty;
+    rdfs:domain fil:AssessmentReport;
+    rdfs:range risk:ValueAssessment;
+    owl:inverseOf prod:issues .
+  
+  prod:issues a owl:ObjectProperty;
+    rdfs:domain risk:ValueAssessment;
+    rdfs:range fil:AssessmentReport .
+  
+  fil:AssessmentReport a owl:Class;
+    rdfs:subClassOf fil:Report .
+  
+  risk:ValueAssessment a owl:Class;
+    rdfs:subClassOf risk:AssessmentEvent .
+  
+  prod:mortgageInStage a owl:ObjectProperty;
+    rdfs:domain _:node98;
+    rdfs:range _:node103 .
+  
+  _:node98 a owl:Class .
+  
+  _:node103 a owl:Class .
+  
+  prod:ApplicationStage a owl:Class;
+    rdfs:subClassOf prod:LifeCycleStage .
+  
+  prod:DefaultRecoveryStage a owl:Class;
+    rdfs:subClassOf prod:LifeCycleStage .
+  
+  prod:ServicingStage a owl:Class;
+    rdfs:subClassOf prod:LifeCycleStage .
+  
+  prod:UnderwritingStage a owl:Class;
+    rdfs:subClassOf prod:LifeCycleStage .
+  
+  prod:providedBy a owl:ObjectProperty;
+    rdfs:domain risk:ValueAssessment;
+    rdfs:range risk:PropertyInspection;
+    owl:inverseOf prod:provides .
+  
+  prod:provides a owl:ObjectProperty;
+    rdfs:domain risk:PropertyInspection;
+    rdfs:range risk:ValueAssessment .
+  
+  risk:PropertyInspection a owl:Class;
+    rdfs:subClassOf risk:AssessmentEvent .
+  
+  prod:requiredFor a owl:ObjectProperty;
+    rdfs:domain _:node108;
+    rdfs:range prod:MortgageApplication;
+    owl:inverseOf prod:requires .
+  
+  prod:requires a owl:ObjectProperty;
+    rdfs:domain prod:MortgageApplication;
+    rdfs:range _:node111 .
+  
+  _:node108 a owl:Class .
+  
+  prod:CreditCheck a owl:Class .
+  
+  _:node111 a owl:Class .
+  
+  _:node114 a owl:Class .
+  
+  prod:startsContract a owl:ObjectProperty;
+    rdfs:domain prod:MortgageApplication;
+    rdfs:range fil:MortgageContract .
+  
+  _:node118 a owl:Class .
+  
+  _:node121 a owl:Class .
+  
+  prod:triggeredBy a owl:ObjectProperty;
+    rdfs:domain _:node124;
+    rdfs:range _:node127;
+    owl:inverseOf prod:triggers .
+  
+  prod:triggers a owl:ObjectProperty;
+    rdfs:domain _:node130;
+    rdfs:range _:node133 .
+  
+  _:node124 a owl:Class .
+  
+  _:node127 a owl:Class .
+  
+  _:node130 a owl:Class .
+  
+  _:node133 a owl:Class .
+  
+  risk:aRiskTo a owl:ObjectProperty;
+    rdfs:domain _:node136;
+    rdfs:range _:node143;
+    owl:inverseOf risk:hasRiskSource .
+  
+  risk:hasRiskSource a owl:ObjectProperty;
+    rdfs:domain _:node187;
+    rdfs:range _:node194 .
+  
+  _:node136 a owl:Class .
+  
+  _:node143 a owl:Class .
+  
+  risk:actionOf a owl:ObjectProperty;
+    rdfs:domain risk:ControlAction;
+    rdfs:range risk:RiskTreatment;
+    owl:inverseOf risk:hasAction .
+  
+  risk:hasAction a owl:ObjectProperty;
+    rdfs:domain risk:RiskTreatment;
+    rdfs:range risk:ControlAction .
+  
+  risk:assessedBy a owl:ObjectProperty;
+    rdfs:domain prod:Asset;
+    rdfs:range risk:ValueAssessment;
+    owl:inverseOf risk:assesses .
+  
+  risk:assesses a owl:ObjectProperty;
+    rdfs:domain risk:ValueAssessment;
+    rdfs:range prod:Asset .
+  
+  risk:assessesRisk a owl:ObjectProperty;
+    rdfs:domain risk:RiskAssessment;
+    rdfs:range risk:Risk;
+    owl:inverseOf risk:riskAssessedBy .
+  
+  risk:riskAssessedBy a owl:ObjectProperty;
+    rdfs:domain risk:Risk;
+    rdfs:range risk:RiskAssessment .
+  
+  risk:RiskAssessment a owl:Class;
+    rdfs:subClassOf risk:AssessmentEvent .
+  
+  risk:concernedBy a owl:ObjectProperty;
+    rdfs:domain _:node150;
+    rdfs:range _:node159;
+    owl:inverseOf risk:concerns .
+  
+  risk:concerns a owl:ObjectProperty;
+    rdfs:domain _:node167;
+    rdfs:range _:node175 .
+  
+  _:node150 a owl:Class .
+  
+  _:node159 a owl:Class .
+  
+  _:node167 a owl:Class .
+  
+  _:node175 a owl:Class .
+  
+  risk:controlledBy a owl:ObjectProperty;
+    rdfs:domain risk:Risk;
+    rdfs:range risk:ControlAction;
+    owl:inverseOf risk:controls .
+  
+  risk:controls a owl:ObjectProperty;
+    rdfs:domain risk:ControlAction;
+    rdfs:range risk:Risk .
+  
+  risk:hasRiskLevel a owl:ObjectProperty;
+    rdfs:domain _:node184;
+    rdfs:range risk:RiskLevel;
+    owl:inverseOf risk:levelOfRisk .
+  
+  risk:levelOfRisk a owl:ObjectProperty;
+    rdfs:domain risk:RiskLevel;
+    rdfs:range _:node201 .
+  
+  _:node184 a owl:Class .
+  
+  _:node187 a owl:Class .
+  
+  _:node194 a owl:Class .
+  
+  risk:hasTreatment a owl:ObjectProperty;
+    rdfs:domain risk:Risk;
+    rdfs:range risk:RiskTreatment;
+    owl:inverseOf risk:treats .
+  
+  risk:treats a owl:ObjectProperty;
+    rdfs:domain risk:RiskTreatment;
+    rdfs:range risk:Risk .
+  
+  risk:implementsTransfer a owl:ObjectProperty;
+    rdfs:domain risk:PurchaseInsurance;
+    rdfs:range risk:TransferRisk .
+  
+  risk:TransferRisk a owl:Class;
+    rdfs:subClassOf risk:RiskTreatment .
+  
+  _:node201 a owl:Class .
+  
+  risk:receivesTransfer a owl:ObjectProperty;
+    rdfs:domain fil:Organisation;
+    rdfs:range risk:ControlAction;
+    owl:inverseOf risk:transfersTo .
+  
+  risk:transfersTo a owl:ObjectProperty;
+    rdfs:domain risk:ControlAction;
+    rdfs:range fil:Organisation .
+  
+  risk:recommendsTreatment a owl:ObjectProperty;
+    rdfs:domain risk:RiskAssessment;
+    rdfs:range risk:RiskTreatment;
+    owl:inverseOf risk:treatmentRecommendedBy .
+  
+  risk:treatmentRecommendedBy a owl:ObjectProperty;
+    rdfs:domain risk:RiskTreatment;
+    rdfs:range risk:RiskAssessment .
+  
+  fil:accountID a owl:DatatypeProperty;
+    rdfs:domain _:node204;
+    rdfs:range xsd:string .
+  
+  _:node204 a owl:Class .
+  
+  fil:accountStatus a owl:DatatypeProperty;
+    rdfs:domain fil:LoanAccount;
+    rdfs:range xsd:string .
+  
+  fil:addressID a owl:DatatypeProperty;
+    rdfs:domain fil:Address;
+    rdfs:range xsd:string .
+  
+  fil:arrearsLimitCount a owl:DatatypeProperty;
+    rdfs:domain fil:MortgageContract;
+    rdfs:range xsd:int .
+  
+  fil:balanceAmount a owl:DatatypeProperty;
+    rdfs:domain fil:Account;
+    rdfs:range xsd:decimal .
+  
+  fil:birthDate a owl:DatatypeProperty;
+    rdfs:domain fil:BirthCertificate;
+    rdfs:range xsd:date .
+  
+  fil:BirthCertificate a owl:Class;
+    rdfs:subClassOf fil:Certificate .
+  
+  fil:branchID a owl:DatatypeProperty;
+    rdfs:domain fil:Bank;
+    rdfs:range xsd:string .
+  
+  fil:Bank a owl:Class;
+    rdfs:subClassOf fil:Organisation .
+  
+  fil:city a owl:DatatypeProperty;
+    rdfs:domain fil:Address;
+    rdfs:range xsd:string .
+  
+  fil:contractID a owl:DatatypeProperty;
+    rdfs:domain fil:MortgageContract;
+    rdfs:range xsd:string .
+  
+  fil:contractStatus a owl:DatatypeProperty;
+    rdfs:domain fil:MortgageContract;
+    rdfs:range xsd:string .
+  
+  fil:country a owl:DatatypeProperty;
+    rdfs:domain fil:Address;
+    rdfs:range xsd:string .
+  
+  fil:currentInterest a owl:DatatypeProperty;
+    rdfs:domain fil:Account;
+    rdfs:range xsd:decimal .
+  
+  fil:documentID a owl:DatatypeProperty;
+    rdfs:domain _:node207;
+    rdfs:range xsd:string .
+  
+  _:node207 a owl:Class .
+  
+  fil:DriverLicence a owl:Class;
+    rdfs:subClassOf fil:IdentityDocument .
+  
+  fil:LegalDocument a owl:Class;
+    rdfs:subClassOf fil:Document .
+  
+  fil:Passport a owl:Class;
+    rdfs:subClassOf fil:IdentityDocument .
+  
+  fil:downPayment a owl:DatatypeProperty;
+    rdfs:domain fil:MortgageContract;
+    rdfs:range xsd:decimal .
+  
+  fil:expenseAmount a owl:DatatypeProperty;
+    rdfs:domain fil:Expense;
+    rdfs:range xsd:decimal .
+  
+  fil:expenseID a owl:DatatypeProperty;
+    rdfs:domain fil:Expense;
+    rdfs:range xsd:string .
+  
+  fil:expiryDate a owl:DatatypeProperty;
+    rdfs:domain _:node213;
+    rdfs:range xsd:date .
+  
+  _:node213 a owl:Class .
+  
+  fil:firstName a owl:DatatypeProperty;
+    rdfs:domain _:node216;
+    rdfs:range xsd:string .
+  
+  _:node216 a owl:Class .
+  
+  fil:firstPaymentDate a owl:DatatypeProperty;
+    rdfs:domain fil:MortgageContract;
+    rdfs:range xsd:date .
+  
+  fil:incomeAmount a owl:DatatypeProperty;
+    rdfs:domain fil:Income;
+    rdfs:range xsd:decimal .
+  
+  fil:incomeID a owl:DatatypeProperty;
+    rdfs:domain fil:Income;
+    rdfs:range xsd:string .
+  
+  fil:issueDate a owl:DatatypeProperty;
+    rdfs:domain _:node220;
+    rdfs:range xsd:date .
+  
+  _:node220 a owl:Class .
+  
+  fil:lastName a owl:DatatypeProperty;
+    rdfs:domain _:node223;
+    rdfs:range xsd:string .
+  
+  _:node223 a owl:Class .
+  
+  fil:liabilityAmount a owl:DatatypeProperty;
+    rdfs:domain fil:Liability;
+    rdfs:range xsd:decimal .
+  
+  fil:liabilityID a owl:DatatypeProperty;
+    rdfs:domain fil:Liability;
+    rdfs:range xsd:string .
+  
+  fil:loanAgeMonth a owl:DatatypeProperty;
+    rdfs:domain fil:LoanAccount;
+    rdfs:range xsd:int .
+  
+  fil:loanBalanceAmount a owl:DatatypeProperty;
+    rdfs:domain fil:LoanAccount;
+    rdfs:range xsd:decimal .
+  
+  fil:loanID a owl:DatatypeProperty;
+    rdfs:domain _:node227;
+    rdfs:range xsd:string .
+  
+  _:node227 a owl:Class .
+  
+  fil:loanTermMonths a owl:DatatypeProperty;
+    rdfs:domain fil:MortgageContract;
+    rdfs:range xsd:int .
+  
+  fil:maturityDate a owl:DatatypeProperty;
+    rdfs:domain fil:MortgageContract;
+    rdfs:range xsd:date .
+  
+  fil:mortgageInterestRate a owl:DatatypeProperty;
+    rdfs:domain fil:MortgageContract;
+    rdfs:range xsd:decimal .
+  
+  fil:orgID a owl:DatatypeProperty;
+    rdfs:domain _:node236;
+    rdfs:range xsd:string .
+  
+  _:node236 a owl:Class .
+  
+  fil:orgName a owl:DatatypeProperty;
+    rdfs:domain fil:Organisation;
+    rdfs:range xsd:string .
+  
+  fil:orgType a owl:DatatypeProperty;
+    rdfs:domain fil:Organisation;
+    rdfs:range xsd:string .
+  
+  fil:passportNumber a owl:DatatypeProperty;
+    rdfs:domain fil:Passport;
+    rdfs:range xsd:string .
+  
+  fil:personID a owl:DatatypeProperty;
+    rdfs:domain _:node239;
+    rdfs:range xsd:string .
+  
+  _:node239 a owl:Class .
+  
+  fil:postalCode a owl:DatatypeProperty;
+    rdfs:domain fil:Address;
+    rdfs:range xsd:string .
+  
+  fil:prepayPenalty a owl:DatatypeProperty;
+    rdfs:domain fil:MortgageContract;
+    rdfs:range xsd:boolean .
+  
+  fil:principalAmount a owl:DatatypeProperty;
+    rdfs:domain fil:MortgageContract;
+    rdfs:range xsd:decimal .
+  
+  fil:remainingTerm a owl:DatatypeProperty;
+    rdfs:domain fil:LoanAccount;
+    rdfs:range xsd:int .
+  
+  fil:street a owl:DatatypeProperty;
+    rdfs:domain fil:Address;
+    rdfs:range xsd:string .
+  
+  prod:applicationID a owl:DatatypeProperty;
+    rdfs:domain _:node246;
+    rdfs:range xsd:string .
+  
+  _:node246 a owl:Class .
+  
+  prod:applicationStatus a owl:DatatypeProperty;
+    rdfs:domain prod:MortgageApplication;
+    rdfs:range xsd:string .
+  
+  prod:assetID a owl:DatatypeProperty;
+    rdfs:domain _:node252;
+    rdfs:range xsd:string .
+  
+  _:node252 a owl:Class .
+  
+  prod:combinedLoanToValueRatio a owl:DatatypeProperty;
+    rdfs:domain prod:MortgageApplication;
+    rdfs:range xsd:decimal .
+  
+  prod:creditCheckStatus a owl:DatatypeProperty;
+    rdfs:domain prod:CreditCheck;
+    rdfs:range xsd:string .
+  
+  prod:debtToIncomeRatio a owl:DatatypeProperty;
+    rdfs:domain prod:MortgageApplication;
+    rdfs:range xsd:decimal .
+  
+  prod:documentCheckStatus a owl:DatatypeProperty;
+    rdfs:domain prod:DocumentCheck;
+    rdfs:range xsd:string .
+  
+  prod:eventID a owl:DatatypeProperty;
+    rdfs:domain _:node255;
+    rdfs:range xsd:string .
+  
+  _:node255 a owl:Class .
+  
+  prod:insuranceId a owl:DatatypeProperty;
+    rdfs:domain risk:PurchaseInsurance;
+    rdfs:range xsd:string .
+  
+  prod:interestRate a owl:DatatypeProperty;
+    rdfs:domain prod:Interest;
+    rdfs:range xsd:decimal .
+  
+  prod:interestStatus a owl:DatatypeProperty;
+    rdfs:domain prod:Interest;
+    rdfs:range xsd:string .
+  
+  prod:limitCount a owl:DatatypeProperty;
+    rdfs:domain prod:Arrears;
+    rdfs:range xsd:int .
+  
+  prod:loanPurpose a owl:DatatypeProperty;
+    rdfs:domain prod:MortgageApplication;
+    rdfs:range xsd:string .
+  
+  prod:loanToValueRatio a owl:DatatypeProperty;
+    rdfs:domain prod:MortgageApplication;
+    rdfs:range xsd:decimal .
+  
+  prod:marketValue a owl:DatatypeProperty;
+    rdfs:domain prod:Asset;
+    rdfs:range xsd:decimal .
+  
+  prod:missedCount a owl:DatatypeProperty;
+    rdfs:domain prod:Arrears;
+    rdfs:range xsd:int .
+  
+  prod:recordCheckStatus a owl:DatatypeProperty;
+    rdfs:domain prod:RecordCheck;
+    rdfs:range xsd:string .
+  
+  prod:remainingCredit a owl:DatatypeProperty;
+    rdfs:domain prod:LoanSchedule;
+    rdfs:range xsd:decimal .
+  
+  prod:requestedAmount a owl:DatatypeProperty;
+    rdfs:domain prod:MortgageApplication;
+    rdfs:range xsd:decimal .
+  
+  prod:scheduleID a owl:DatatypeProperty;
+    rdfs:domain prod:LoanSchedule;
+    rdfs:range xsd:string .
+  
+  prod:valuationDate a owl:DatatypeProperty;
+    rdfs:domain prod:Asset;
+    rdfs:range xsd:date .
+  
+  risk:actualPrincipal a owl:DatatypeProperty;
+    rdfs:domain risk:Payment;
+    rdfs:range xsd:decimal .
+  
+  risk:assessedValueAmount a owl:DatatypeProperty;
+    rdfs:domain risk:ValueAssessment;
+    rdfs:range xsd:decimal .
+  
+  risk:coverageAmount a owl:DatatypeProperty;
+    rdfs:domain risk:PurchaseInsurance;
+    rdfs:range xsd:decimal .
+  
+  risk:dueDate a owl:DatatypeProperty;
+    rdfs:domain risk:Payment;
+    rdfs:range xsd:date .
+  
+  risk:impact a owl:DatatypeProperty;
+    rdfs:domain risk:Risk;
+    rdfs:range xsd:string .
+  
+  risk:likelihood a owl:DatatypeProperty;
+    rdfs:domain risk:Risk;
+    rdfs:range xsd:decimal .
+  
+  risk:paymentDate a owl:DatatypeProperty;
+    rdfs:domain risk:Payment;
+    rdfs:range xsd:date .
+  
+  risk:paymentHistoryCode a owl:DatatypeProperty;
+    rdfs:domain risk:Payment;
+    rdfs:range xsd:string .
+  
+  risk:paymentID a owl:DatatypeProperty;
+    rdfs:domain risk:Payment;
+    rdfs:range xsd:string .
+  
+  risk:requiredAmount a owl:DatatypeProperty;
+    rdfs:domain risk:ForeclosureEvent;
+    rdfs:range xsd:decimal .
+  
+  risk:riskID a owl:DatatypeProperty;
+    rdfs:domain risk:Risk;
+    rdfs:range xsd:string .
+  
+  risk:riskScore a owl:DatatypeProperty;
+    rdfs:domain risk:Risk;
+    rdfs:range xsd:decimal .
+  
+  risk:scheduledPrincipal a owl:DatatypeProperty;
+    rdfs:domain risk:Payment;
+    rdfs:range xsd:decimal .
+  
+  risk:staged a owl:DatatypeProperty;
+    rdfs:domain risk:Risk;
+    rdfs:range xsd:string .
+  
+  risk:totalPrincipal a owl:DatatypeProperty;
+    rdfs:domain risk:Payment;
+    rdfs:range xsd:decimal .
+  
+  risk:transactionAmount a owl:DatatypeProperty;
+    rdfs:domain risk:Transaction;
+    rdfs:range xsd:decimal .
+  
+  risk:Transaction a owl:Class;
+    rdfs:subClassOf risk:Occurrence .
+  
+  risk:transactionDate a owl:DatatypeProperty;
+    rdfs:domain risk:Transaction;
+    rdfs:range xsd:date .
+  
+  risk:transactionID a owl:DatatypeProperty;
+    rdfs:domain _:node261;
+    rdfs:range xsd:string .
+  
+  _:node261 a owl:Class .
+  
+  fil:AccountStatement a owl:Class;
+    rdfs:subClassOf fil:Record .
+  
+  fil:Location a owl:Class .
+  
+  fil:AgreementDocument a owl:Class;
+    rdfs:subClassOf fil:LegalDocument .
+  
+  fil:Report a owl:Class;
+    rdfs:subClassOf fil:Document .
+  
+  fil:Certificate a owl:Class;
+    rdfs:subClassOf fil:Document .
+  
+  fil:DeathCertificate a owl:Class;
+    rdfs:subClassOf fil:Certificate .
+  
+  fil:Bond a owl:Class;
+    rdfs:subClassOf fil:FinancialInstrument .
+  
+  fil:FinancialInstrument a owl:Class .
+  
+  fil:BusinessUnit a owl:Class;
+    rdfs:subClassOf fil:Organisation .
+  
+  fil:CreditCardAccount a owl:Class;
+    rdfs:subClassOf fil:LoanOrCreditAccount .
+  
+  fil:LoanOrCreditAccount a owl:Class;
+    rdfs:subClassOf fil:Account .
+  
+  fil:Notice a owl:Class;
+    rdfs:subClassOf fil:Document .
+  
+  fil:DepositAccount a owl:Class;
+    rdfs:subClassOf fil:InvestmentOrDepositAccount .
+  
+  fil:InvestmentOrDepositAccount a owl:Class;
+    rdfs:subClassOf fil:Account .
+  
+  fil:InvestmentAccount a owl:Class;
+    rdfs:subClassOf fil:InvestmentOrDepositAccount .
+  
+  fil:Derivative a owl:Class;
+    rdfs:subClassOf fil:FinancialInstrument .
+  
+  fil:FinancialRecord a owl:Class;
+    rdfs:subClassOf fil:Record .
+  
+  fil:LedgerAccount a owl:Class;
+    rdfs:subClassOf fil:Account .
+  
+  _:node264 a owl:Restriction .
+  
+  _:node265 a owl:Restriction .
+  
+  _:node266 a owl:Restriction .
+  
+  _:node267 a owl:Restriction .
+  
+  fil:PaymentAccount a owl:Class;
+    rdfs:subClassOf fil:Account .
+  
+  _:node268 a owl:Restriction .
+  
+  _:node269 a owl:Restriction .
+  
+  fil:Stock a owl:Class;
+    rdfs:subClassOf fil:FinancialInstrument .
+  
+  fil:TransactionRecord a owl:Class;
+    rdfs:subClassOf fil:Record .
+  
+  prod:Balance a owl:Class .
+  
+  prod:BalloonAmortisation a owl:Class;
+    rdfs:subClassOf prod:Amortisation .
+  
+  _:node270 a owl:Restriction .
+  
+  _:node271 a owl:Restriction .
+  
+  _:node272 a owl:Restriction .
+  
+  prod:Guarantor a owl:Class;
+    rdfs:subClassOf prod:Role .
+  
+  prod:DebtBalance a owl:Class;
+    rdfs:subClassOf prod:Balance .
+  
+  prod:CreditScore a owl:Class .
+  
+  prod:DelinquencyStatus a owl:Class;
+    rdfs:subClassOf prod:LifeCycleStage .
+  
+  prod:FX a owl:Class;
+    rdfs:subClassOf prod:FinancialProduct .
+  
+  prod:Product a owl:Class .
+  
+  prod:FixedAmortisation a owl:Class;
+    rdfs:subClassOf prod:Amortisation .
+  
+  prod:FixedInterest a owl:Class;
+    rdfs:subClassOf prod:Interest .
+  
+  prod:IndexedInterest a owl:Class;
+    rdfs:subClassOf prod:Interest .
+  
+  prod:InterestOnlyAmortisation a owl:Class;
+    rdfs:subClassOf prod:Amortisation .
+  
+  _:node273 a owl:Restriction .
+  
+  _:node274 a owl:Restriction .
+  
+  _:node275 a owl:Restriction .
+  
+  _:node276 a owl:Restriction .
+  
+  _:node277 a owl:Restriction .
+  
+  prod:NegativeAmortisation a owl:Class;
+    rdfs:subClassOf prod:Amortisation .
+  
+  prod:Property a owl:Class;
+    rdfs:subClassOf prod:Asset .
+  
+  prod:Rating a owl:Class;
+    rdfs:subClassOf prod:CreditScore .
+  
+  prod:VariableInterest a owl:Class;
+    rdfs:subClassOf prod:Interest .
+  
+  risk:AcceptRisk a owl:Class;
+    rdfs:subClassOf risk:RiskTreatment .
+  
+  risk:AdjustInterestRate a owl:Class;
+    rdfs:subClassOf risk:ControlAction .
+  
+  risk:ApplicationRejection a owl:Class;
+    rdfs:subClassOf risk:ControlAction .
+  
+  risk:RiskSource a owl:Class .
+  
+  risk:AssessmentEvent a owl:Class;
+    rdfs:subClassOf risk:Occurrence .
+  
+  risk:AvoidRisk a owl:Class;
+    rdfs:subClassOf risk:RiskTreatment .
+  
+  risk:Calculation a owl:Class;
+    rdfs:subClassOf risk:Occurrence .
+  
+  risk:ContractTermination a owl:Class;
+    rdfs:subClassOf risk:ControlAction .
+  
+  risk:EarlyPayment a owl:Class;
+    rdfs:subClassOf risk:Payment .
+  
+  risk:Exposure a owl:Class .
+  
+  risk:FeePayment a owl:Class;
+    rdfs:subClassOf risk:Transaction .
+  
+  risk:FinancialExposure a owl:Class;
+    rdfs:subClassOf risk:Exposure .
+  
+  risk:HighRiskLevel a owl:Class;
+    rdfs:subClassOf risk:RiskLevel .
+  
+  risk:IncreaseCollateral a owl:Class;
+    rdfs:subClassOf risk:ControlAction .
+  
+  risk:InterestRateCalculation a owl:Class;
+    rdfs:subClassOf risk:Calculation .
+  
+  risk:InterestRateReset a owl:Class;
+    rdfs:subClassOf risk:Calculation .
+  
+  risk:LoanServicing a owl:Class;
+    rdfs:subClassOf risk:Occurrence .
+  
+  risk:LowRiskLevel a owl:Class;
+    rdfs:subClassOf risk:RiskLevel .
+  
+  risk:MediumRiskLevel a owl:Class;
+    rdfs:subClassOf risk:RiskLevel .
+  
+  risk:MitigateRisk a owl:Class;
+    rdfs:subClassOf risk:RiskTreatment .
+  
+  risk:ReschedulePayment a owl:Class;
+    rdfs:subClassOf risk:ControlAction .
+  
+  risk:Transfer a owl:Class;
+    rdfs:subClassOf risk:Transaction .
+  
+  risk:TransferOperation a owl:Class;
+    rdfs:subClassOf risk:ControlAction .
+  
+  <http://www.opengis.net/def/uom/ISO-8601/0/Gregorian> a owl:NamedIndividual .
+  
+  time:Friday a owl:NamedIndividual .
+  
+  time:Monday a owl:NamedIndividual .
+  
+  time:Saturday a owl:NamedIndividual .
+  
+  time:Sunday a owl:NamedIndividual .
+  
+  time:Thursday a owl:NamedIndividual .
+  
+  time:Tuesday a owl:NamedIndividual .
+  
+  time:Wednesday a owl:NamedIndividual .
+  
+  time:unitDay a owl:NamedIndividual .
+  
+  time:unitHour a owl:NamedIndividual .
+  
+  time:unitMinute a owl:NamedIndividual .
+  
+  time:unitMonth a owl:NamedIndividual .
+  
+  time:unitSecond a owl:NamedIndividual .
+  
+  time:unitWeek a owl:NamedIndividual .
+  
+  time:unitYear a owl:NamedIndividual .
+  
+  _:node278 a owl:AllDisjointClasses .
+  
+  _:node282 a owl:AllDisjointClasses .
+  
+  _:node286 a owl:AllDisjointClasses .
+  
+  _:node291 a owl:AllDisjointClasses .
+  
+  _:node297 a owl:AllDisjointClasses .
+  
+  _:node302 a owl:AllDisjointClasses .
+  
+  _:node306 a owl:AllDisjointClasses .
+  
+  _:node311 a owl:AllDisjointClasses .
+  
+  _:node319 a owl:AllDisjointClasses .
+  
+  _:node327 a owl:AllDisjointClasses .
+  
+  _:node335 a owl:AllDisjointClasses .
+  
+  _:node340 a owl:AllDisjointClasses .
+  
+  _:node344 a owl:AllDisjointClasses .
+  
+  _:node2 rdf:first fil:Organisation .
+  
+  _:node3 rdf:first fil:Person .
+  
+  _:node4 rdf:first prod:Asset .
+  
+  _:node6 rdf:first fil:Organisation .
+  
+  _:node7 rdf:first fil:Person .
+  
+  _:node8 rdf:first prod:Asset .
+  
+  _:node10 rdf:first fil:Organisation .
+  
+  _:node11 rdf:first fil:Person .
+  
+  _:node13 rdf:first fil:Organisation .
+  
+  _:node14 rdf:first fil:Person .
+  
+  _:node16 rdf:first risk:BadRecord .
+  
+  _:node17 rdf:first risk:DegradationInAssetValue .
+  
+  _:node18 rdf:first risk:FraudulentDocument .
+  
+  _:node20 rdf:first fil:LoanAccount .
+  
+  _:node21 rdf:first fil:MortgageContract .
+  
+  _:node23 rdf:first fil:LoanAccount .
+  
+  _:node24 rdf:first fil:MortgageContract .
+  
+  _:node26 rdf:first risk:DuePayment .
+  
+  _:node27 rdf:first risk:ForeclosureEvent .
+  
+  _:node29 rdf:first risk:DuePayment .
+  
+  _:node30 rdf:first risk:ForeclosureEvent .
+  
+  _:node32 rdf:first fil:Document .
+  
+  _:node33 rdf:first fil:Record .
+  
+  _:node34 rdf:first prod:Arrears .
+  
+  _:node35 rdf:first prod:Asset .
+  
+  _:node36 rdf:first prod:MissingPayment .
+  
+  _:node37 rdf:first prod:Mortgage .
+  
+  _:node38 rdf:first prod:RecordCheck .
+  
+  _:node39 rdf:first risk:LatePayment .
+  
+  _:node41 rdf:first risk:ArrearsRisk .
+  
+  _:node42 rdf:first risk:AssetRisk .
+  
+  _:node43 rdf:first risk:CreditCheckRisk .
+  
+  _:node44 rdf:first risk:DocumentCheckRisk .
+  
+  _:node45 rdf:first risk:LatePaymentRisk .
+  
+  _:node46 rdf:first risk:MissingPaymentRisk .
+  
+  _:node47 rdf:first risk:MortgageRisk .
+  
+  _:node49 rdf:first risk:Occurrence .
+  
+  _:node50 rdf:first risk:Risk .
+  
+  _:node52 rdf:first prod:Arrears .
+  
+  _:node53 rdf:first prod:Interest .
+  
+  _:node54 rdf:first risk:RiskLevel .
+  
+  _:node56 rdf:first fil:DefaultNotice .
+  
+  _:node57 rdf:first risk:LatePayment .
+  
+  _:node58 rdf:first risk:MissedPayment .
+  
+  _:node60 rdf:first fil:DefaultNotice .
+  
+  _:node61 rdf:first risk:LatePayment .
+  
+  _:node62 rdf:first risk:MissedPayment .
+  
+  _:node64 rdf:first prod:Arrears .
+  
+  _:node65 rdf:first prod:Interest .
+  
+  _:node66 rdf:first risk:RiskLevel .
+  
+  _:node68 rdf:first prod:DocumentCheck .
+  
+  _:node69 rdf:first prod:RecordCheck .
+  
+  _:node71 rdf:first fil:IdentityDocument .
+  
+  _:node72 rdf:first fil:Record .
+  
+  _:node74 rdf:first risk:ArrearsRisk .
+  
+  _:node75 rdf:first risk:AssetRisk .
+  
+  _:node76 rdf:first risk:CreditCheckRisk .
+  
+  _:node77 rdf:first risk:DocumentCheckRisk .
+  
+  _:node78 rdf:first risk:LatePaymentRisk .
+  
+  _:node79 rdf:first risk:MissingPaymentRisk .
+  
+  _:node80 rdf:first risk:MortgageRisk .
+  
+  _:node82 rdf:first fil:Document .
+  
+  _:node83 rdf:first fil:Record;
+    rdf:rest _:node84 .
+  
+  _:node84 rdf:first prod:Arrears;
+    rdf:rest _:node85 .
+  
+  _:node85 rdf:first prod:Asset;
+    rdf:rest _:node86 .
+  
+  _:node86 rdf:first prod:MissingPayment;
+    rdf:rest _:node87 .
+  
+  _:node87 rdf:first prod:Mortgage;
+    rdf:rest _:node88 .
+  
+  _:node88 rdf:first prod:RecordCheck;
+    rdf:rest _:node89 .
+  
+  _:node89 rdf:first risk:LatePayment;
+    rdf:rest rdf:nil .
+  
+  _:node91 rdf:first risk:ArrearsLimitExceeded;
+    rdf:rest _:node92 .
+  
+  _:node92 rdf:first risk:LatePaymentEvent;
+    rdf:rest _:node93 .
+  
+  _:node93 rdf:first risk:MissingPaymentEvent;
+    rdf:rest rdf:nil .
+  
+  _:node95 rdf:first risk:ArrearsRisk;
+    rdf:rest _:node96 .
+  
+  _:node96 rdf:first risk:LatePaymentRisk;
+    rdf:rest _:node97 .
+  
+  _:node97 rdf:first risk:MissingPaymentRisk;
+    rdf:rest rdf:nil .
+  
+  _:node99 rdf:first fil:LoanAccount;
+    rdf:rest _:node100 .
+  
+  _:node100 rdf:first fil:MortgageContract;
+    rdf:rest _:node101 .
+  
+  _:node101 rdf:first prod:MortgageApplication;
+    rdf:rest _:node102 .
+  
+  _:node102 rdf:first risk:ForeclosureEvent;
+    rdf:rest rdf:nil .
+  
+  _:node104 rdf:first prod:ApplicationStage;
+    rdf:rest _:node105 .
+  
+  _:node105 rdf:first prod:DefaultRecoveryStage;
+    rdf:rest _:node106 .
+  
+  _:node106 rdf:first prod:ServicingStage;
+    rdf:rest _:node107 .
+  
+  _:node107 rdf:first prod:UnderwritingStage;
+    rdf:rest rdf:nil .
+  
+  _:node109 rdf:first prod:CreditCheck;
+    rdf:rest _:node110 .
+  
+  _:node110 rdf:first risk:PropertyInspection;
+    rdf:rest rdf:nil .
+  
+  _:node112 rdf:first prod:CreditCheck;
+    rdf:rest _:node113 .
+  
+  _:node113 rdf:first risk:PropertyInspection;
+    rdf:rest rdf:nil .
+  
+  _:node115 rdf:first risk:BadRecord;
+    rdf:rest _:node116 .
+  
+  _:node116 rdf:first risk:DegradationInAssetValue;
+    rdf:rest _:node117 .
+  
+  _:node117 rdf:first risk:FraudulentDocument;
+    rdf:rest rdf:nil .
+  
+  _:node119 rdf:first fil:IdentityDocument;
+    rdf:rest _:node120 .
+  
+  _:node120 rdf:first fil:Record;
+    rdf:rest rdf:nil .
+  
+  _:node122 rdf:first prod:DocumentCheck;
+    rdf:rest _:node123 .
+  
+  _:node123 rdf:first prod:RecordCheck;
+    rdf:rest rdf:nil .
+  
+  _:node125 rdf:first fil:DefaultNotice;
+    rdf:rest _:node126 .
+  
+  _:node126 rdf:first risk:ForeclosureEvent;
+    rdf:rest rdf:nil .
+  
+  _:node128 rdf:first fil:DefaultNotice;
+    rdf:rest _:node129 .
+  
+  _:node129 rdf:first prod:Arrears;
+    rdf:rest rdf:nil .
+  
+  _:node131 rdf:first fil:DefaultNotice;
+    rdf:rest _:node132 .
+  
+  _:node132 rdf:first prod:Arrears;
+    rdf:rest rdf:nil .
+  
+  _:node134 rdf:first fil:DefaultNotice;
+    rdf:rest _:node135 .
+  
+  _:node135 rdf:first risk:ForeclosureEvent;
+    rdf:rest rdf:nil .
+  
+  _:node137 rdf:first risk:ArrearsLimitExceeded;
+    rdf:rest _:node138 .
+  
+  _:node138 rdf:first risk:DegradationInAssetValue;
+    rdf:rest _:node139 .
+  
+  _:node139 rdf:first risk:FraudulentDocument;
+    rdf:rest _:node140 .
+  
+  _:node140 rdf:first risk:InsecureApplication;
+    rdf:rest _:node141 .
+  
+  _:node141 rdf:first risk:LatePaymentEvent;
+    rdf:rest _:node142 .
+  
+  _:node142 rdf:first risk:MissingPaymentEvent;
+    rdf:rest rdf:nil .
+  
+  _:node144 rdf:first risk:ArrearsRisk;
+    rdf:rest _:node145 .
+  
+  _:node145 rdf:first risk:AssetRisk;
+    rdf:rest _:node146 .
+  
+  _:node146 rdf:first risk:DocumentCheckRisk;
+    rdf:rest _:node147 .
+  
+  _:node147 rdf:first risk:LatePaymentRisk;
+    rdf:rest _:node148 .
+  
+  _:node148 rdf:first risk:MissingPaymentRisk;
+    rdf:rest _:node149 .
+  
+  _:node149 rdf:first risk:MortgageRisk;
+    rdf:rest rdf:nil .
+  
+  _:node151 rdf:first fil:MortgageContract;
+    rdf:rest _:node152 .
+  
+  _:node152 rdf:first prod:Arrears;
+    rdf:rest _:node153 .
+  
+  _:node153 rdf:first prod:CreditCheck;
+    rdf:rest _:node154 .
+  
+  _:node154 rdf:first prod:DocumentCheck;
+    rdf:rest _:node155 .
+  
+  _:node155 rdf:first prod:Mortgage;
+    rdf:rest _:node156 .
+  
+  _:node156 rdf:first prod:RecordCheck;
+    rdf:rest _:node157 .
+  
+  _:node157 rdf:first risk:LatePayment;
+    rdf:rest _:node158 .
+  
+  _:node158 rdf:first risk:MissedPayment;
+    rdf:rest rdf:nil .
+  
+  _:node160 rdf:first risk:ArrearsRisk;
+    rdf:rest _:node161 .
+  
+  _:node161 rdf:first risk:CreditCheckRisk;
+    rdf:rest _:node162 .
+  
+  _:node162 rdf:first risk:DocumentCheckRisk;
+    rdf:rest _:node163 .
+  
+  _:node163 rdf:first risk:LatePaymentRisk;
+    rdf:rest _:node164 .
+  
+  _:node164 rdf:first risk:MissingPaymentRisk;
+    rdf:rest _:node165 .
+  
+  _:node165 rdf:first risk:MortgageRisk;
+    rdf:rest _:node166 .
+  
+  _:node166 rdf:first risk:Risk;
+    rdf:rest rdf:nil .
+  
+  _:node168 rdf:first risk:ArrearsRisk;
+    rdf:rest _:node169 .
+  
+  _:node169 rdf:first risk:CreditCheckRisk;
+    rdf:rest _:node170 .
+  
+  _:node170 rdf:first risk:DocumentCheckRisk;
+    rdf:rest _:node171 .
+  
+  _:node171 rdf:first risk:LatePaymentRisk;
+    rdf:rest _:node172 .
+  
+  _:node172 rdf:first risk:MissingPaymentRisk;
+    rdf:rest _:node173 .
+  
+  _:node173 rdf:first risk:MortgageRisk;
+    rdf:rest _:node174 .
+  
+  _:node174 rdf:first risk:Risk;
+    rdf:rest rdf:nil .
+  
+  _:node176 rdf:first fil:MortgageContract;
+    rdf:rest _:node177 .
+  
+  _:node177 rdf:first prod:Arrears;
+    rdf:rest _:node178 .
+  
+  _:node178 rdf:first prod:CreditCheck;
+    rdf:rest _:node179 .
+  
+  _:node179 rdf:first prod:DocumentCheck;
+    rdf:rest _:node180 .
+  
+  _:node180 rdf:first prod:Mortgage;
+    rdf:rest _:node181 .
+  
+  _:node181 rdf:first prod:RecordCheck;
+    rdf:rest _:node182 .
+  
+  _:node182 rdf:first risk:LatePayment;
+    rdf:rest _:node183 .
+  
+  _:node183 rdf:first risk:MissedPayment;
+    rdf:rest rdf:nil .
+  
+  _:node185 rdf:first prod:MortgageApplication;
+    rdf:rest _:node186 .
+  
+  _:node186 rdf:first risk:Risk;
+    rdf:rest rdf:nil .
+  
+  _:node188 rdf:first risk:ArrearsRisk;
+    rdf:rest _:node189 .
+  
+  _:node189 rdf:first risk:AssetRisk;
+    rdf:rest _:node190 .
+  
+  _:node190 rdf:first risk:DocumentCheckRisk;
+    rdf:rest _:node191 .
+  
+  _:node191 rdf:first risk:LatePaymentRisk;
+    rdf:rest _:node192 .
+  
+  _:node192 rdf:first risk:MissingPaymentRisk;
+    rdf:rest _:node193 .
+  
+  _:node193 rdf:first risk:MortgageRisk;
+    rdf:rest rdf:nil .
+  
+  _:node195 rdf:first risk:ArrearsLimitExceeded;
+    rdf:rest _:node196 .
+  
+  _:node196 rdf:first risk:DegradationInAssetValue;
+    rdf:rest _:node197 .
+  
+  _:node197 rdf:first risk:FraudulentDocument;
+    rdf:rest _:node198 .
+  
+  _:node198 rdf:first risk:InsecureApplication;
+    rdf:rest _:node199 .
+  
+  _:node199 rdf:first risk:LatePaymentEvent;
+    rdf:rest _:node200 .
+  
+  _:node200 rdf:first risk:MissingPaymentEvent;
+    rdf:rest rdf:nil .
+  
+  _:node202 rdf:first prod:MortgageApplication;
+    rdf:rest _:node203 .
+  
+  _:node203 rdf:first risk:Risk;
+    rdf:rest rdf:nil .
+  
+  _:node205 rdf:first fil:Account;
+    rdf:rest _:node206 .
+  
+  _:node206 rdf:first fil:LoanAccount;
+    rdf:rest rdf:nil .
+  
+  _:node208 rdf:first fil:BirthCertificate;
+    rdf:rest _:node209 .
+  
+  _:node209 rdf:first fil:DriverLicence;
+    rdf:rest _:node210 .
+  
+  _:node210 rdf:first fil:LegalDocument;
+    rdf:rest _:node211 .
+  
+  _:node211 rdf:first fil:Passport;
+    rdf:rest _:node212 .
+  
+  _:node212 rdf:first prod:DocumentCheck;
+    rdf:rest rdf:nil .
+  
+  _:node214 rdf:first fil:DriverLicence;
+    rdf:rest _:node215 .
+  
+  _:node215 rdf:first fil:LegalDocument;
+    rdf:rest rdf:nil .
+  
+  _:node217 rdf:first fil:BirthCertificate;
+    rdf:rest _:node218 .
+  
+  _:node218 rdf:first fil:DriverLicence;
+    rdf:rest _:node219 .
+  
+  _:node219 rdf:first fil:Passport;
+    rdf:rest rdf:nil .
+  
+  _:node221 rdf:first fil:DriverLicence;
+    rdf:rest _:node222 .
+  
+  _:node222 rdf:first fil:LegalDocument;
+    rdf:rest rdf:nil .
+  
+  _:node224 rdf:first fil:BirthCertificate;
+    rdf:rest _:node225 .
+  
+  _:node225 rdf:first fil:DriverLicence;
+    rdf:rest _:node226 .
+  
+  _:node226 rdf:first fil:Passport;
+    rdf:rest rdf:nil .
+  
+  _:node228 rdf:first fil:LoanAccount;
+    rdf:rest _:node229 .
+  
+  _:node229 rdf:first prod:Arrears;
+    rdf:rest _:node230 .
+  
+  _:node230 rdf:first prod:Interest;
+    rdf:rest _:node231 .
+  
+  _:node231 rdf:first prod:LoanSchedule;
+    rdf:rest _:node232 .
+  
+  _:node232 rdf:first prod:MortgageApplication;
+    rdf:rest _:node233 .
+  
+  _:node233 rdf:first risk:ForeclosureEvent;
+    rdf:rest _:node234 .
+  
+  _:node234 rdf:first risk:PurchaseInsurance;
+    rdf:rest _:node235 .
+  
+  _:node235 rdf:first risk:Risk;
+    rdf:rest rdf:nil .
+  
+  _:node237 rdf:first fil:Bank;
+    rdf:rest _:node238 .
+  
+  _:node238 rdf:first fil:Organisation;
+    rdf:rest rdf:nil .
+  
+  _:node240 rdf:first fil:BirthCertificate;
+    rdf:rest _:node241 .
+  
+  _:node241 rdf:first fil:DriverLicence;
+    rdf:rest _:node242 .
+  
+  _:node242 rdf:first fil:Expense;
+    rdf:rest _:node243 .
+  
+  _:node243 rdf:first fil:Income;
+    rdf:rest _:node244 .
+  
+  _:node244 rdf:first fil:Liability;
+    rdf:rest _:node245 .
+  
+  _:node245 rdf:first fil:Passport;
+    rdf:rest rdf:nil .
+  
+  _:node247 rdf:first prod:CreditCheck;
+    rdf:rest _:node248 .
+  
+  _:node248 rdf:first prod:DocumentCheck;
+    rdf:rest _:node249 .
+  
+  _:node249 rdf:first prod:MortgageApplication;
+    rdf:rest _:node250 .
+  
+  _:node250 rdf:first prod:RecordCheck;
+    rdf:rest _:node251 .
+  
+  _:node251 rdf:first risk:ValueAssessment;
+    rdf:rest rdf:nil .
+  
+  _:node253 rdf:first prod:Asset;
+    rdf:rest _:node254 .
+  
+  _:node254 rdf:first risk:ValueAssessment;
+    rdf:rest rdf:nil .
+  
+  _:node256 rdf:first prod:CreditCheck;
+    rdf:rest _:node257 .
+  
+  _:node257 rdf:first prod:DocumentCheck;
+    rdf:rest _:node258 .
+  
+  _:node258 rdf:first prod:RecordCheck;
+    rdf:rest _:node259 .
+  
+  _:node259 rdf:first risk:ForeclosureEvent;
+    rdf:rest _:node260 .
+  
+  _:node260 rdf:first risk:ValueAssessment;
+    rdf:rest rdf:nil .
+  
+  _:node262 rdf:first risk:Payment;
+    rdf:rest _:node263 .
+  
+  _:node263 rdf:first risk:Transaction;
+    rdf:rest rdf:nil .
+  
+  _:node279 rdf:first fil:AccountStatement;
+    rdf:rest _:node280 .
+  
+  _:node280 rdf:first fil:FinancialRecord;
+    rdf:rest _:node281 .
+  
+  _:node281 rdf:first fil:TransactionRecord;
+    rdf:rest rdf:nil .
+  
+  _:node283 rdf:first fil:Bank;
+    rdf:rest _:node284 .
+  
+  _:node284 rdf:first fil:BusinessUnit;
+    rdf:rest _:node285 .
+  
+  _:node285 rdf:first fil:InsuranceCompany;
+    rdf:rest rdf:nil .
+  
+  _:node287 rdf:first fil:Bond;
+    rdf:rest _:node288 .
+  
+  _:node288 rdf:first fil:Currency;
+    rdf:rest _:node289 .
+  
+  _:node289 rdf:first fil:Derivative;
+    rdf:rest _:node290 .
+  
+  _:node290 rdf:first fil:Stock;
+    rdf:rest rdf:nil .
+  
+  _:node292 rdf:first prod:ApplicationStage;
+    rdf:rest _:node293 .
+  
+  _:node293 rdf:first prod:DefaultRecoveryStage;
+    rdf:rest _:node294 .
+  
+  _:node294 rdf:first prod:DelinquencyStatus;
+    rdf:rest _:node295 .
+  
+  _:node295 rdf:first prod:ServicingStage;
+    rdf:rest _:node296 .
+  
+  _:node296 rdf:first prod:UnderwritingStage;
+    rdf:rest rdf:nil .
+  
+  _:node298 rdf:first prod:BalloonAmortisation;
+    rdf:rest _:node299 .
+  
+  _:node299 rdf:first prod:FixedAmortisation;
+    rdf:rest _:node300 .
+  
+  _:node300 rdf:first prod:InterestOnlyAmortisation;
+    rdf:rest _:node301 .
+  
+  _:node301 rdf:first prod:NegativeAmortisation;
+    rdf:rest rdf:nil .
+  
+  _:node303 rdf:first prod:FixedInterest;
+    rdf:rest _:node304 .
+  
+  _:node304 rdf:first prod:IndexedInterest;
+    rdf:rest _:node305 .
+  
+  _:node305 rdf:first prod:VariableInterest;
+    rdf:rest rdf:nil .
+  
+  _:node307 rdf:first risk:AcceptRisk;
+    rdf:rest _:node308 .
+  
+  _:node308 rdf:first risk:AvoidRisk;
+    rdf:rest _:node309 .
+  
+  _:node309 rdf:first risk:MitigateRisk;
+    rdf:rest _:node310 .
+  
+  _:node310 rdf:first risk:TransferRisk;
+    rdf:rest rdf:nil .
+  
+  _:node312 rdf:first risk:AdjustInterestRate;
+    rdf:rest _:node313 .
+  
+  _:node313 rdf:first risk:ApplicationRejection;
+    rdf:rest _:node314 .
+  
+  _:node314 rdf:first risk:ContractTermination;
+    rdf:rest _:node315 .
+  
+  _:node315 rdf:first risk:IncreaseCollateral;
+    rdf:rest _:node316 .
+  
+  _:node316 rdf:first risk:PurchaseInsurance;
+    rdf:rest _:node317 .
+  
+  _:node317 rdf:first risk:ReschedulePayment;
+    rdf:rest _:node318 .
+  
+  _:node318 rdf:first risk:TransferOperation;
+    rdf:rest rdf:nil .
+  
+  _:node320 rdf:first risk:ArrearsLimitExceeded;
+    rdf:rest _:node321 .
+  
+  _:node321 rdf:first risk:BadRecord;
+    rdf:rest _:node322 .
+  
+  _:node322 rdf:first risk:DegradationInAssetValue;
+    rdf:rest _:node323 .
+  
+  _:node323 rdf:first risk:FraudulentDocument;
+    rdf:rest _:node324 .
+  
+  _:node324 rdf:first risk:InsecureApplication;
+    rdf:rest _:node325 .
+  
+  _:node325 rdf:first risk:LatePaymentEvent;
+    rdf:rest _:node326 .
+  
+  _:node326 rdf:first risk:MissingPaymentEvent;
+    rdf:rest rdf:nil .
+  
+  _:node328 rdf:first risk:ArrearsRisk;
+    rdf:rest _:node329 .
+  
+  _:node329 rdf:first risk:AssetRisk;
+    rdf:rest _:node330 .
+  
+  _:node330 rdf:first risk:CreditCheckRisk;
+    rdf:rest _:node331 .
+  
+  _:node331 rdf:first risk:DocumentCheckRisk;
+    rdf:rest _:node332 .
+  
+  _:node332 rdf:first risk:LatePaymentRisk;
+    rdf:rest _:node333 .
+  
+  _:node333 rdf:first risk:MissingPaymentRisk;
+    rdf:rest _:node334 .
+  
+  _:node334 rdf:first risk:MortgageRisk;
+    rdf:rest rdf:nil .
+  
+  _:node336 rdf:first risk:DuePayment;
+    rdf:rest _:node337 .
+  
+  _:node337 rdf:first risk:EarlyPayment;
+    rdf:rest _:node338 .
+  
+  _:node338 rdf:first risk:LatePayment;
+    rdf:rest _:node339 .
+  
+  _:node339 rdf:first risk:MissedPayment;
+    rdf:rest rdf:nil .
+  
+  _:node341 rdf:first risk:HighRiskLevel;
+    rdf:rest _:node342 .
+  
+  _:node342 rdf:first risk:LowRiskLevel;
+    rdf:rest _:node343 .
+  
+  _:node343 rdf:first risk:MediumRiskLevel;
+    rdf:rest rdf:nil .
+  
+  _:node345 rdf:first risk:PropertyInspection;
+    rdf:rest _:node346 .
+  
+  _:node346 rdf:first risk:RiskAssessment;
+    rdf:rest _:node347 .
+  
+  _:node347 rdf:first risk:ValueAssessment;
+    rdf:rest rdf:nil .
+  
+  _:node264 owl:onProperty fil:hasBalance .
+  
+  _:node265 owl:onProperty prod:hasArrears .
+  
+  _:node266 owl:onProperty fil:holdsCollateral .
+  
+  _:node267 owl:onProperty fil:opens .
+  
+  _:node268 owl:onProperty fil:hasID .
+  
+  _:node269 owl:onProperty fil:locatedAt .
+  
+  _:node270 owl:onProperty prod:hasExpenses .
+  
+  _:node271 owl:onProperty prod:hasIncome .
+  
+  _:node272 owl:onProperty prod:hasLiability .
+  
+  _:node273 owl:onProperty prod:belongsTo .
+  
+  _:node274 owl:onProperty prod:hasApplication .
+  
+  _:node275 owl:onProperty prod:hasApplicant .
+  
+  _:node276 owl:onProperty prod:requires .
+  
+  _:node277 owl:onProperty prod:requires .
+  
+  _:node2 rdf:rest _:node3 .
+  
+  _:node3 rdf:rest _:node4 .
+  
+  _:node4 rdf:rest rdf:nil .
+  
+  _:node6 rdf:rest _:node7 .
+  
+  _:node7 rdf:rest _:node8 .
+  
+  _:node8 rdf:rest rdf:nil .
+  
+  _:node10 rdf:rest _:node11 .
+  
+  _:node11 rdf:rest rdf:nil .
+  
+  _:node13 rdf:rest _:node14 .
+  
+  _:node14 rdf:rest rdf:nil .
+  
+  _:node16 rdf:rest _:node17 .
+  
+  _:node17 rdf:rest _:node18 .
+  
+  _:node18 rdf:rest rdf:nil .
+  
+  _:node20 rdf:rest _:node21 .
+  
+  _:node21 rdf:rest rdf:nil .
+  
+  _:node23 rdf:rest _:node24 .
+  
+  _:node24 rdf:rest rdf:nil .
+  
+  _:node26 rdf:rest _:node27 .
+  
+  _:node27 rdf:rest rdf:nil .
+  
+  _:node29 rdf:rest _:node30 .
+  
+  _:node30 rdf:rest rdf:nil .
+  
+  _:node32 rdf:rest _:node33 .
+  
+  _:node33 rdf:rest _:node34 .
+  
+  _:node34 rdf:rest _:node35 .
+  
+  _:node35 rdf:rest _:node36 .
+  
+  _:node36 rdf:rest _:node37 .
+  
+  _:node37 rdf:rest _:node38 .
+  
+  _:node38 rdf:rest _:node39 .
+  
+  _:node39 rdf:rest rdf:nil .
+  
+  _:node41 rdf:rest _:node42 .
+  
+  _:node42 rdf:rest _:node43 .
+  
+  _:node43 rdf:rest _:node44 .
+  
+  _:node44 rdf:rest _:node45 .
+  
+  _:node45 rdf:rest _:node46 .
+  
+  _:node46 rdf:rest _:node47 .
+  
+  _:node47 rdf:rest rdf:nil .
+  
+  _:node49 rdf:rest _:node50 .
+  
+  _:node50 rdf:rest rdf:nil .
+  
+  _:node52 rdf:rest _:node53 .
+  
+  _:node53 rdf:rest _:node54 .
+  
+  _:node54 rdf:rest rdf:nil .
+  
+  _:node56 rdf:rest _:node57 .
+  
+  _:node57 rdf:rest _:node58 .
+  
+  _:node58 rdf:rest rdf:nil .
+  
+  _:node60 rdf:rest _:node61 .
+  
+  _:node61 rdf:rest _:node62 .
+  
+  _:node62 rdf:rest rdf:nil .
+  
+  _:node64 rdf:rest _:node65 .
+  
+  _:node65 rdf:rest _:node66 .
+  
+  _:node66 rdf:rest rdf:nil .
+  
+  _:node68 rdf:rest _:node69 .
+  
+  _:node69 rdf:rest rdf:nil .
+  
+  _:node71 rdf:rest _:node72 .
+  
+  _:node72 rdf:rest rdf:nil .
+  
+  _:node74 rdf:rest _:node75 .
+  
+  _:node75 rdf:rest _:node76 .
+  
+  _:node76 rdf:rest _:node77 .
+  
+  _:node77 rdf:rest _:node78 .
+  
+  _:node78 rdf:rest _:node79 .
+  
+  _:node79 rdf:rest _:node80 .
+  
+  _:node80 rdf:rest rdf:nil .
+  
+  _:node82 rdf:rest _:node83 .
+  
+  <https://w3id.org/financialDT> rdfs:comment "Ontology for mortgage product, risk and organisational structure. Uses concepts and modelling approach from FIBO ontology; the FIBO vocabulary and definitions are reused under appropriate licensing.";
+    rdfs:label "Financial Risk and Mortgage Ontology" .
+  
+  fil:collateralOf rdfs:comment "Links an asset to the mortgage contract that its assigned as a collateral of.";
+    rdfs:label "collateralOf" .
+  
+  fil:holdsCollateral rdfs:comment "Links a Mortgage Contract to the Asset that is held as its collateral.";
+    rdfs:label "holdsCollateral" .
+  
+  prod:Asset rdfs:comment "Something of economic value owned or controlled by an entity that is expected to provide future benefit";
+    rdfs:label "Asset" .
+  
+  fil:MortgageContract rdfs:comment "A contract document detailing the contract for a mortgage",
+      "A mortgage contract will include relation to the person taking the mortgage and the organisation providing it, the upfront payment, the interest rate of the mortgage, the fees in case of a late payment, the arrears allowed before foreclose, the initial start date and the end date, it will also require a collateral with an equal or higher value";
+    rdfs:label "MortgageContract" .
+  
+  fil:hasAccountHolder rdfs:comment "Links the account to the person holding it.";
+    rdfs:label "hasAccountHolder" .
+  
+  fil:holdsAccount rdfs:comment "Links the person to the account that he/she holds";
+    rdfs:label "holdsAccount" .
+  
+  fil:Account rdfs:comment "Container for records associated with a business arrangement for regular transactions and services",
+      "In general, account will have a subclass that represents the account type and will be related to a person who is the account holder, it will have an account number, balance and interest rate associated with it";
+    rdfs:label "Account" .
+  
+  fil:Person rdfs:comment "A human being considered as an individual legal or natural person capable of entering into agreements and holding rights or obligations";
+    rdfs:label "Person" .
+  
+  fil:hasBalance rdfs:comment "Links the loan account to its credit balance amount";
+    rdfs:label "hasBalance" .
+  
+  fil:LoanAccount rdfs:comment "Account established by a lender to record the principal, interest, and payment history associated with a specific loan granted to a borrower";
+    rdfs:label "LoanAccount" .
+  
+  prod:CreditBalance rdfs:comment "A positive balance in an account indicating excess funds or payments exceeding owed amounts";
+    rdfs:label "CreditBalance" .
+  
+  fil:hasID rdfs:comment "Links a person to the ID document used to identify him/her.",
+      "hasID" .
+  
+  fil:idOf rdfs:comment "Links the ID document to its owner.", "iDOf" .
+  
+  fil:IdentityDocument rdfs:comment "Any legal document which may be used to verify aspects of a person’s identity";
+    rdfs:label "IdentityDocument" .
+  
+  fil:hasLocation rdfs:comment "Links an address to an entity.";
+    rdfs:label "hasLocation" .
+  
+  fil:locatedAt rdfs:comment "Links an entity to an address";
+    rdfs:label "locatedAt" .
+  
+  fil:Address rdfs:comment "A structured set of information that describes the location of a place or property, typically including street, city, postal code, and country";
+    rdfs:label "Address" .
+  
+  fil:Organisation rdfs:comment "A large body of smaller institutes responsible for financial operations";
+    rdfs:label "Organisation" .
+  
+  fil:hasRole rdfs:comment "Links a person to its role as a borrower or a guarantor in a mortgage contract";
+    rdfs:label "hasRole" .
+  
+  fil:roleOf rdfs:comment "Links the role of a person in the contract to the intended person";
+    rdfs:label "roleOf" .
+  
+  prod:Role rdfs:comment "A function, capacity, or position that a party assumes in a given context, defining its responsibilities, rights, or relationships";
+    rdfs:label "Role" .
+  
+  fil:issuedByOrg rdfs:comment "Links a contract document with the organisation that issued it.";
+    rdfs:label "issuedByOrg" .
+  
+  fil:orgIssues rdfs:comment "Links an organisation with the document that it issued";
+    rdfs:label "orgIssues" .
+  
+  fil:ContractDocument rdfs:comment "Legal document that records the formal terms and conditions of some contract";
+    rdfs:label "ContractDocument" .
+  
+  fil:loanCurrency rdfs:comment "Links a mortgage contract to the currency used to identify its amount";
+    rdfs:label "loanCurrency" .
+  
+  fil:Currency rdfs:comment "A system of money in common use, typically issued by a government or monetary authority, serving as a medium of exchange and unit of account";
+    rdfs:label "Currency" .
+  
+  fil:offersProduct rdfs:comment "Links an organisation to the financial product that it offers";
+    rdfs:label "offersProduct" .
+  
+  fil:productOfferedBy rdfs:comment "Links a financial product to the organisation that offers it";
+    rdfs:label "productOfferedBy" .
+  
+  prod:FinancialProduct rdfs:comment "Product provided to consumers and businesses by a depository institution";
+    rdfs:label "FinancialProduct" .
+  
+  fil:openedBy rdfs:comment "Links a Loan Account to the Mortgage Contract that caused its opening";
+    rdfs:label "openedBy" .
+  
+  fil:opens rdfs:comment "Links a mortgage contract to its dedicated loan account";
+    rdfs:label "opens" .
+  
+  fil:ownedBy rdfs:comment "Links an asset to the person that owns it";
+    rdfs:label "ownedBy" .
+  
+  fil:owns rdfs:comment "Links a person to the asset own by him/her.";
+    rdfs:label "owns" .
+  
+  fil:paidBy rdfs:comment "Links the loan account to the payments used to cover the loan";
+    rdfs:label "paidBy" .
+  
+  fil:pays rdfs:comment "Links a payment to the loan account it goes toward";
+    rdfs:label "pays" .
+  
+  risk:Payment rdfs:comment "Delivery of money in fulfilment of an obligation, such as to satisfy a claim or debt";
+    rdfs:label "Payment" .
+  
+  fil:signedBy rdfs:comment "Links a contract document to the parties that signs it";
+    rdfs:label "signedBy" .
+  
+  fil:signs rdfs:comment "Links the parties to the contract document that they sign";
+    rdfs:label "signs" .
+  
+  prod:applicantOf rdfs:comment "Indicates the contract, application, or financial agreement for which a person acts as an applicant";
+    rdfs:label "applicantOf" .
+  
+  prod:hasApplicant rdfs:comment "Associates a contract, application, or financial agreement with the person who applies for it.";
+    rdfs:label "hasApplicant" .
+  
+  prod:MortgageApplication rdfs:comment "A formal request submitted by a borrower to a lender for a mortgage loan, including personal, financial, and property information used in credit and risk assessment";
+    rdfs:label "MortgageApplication" .
+  
+  prod:applicationOf rdfs:comment "Indicates the contract, product, or agreement to which a given application refers";
+    rdfs:label "applicationOf" .
+  
+  prod:hasApplication rdfs:comment "Associates a contract, product, or agreement with an application submitted in relation to it";
+    rdfs:label "hasApplication" .
+  
+  prod:Mortgage rdfs:comment "A loan secured by real property, under which the borrower gives the lender a lien on the property as collateral for the debt";
+    rdfs:label "Mortgage" .
+  
+  prod:assetRecoveredBy rdfs:comment "Links an asset to its foreclosure event incase of failing a set of due payments.";
+    rdfs:label "assetRecoveredBy" .
+  
+  prod:recoversAsset rdfs:comment "Links a foreclosure event with asset to be recovered.";
+    rdfs:label "recoversAsset" .
+  
+  risk:ForeclosureEvent rdfs:comment "An event indicating taking over an asset due to failure of a number of payments";
+    rdfs:label "ForeclosureEvent" .
+  
+  prod:belongsTo rdfs:comment "Links a loan scheduale with the mortgage contract that its related to.";
+    rdfs:label "belongsTo" .
+  
+  prod:LoanSchedule rdfs:comment "A structured plan that specifies the sequence, timing, and amount of payments required to repay a loan or mortgage, including details of due dates, principal and interest components, and total remaining balance at each instalment";
+    rdfs:label "LoanSchedule" .
+  
+  prod:causesRiskSource rdfs:comment "Link risk sources to each other incase of dependencies";
+    rdfs:label "causesRiskSource" .
+  
+  prod:riskCausedBy rdfs:comment "Links the insecure applications to the sources that causes it to become insecure";
+    rdfs:label "riskCausedBy" .
+  
+  risk:BadRecord rdfs:comment "A risk source representing the existence of adverse or unfavourable historical information in an applicant’s financial, legal, or behavioural record that may increase the likelihood of default, delay, or non-compliance with contractual obligations";
+    rdfs:label "BadRecord" .
+  
+  risk:DegradationInAssetValue rdfs:comment "The risk of the reduction of the asset value in time which reduces its value below the mortgage value";
+    rdfs:label "DegradationInAssetValue" .
+  
+  risk:FraudulentDocument rdfs:comment "The risks that arise due to the presentation of fraudulent documents";
+    rdfs:label "FraudulentDocument" .
+  
+  risk:InsecureApplication rdfs:comment "The risks that are associated with not fulfilling the entire requirements of the mortgage application";
+    rdfs:label "InsecureApplication" .
+  
+  prod:changedBy rdfs:comment "Links the risk level to the document check event that caused the risk to increase or decrease";
+    rdfs:label "changedBy" .
+  
+  prod:changes rdfs:comment "Links the document check event to the risk level that it has changed.";
+    rdfs:label "changes" .
+  
+  risk:RiskLevel rdfs:comment "A qualitative or quantitative categorization of the magnitude or severity of a risk, typically derived from the combination of likelihood and impact assessments.";
+    rdfs:label "RiskLevel" .
+  
+  prod:DocumentCheck rdfs:comment "A verification process confirming the authenticity, completeness, and validity of submitted identification and financial documents";
+    rdfs:label "DocumentCheck" .
+  
+  prod:closedBy rdfs:comment "Links the account and contract that were closed by the foreclosure event.";
+    rdfs:label "closedBy" .
+  
+  prod:closes rdfs:comment "Links the foreclosure event to the account and mortgage contract cloased by it";
+    rdfs:label "closes" .
+  
+  prod:coveredBy rdfs:comment "Links a Mortgage Risk to the inchurance policy used to mitigate it.";
+    rdfs:label "coveredBy" .
+  
+  prod:covers rdfs:comment "Links the insurance with the mortgage risk that it covers.";
+    rdfs:label "covers" .
+  
+  risk:MortgageRisk rdfs:comment "The potential for financial loss or adverse impact associated with a mortgage agreement, including credit, property, and payment-related uncertainties.";
+    rdfs:label "MortgageRisk" .
+  
+  risk:PurchaseInsurance rdfs:comment "A control action that mitigates financial risk by acquiring an insurance policy to transfer potential losses or liabilities to an insurer, thereby reducing the exposure of the organisation or borrower to adverse events";
+    rdfs:label "PurchaseInsurance" .
+  
+  prod:decreasedBy rdfs:comment "Links the credit balance to the payment or the foreclosure event used to cover it.";
+    rdfs:label "decreasedBy" .
+  
+  prod:decreases rdfs:comment "Links the due payments or the foreclosure event used to cover the credit balance.";
+    rdfs:label "decreases" .
+  
+  risk:DuePayment rdfs:comment "A payment that was made on or before its due date";
+    rdfs:label "DuePayment" .
+  
+  prod:definedBy rdfs:comment "Links the payment to the loan schedule used to define its date and amount.";
+    rdfs:label "definedBy" .
+  
+  prod:definesPayment rdfs:comment "Links the loan schedule to the payments that it defines.";
+    rdfs:label "definesPayment" .
+  
+  prod:guarantees rdfs:comment "Defines the person who act as a guarantor in the mortgage contract.";
+    rdfs:label "guarentees" .
+  
+  prod:hasAmortisationType rdfs:comment "Links the mortgage contract to the amortisation type agreed upon";
+    rdfs:label "hasAmortisation" .
+  
+  prod:Amortisation rdfs:comment "A structured process of repaying a loan or debt over time through scheduled periodic payments that cover interest and, typically, portions of the principal amount";
+    rdfs:label "Amortisation" .
+  
+  prod:hasArrears rdfs:comment "Links a loan account to its arrears";
+    rdfs:label "hasArrears" .
+  
+  prod:Arrears rdfs:comment "The state of being behind in fulfilling financial obligations, such as missed or overdue loan or mortgage payments";
+    rdfs:label "Arrears" .
+  
+  prod:hasExpenses rdfs:comment "Links the borrower to the expenses that he/she has to evaluate the possibility of a loan/mortgage.";
+    rdfs:label "hasExpenses" .
+  
+  prod:Borrower rdfs:comment "A party that receives money or other assets under a loan agreement and is obligated to repay them under specified terms";
+    rdfs:label "Borrower" .
+  
+  fil:Expense rdfs:comment "Recurring or one-off monetary outflows incurred by a borrower or entity that reduce disposable income";
+    rdfs:label "Expense" .
+  
+  prod:hasIncome rdfs:comment "Links the Borrower to his/her income to help evaluate the possibility of the loan/mortgage.";
+    rdfs:label "hasIncome" .
+  
+  fil:Income rdfs:comment "Any monetary amount received by an individual or entity from employment, investments, financial products, or other sources within a defined period. In the context of financial risk assessment, Income represents a key financial attribute influencing affordability, repayment capacity, and exposure to credit risk.";
+    rdfs:label "Income" .
+  
+  prod:hasLiability rdfs:comment "Links the borrower to the liabilities that he/she has and may prevent proceeding with the loan/mortgage.";
+    rdfs:label "hasLiability" .
+  
+  fil:Liability rdfs:comment "A financial obligation or debt owed by a borrower or entity to another party, requiring future payments of cash, goods, or services.";
+    rdfs:label "Liability" .
+  
+  prod:hasNextStage rdfs:comment "Links a product lifecycle stage to its next stage";
+    rdfs:label "hasNextStage" .
+  
+  prod:hasPreviousStage rdfs:comment "Links a product lifecycle stage to its previous one.";
+    rdfs:label "hasPreviousStage" .
+  
+  prod:LifeCycleStage rdfs:comment "A distinct phase in the operational, contractual, or financial life of a product or service that delineates its status, activities, and responsibilities within an overall process";
+    rdfs:label "LifecycleStage" .
+  
+  prod:hasRisk rdfs:comment "Links an entity to the risk that it may contain";
+    rdfs:label "hasRisk" .
+  
+  prod:isRiskOf rdfs:comment "Links a risk to the entity that it may be affected by it";
+    rdfs:label "isRiskOf" .
+  
+  fil:Document rdfs:comment "A document, especially a legal document, may serve to establish one or several facts, and can be relied upon as a proof thereof",
+      "Unitary expression of some realization of an intellectual or artistic work";
+    rdfs:label "Document" .
+  
+  fil:Record rdfs:comment "Memorialization and objective evidence of activities performed, events occurred, results achieved, or statements made, regardless of its characteristics, media, physical form, or the manner in which it is recorded or stored";
+    rdfs:label "Record" .
+  
+  prod:RecordCheck rdfs:comment "An evaluation of an applicant's past records or history as part of a credit or mortgage assessment";
+    rdfs:label "RecordCheck" .
+  
+  risk:LatePayment rdfs:comment "A Payment that was made after the indicated due date";
+    rdfs:label "LatePayment" .
+  
+  risk:ArrearsRisk rdfs:comment "The risk that accumulated unpaid obligations or overdue payments lead to loan delinquency, legal action, or foreclosure";
+    rdfs:label "ArrearsRisk" .
+  
+  risk:AssetRisk rdfs:comment "The risk of financial loss arising from the reduction in value, impairment, or loss of an asset used as collateral for a mortgage or loan";
+    rdfs:label "AssetRisk" .
+  
+  risk:CreditCheckRisk rdfs:comment "The risk associated with incorrect or incomplete assessment of a borrower’s creditworthiness";
+    rdfs:label "CreditCheckRisk" .
+  
+  risk:DocumentCheckRisk rdfs:comment "The risk arising from inaccurate, falsified, or incomplete documentation provided during the mortgage or loan verification process";
+    rdfs:label "DocumentCheckRisk" .
+  
+  risk:LatePaymentRisk rdfs:comment "The risk that a borrower delays scheduled payments beyond their due date, causing potential penalties, interest accumulation, or credit score degradation.";
+    rdfs:label "LatePaymentRisk" .
+  
+  risk:MissingPaymentRisk rdfs:comment "The risk that a borrower fails to make one or more required loan or mortgage payments, resulting in arrears or default";
+    rdfs:label "MissingPaymentRisk" .
+  
+  prod:hasRisk2 rdfs:comment "Links a record check event with the credit check risk";
+    rdfs:label "hasRisk" .
+  
+  prod:hasStage rdfs:comment "Links a financial product to the lifecycle stage its in";
+    rdfs:label "hasStage" .
+  
+  prod:implementedBy rdfs:comment "Links a risk treatment to the action used to achieve it.";
+    rdfs:label "implementedBy" .
+  
+  prod:implements rdfs:comment "Links a control action to the risk treatment it is used to achieve";
+    rdfs:label "implements" .
+  
+  risk:RiskTreatment rdfs:comment "A process, action, or set of measures intended to modify a risk by reducing, avoiding, transferring, or accepting it";
+    rdfs:label "RiskTreatment" .
+  
+  risk:ControlAction rdfs:comment "An intentional act or measure taken to influence, adjust, or manage a financial process, risk, or contractual condition";
+    rdfs:label "ControlAction" .
+  
+  prod:inStage rdfs:comment "Links a risk or an event to a product lifecycle stage.";
+    rdfs:label "inStage" .
+  
+  risk:Occurrence rdfs:comment "Happening of an Occurrence Kind, i.e., an event";
+    rdfs:label "Occurrence" .
+  
+  risk:Risk rdfs:comment "The possibility of an event or condition that, if it occurs, has a negative impact on objectives, outcomes, or value";
+    rdfs:label "Risk" .
+  
+  prod:increasedBy rdfs:comment "links a status change to the event that caused it";
+    rdfs:label "increasedBy" .
+  
+  prod:increases rdfs:comment "Links an event to the status change that it causes";
+    rdfs:label "increases" .
+  
+  prod:Interest rdfs:comment "A charge for the use of borrowed money, typically expressed as a percentage of the principal amount over a specified period";
+    rdfs:label "Interest" .
+  
+  fil:DefaultNotice rdfs:comment "A notice given to a person before taking over an asset to recover the loan account indicating failure to make required payments";
+    rdfs:label "DefaultNotice" .
+  
+  risk:MissedPayment rdfs:comment "A Payment that was not made";
+    rdfs:label "MissedPayment" .
+  
+  prod:involves rdfs:comment "Links a check event with the entities being checked";
+    rdfs:label "involves" .
+  
+  prod:stepOf rdfs:comment "Links the entities being checked with the check event relevant for them.";
+    rdfs:label "stepOf" .
+  
+  prod:isRiskSourceFor rdfs:comment "links a risk source with the risk its responsible for";
+    rdfs:label "isRiskSourceFor" .
+  
+  risk:ArrearsLimitExceeded rdfs:comment "The risk of exceeding the number of allowed missing payments without repaying them or the penalties";
+    rdfs:label "ArrearsLimitExceeded" .
+  
+  risk:LatePaymentEvent rdfs:comment "The risk associated with being late on one payment";
+    rdfs:label "LatePaymentEvent" .
+  
+  risk:MissingPaymentEvent rdfs:comment "The risk of missing one payment";
+    rdfs:label "MissingPaymentEvent" .
+  
+  prod:issuedBy rdfs:comment "Links an insurance with the insurance company responsible for it";
+    rdfs:label "issuedBy" .
+  
+  fil:InsuranceCompany rdfs:comment "A financial institution that provides insurance services by underwriting risk in exchange for premiums and compensates policyholders or beneficiaries in the event of specified losses or events";
+    rdfs:label "InsuranceCompany" .
+  
+  prod:issuedByVA rdfs:comment "Links an assessment report to the value assessment event that issued it";
+    rdfs:label "issuedByVA" .
+  
+  prod:issues rdfs:comment "Links a value assessment event to the assessment report that it issues";
+    rdfs:label "issues" .
+  
+  fil:AssessmentReport rdfs:comment "A report indicating the details of an assessed asset and its estimated value and condition";
+    rdfs:label "AssessmentReport" .
+  
+  risk:ValueAssessment rdfs:comment "Assessment event to estimate the value of something";
+    rdfs:label "ValueAssessment" .
+  
+  prod:mortgageInStage rdfs:comment "Links an entity to its lifecycle stage";
+    rdfs:label "mortgageInStage" .
+  
+  prod:ApplicationStage rdfs:comment "The initial phase of a financial product's life cycle where a customer submits an application and provides required documentation for eligibility and credit assessment";
+    rdfs:label "ApplicationStage" .
+  
+  prod:DefaultRecoveryStage rdfs:comment "The concluding phase of a financial product’s life cycle that addresses default situations through recovery actions such as notices, collateral seizure, restructuring, or legal enforcement";
+    rdfs:label "DefaultRecoveryStage" .
+  
+  prod:ServicingStage rdfs:comment "The operational phase during which payment collection, interest calculation, and account maintenance occur";
+    rdfs:label "ServicingStage" .
+  
+  prod:UnderwritingStage rdfs:comment "The phase of the financial product life cycle in which the lender evaluates application details, assesses credit and collateral risks, and decides on approval terms and conditions";
+    rdfs:label "UnderwritingStage" .
+  
+  prod:providedBy rdfs:comment "Links a value assessment report to the property inspection event that issued it";
+    rdfs:label "providedBy" .
+  
+  prod:provides rdfs:comment "Links a Property inspection event with the value assessment report that it issues";
+    rdfs:label "provides" .
+  
+  risk:PropertyInspection rdfs:comment "Event that involves analysing one or more aspects of a real property";
+    rdfs:label "PropertyInspection" .
+  
+  prod:requiredFor rdfs:comment "Links the checks to the mortgage application that required them";
+    rdfs:label "requiredFor" .
+  
+  prod:requires rdfs:comment "links the mortgage application to the needed checks to proceed with it";
+    rdfs:label "requires" .
+  
+  prod:CreditCheck rdfs:comment "An evaluation of a borrower's credit history and financial reliability, conducted to assess their ability to repay a loan or mortgage";
+    rdfs:label "CreditCheck" .
+  
+  prod:startsContract rdfs:comment "Links a mortgage application to its contract";
+    rdfs:label "startsContract" .
+  
+  prod:triggeredBy rdfs:comment "Defines the actions that triggers the foreclosure event or the foreclosure evnet to take place";
+    rdfs:label "triggeredBy" .
+  
+  prod:triggers rdfs:comment "defines the sequence of actions from the notice to the foreclosure event";
+    rdfs:label "triggers" .
+  
+  risk:aRiskTo rdfs:comment "Indicates the risk caused by a given risk source or risk event";
+    rdfs:label "aRiskTo" .
+  
+  risk:hasRiskSource rdfs:comment "Associates risk with its risk source that may give rise to adverse outcomes";
+    rdfs:label "hasRiskSource" .
+  
+  risk:actionOf rdfs:comment "Indicates the risk event (or risk situation) that a given action is intended to address, mitigate, or respond to.";
+    rdfs:label "actionOf" .
+  
+  risk:hasAction rdfs:comment "Associates a risk event (or risk situation) with an action that is implemented to mitigate, control, or respond to it";
+    rdfs:label "hasAction" .
+  
+  risk:assessedBy rdfs:comment "Links an asset to its value assessment event";
+    rdfs:label "assessedBy" .
+  
+  risk:assesses rdfs:comment "Links a value assessment event to the asset that it evaluates.";
+    rdfs:label "assesses" .
+  
+  risk:assessesRisk rdfs:comment "Links a risk assessment process to the relevant risk";
+    rdfs:label "assessesRisk" .
+  
+  risk:riskAssessedBy rdfs:comment "Links a risk with its risk assessment event";
+    rdfs:label "riskAssessedBy" .
+  
+  risk:RiskAssessment rdfs:comment "An event indicating the evaluation of risk for a whole or part of a product life cycle";
+    rdfs:label "RiskAssessment" .
+  
+  risk:concernedBy rdfs:comment "Links an entity to the risk that it is concerned by.";
+    rdfs:label "concernedBy" .
+  
+  risk:concerns rdfs:comment "Links the risk to the entity that it concerns.";
+    rdfs:label "concerns" .
+  
+  risk:controlledBy rdfs:comment "Links a risk to the control action used to mitigate it.";
+    rdfs:label "controlledBy" .
+  
+  risk:controls rdfs:comment "Links a control action to the risk that it mitigates or controls.";
+    rdfs:label "controls" .
+  
+  risk:hasRiskLevel rdfs:comment "Links a mortgage application or a risk with its risk level";
+    rdfs:label "hasRiskLevel" .
+  
+  risk:levelOfRisk rdfs:comment "Links a risk level to a risk or a mortgage application";
+    rdfs:label "levelOfRisk" .
+  
+  risk:hasTreatment rdfs:comment "Links a risk to the treatment method used to mitigate it.";
+    rdfs:label "hasTreatment" .
+  
+  risk:treats rdfs:comment "Links the treatment method to the risk it mitigates.";
+    rdfs:label "treats" .
+  
+  risk:implementsTransfer rdfs:comment "Links the action of purchasing insurance to the risk transfer treatment";
+    rdfs:label "implementsTransfer" .
+  
+  risk:TransferRisk rdfs:comment "A risk treatment option that shifts the financial or operational consequences of a risk to another party, typically through insurance, outsourcing, or contractual arrangements.";
+    rdfs:label "TransferRisk" .
+  
+  risk:receivesTransfer rdfs:comment "Links an organsiation to the control action that caused the transfer or a mortgage to it";
+    rdfs:label "recievesTransfer" .
+  
+  risk:transfersTo rdfs:comment "Links a transfer control action to the organisation that it transfers the risk to.";
+    rdfs:label "transfersTo" .
+  
+  risk:recommendsTreatment rdfs:comment "Links a Risk assessment process to its recommended risk treatment";
+    rdfs:label "recommendsTreatment" .
+  
+  risk:treatmentRecommendedBy rdfs:comment "Links the treatment to the risk assessment process that recommended it.";
+    rdfs:label "treatmentRecommendedBy" .
+  
+  fil:BirthCertificate rdfs:comment "An original document certifying the circumstances of the birth, or a certified copy or representation of the ensuing registration of that birth";
+    rdfs:label "BirthCertificate" .
+  
+  fil:Bank rdfs:comment "The commercial name of the organisational body of the institute";
+    rdfs:label "Bank" .
+  
+  fil:DriverLicence rdfs:comment "An official document which states that a person may operate a motorized vehicle or provides official identifying information for a non-driver";
+    rdfs:label "DriverLicence" .
+  
+  fil:LegalDocument rdfs:comment "Document specifying the terms of, or provides evidence for, an agreement, attestation, certification, conditions, permissions, and/or decisions of legal persons, government entities, or courts of law drawn up in accordance with certain rules that apply in the relevant jurisdiction(s).";
+    rdfs:label "LegalDocument" .
+  
+  fil:Passport rdfs:comment "Formal identity document, issued by a national government, which certifies the identity and nationality of its holder for the purpose of international travel";
+    rdfs:label "Passport" .
+  
+  risk:Transaction rdfs:comment "An event that indicates movement of finances in or out of an account";
+    rdfs:label "Transaction" .
+  
+  fil:AccountStatement rdfs:comment "Periodic summary of account activity for a given period of time";
+    rdfs:label "AccountStatement" .
+  
+  fil:Location rdfs:comment "A geographical place or position that can be identified within a spatial reference system";
+    rdfs:label "Location" .
+  
+  fil:AgreementDocument rdfs:comment "Legal document used to verify an agreement between two or more parties";
+    rdfs:label "AgreementDocument" .
+  
+  fil:Report rdfs:comment "Document that provides a structured description of something, prepared on ad hoc, periodic, recurring, regular, or as required basis";
+    rdfs:label "Report" .
+  
+  fil:Certificate rdfs:comment "Document attesting to the truth of some fact or set of facts";
+    rdfs:label "Certificate" .
+  
+  fil:DeathCertificate rdfs:comment "Original document certifying the circumstances of the death, or a certified copy or representation of the ensuing registration of that death";
+    rdfs:label "DeathCertificate" .
+  
+  fil:Bond rdfs:comment "A debt security under which the issuer owes the holders a debt and is obliged to pay interest and repay the principal at a later date, known as maturity";
+    rdfs:label "Bond" .
+  
+  fil:FinancialInstrument rdfs:comment "A contractual arrangement that represents a financial asset to one party and a financial liability or equity instrument to another";
+    rdfs:label "FinancialInstrument" .
+  
+  fil:BusinessUnit rdfs:comment "A part of a organisational structure where financial operations are made";
+    rdfs:label "BusinessUnit" .
+  
+  fil:CreditCardAccount rdfs:comment "Account maintained by a financial institution that records transactions and credit extended to a cardholder under a revolving line of credit, including purchases, repayments, interest and fees";
+    rdfs:label "CreditCardAccount" .
+  
+  fil:LoanOrCreditAccount rdfs:comment "Account established by a lender to record the principal, interest, and payment history associated with a specific loan granted to a borrower";
+    rdfs:label "LoanOrCreditAccount" .
+  
+  fil:Notice rdfs:comment "Announcement, communication, intimation, or advance warning of something, usually to allow preparations to be made";
+    rdfs:label "Notice" .
+  
+  fil:DepositAccount rdfs:comment "Account that provides a record of money placed with a depository institution for safekeeping and management";
+    rdfs:label "DepositAccount" .
+  
+  fil:InvestmentOrDepositAccount rdfs:comment "Account that provides a record of deposits of funds and/or securities held at a financial institution";
+    rdfs:label "investmentOrDepositAccount" .
+  
+  fil:InvestmentAccount rdfs:comment "Account that provides a record of deposits of funds and/or securities held at a financial institution",
+      "The typical objectives of an investment account are to achieve long term growth, income or capital preservation from the deposited asset portfolio. Investment accounts are typically not insured";
+    rdfs:label "InvestmentAccount" .
+  
+  fil:Derivative rdfs:comment "A financial instrument whose value is derived from the value of one or more underlying assets, rates, or indices";
+    rdfs:label "Derivative" .
+  
+  fil:FinancialRecord rdfs:comment "Summary of all previous financial record for a person";
+    rdfs:label "FinancialRecord" .
+  
+  fil:LedgerAccount rdfs:comment "Account recorded in a general ledger";
+    rdfs:label "LedgerAccount" .
+  
+  fil:PaymentAccount rdfs:comment "Account used to execute payment transactions, such as the deposit and withdrawal of funds, and to store money available for immediate use through instruments like debit cards, transfers, or direct debits";
+    rdfs:label "PaymentAccount" .
+  
+  fil:Stock rdfs:comment "A financial instrument that signifies ownership interest in a company or entity, representing a claim on part of its assets and earnings";
+    rdfs:label "Equity Instrument (Stock)" .
+  
+  fil:TransactionRecord rdfs:comment "A record for all previous transactions made by a person";
+    rdfs:label "TransactionRecord" .
+  
+  prod:Balance rdfs:comment "A quantified statement of the amount of money held in an account at a given point in time, representing either a credit or debit position";
+    rdfs:label "Balance" .
+  
+  prod:BalloonAmortisation rdfs:comment "An amortisation structure that involves regular periodic payments that do not fully repay the principal, followed by a large final payment, known as a balloon payment, at the end of the loan term";
+    rdfs:label "BalloonAmortisation" .
+  
+  prod:Guarantor rdfs:comment "A party that undertakes to fulfil the obligations of a borrower if that borrower fails to do so";
+    rdfs:label "Guarantor" .
+  
+  prod:DebtBalance rdfs:comment "The remaining amount owed by a borrower to a lender on a loan or credit account";
+    rdfs:label "DebtBalance" .
+  
+  prod:CreditScore rdfs:comment "A numerical expression derived from a borrower's credit information that represents their creditworthiness and likelihood of meeting debt obligations";
+    rdfs:label "CreditScore" .
+  
+  prod:DelinquencyStatus rdfs:comment "A lifecycle stage representing that the loan is past due or in arrears, but not yet fully resolved or recovered";
+    rdfs:label "DelinquencyStatus" .
+  
+  prod:FX rdfs:comment "The exchange of one currency for another, typically conducted through spot or derivative transactions in the foreign exchange market";
+    rdfs:label "Foreign Exchange (FX)" .
+  
+  prod:Product rdfs:comment "Commercially distributed good that is tangible property, the output of a production process, or something that passes through a distribution channel before being consumed or used";
+    rdfs:label "Product" .
+  
+  prod:FixedAmortisation rdfs:comment "An amortisation structure in which periodic payments remain constant over the loan term, with the interest component decreasing and the principal component increasing as the balance is repaid";
+    rdfs:label "FixedAmortisation" .
+  
+  prod:FixedInterest rdfs:comment "Interest with a rate that remains constant over an agreed period, or for the entire loan term";
+    rdfs:label "FixedInterest" .
+  
+  prod:IndexedInterest rdfs:comment "Interest where the rate is periodically adjusted based on a specified external index";
+    rdfs:label "IndexedInterest" .
+  
+  prod:InterestOnlyAmortisation rdfs:comment "An amortisation structure in which payments during an initial period cover only interest charges, deferring repayment of the principal until a later stage or at maturity";
+    rdfs:label "InterestOnlyAmortisation" .
+  
+  prod:NegativeAmortisation rdfs:comment "An amortisation structure in which scheduled payments are insufficient to cover accrued interest, causing unpaid interest to be added to the loan balance and increasing the total debt owed over time";
+    rdfs:label "NegativeAmortisation" .
+  
+  prod:Property rdfs:comment "A tangible or intangible thing owned by a person or organisation, over which ownership rights or interests are held";
+    rdfs:label "Property" .
+  
+  prod:Rating rdfs:comment "A qualitative or quantitative evaluation assigned to an entity, asset, or exposure reflecting its credit quality, performance, or risk profile";
+    rdfs:label "Rating" .
+  
+  prod:VariableInterest rdfs:comment "Interest with a rate that can change over time in response to market conditions";
+    rdfs:label "VariableInterest" .
+  
+  risk:AcceptRisk rdfs:comment "A risk treatment option in which the organisation consciously acknowledges and retains the risk without further action, typically because it is within tolerance or economically infeasible to treat";
+    rdfs:label "AcceptRisk" .
+  
+  risk:AdjustInterestRate rdfs:comment "A control action that modifies the interest rate applied to a loan or mortgage to reflect changes in risk, market conditions, or agreement terms";
+    rdfs:label "AdjustInterestRate" .
+  
+  risk:ApplicationRejection rdfs:comment "A control action that rejects the application and prevents proceeding with the mortgage due to the high level of risk that cannot be mitigated";
+    rdfs:label "ApplicationRejection" .
+  
+  risk:RiskSource rdfs:comment "Sources of the risks associated with the lifecycle stages" .
+  
+  risk:AssessmentEvent rdfs:comment "Event involving the evaluation or estimation of the nature, quality, or ability of something" .
+  
+  risk:AvoidRisk rdfs:comment "A risk treatment option that eliminates the source of risk or removes the activity giving rise to it, thereby preventing its occurrence." .
+  
+  risk:Calculation rdfs:comment "Actual execution of some computation or operation that was scheduled or triggered by something" .
+  
+  risk:ContractTermination rdfs:comment "A control action that formally ends the validity or enforceability of a contractual agreement, either by mutual consent, fulfilment, or breach" .
+  
+  risk:EarlyPayment rdfs:comment "A payment that was made before the due date" .
+  
+  risk:Exposure rdfs:comment "A state or condition in which an entity is subject to potential loss, harm, or risk due to its involvement in or relationship with another entity, activity, or event" .
+  
+  risk:FeePayment rdfs:comment "Payment of fees or charges" .
+  
+  risk:FinancialExposure rdfs:comment "The extent to which a party is subject to potential monetary loss arising from market movements, credit events, liquidity changes, or other financial risks" .
+  
+  risk:HighRiskLevel rdfs:comment "Classification indicating that a risk has a high probability of occurrence and/or would have a severe impact" .
+  
+  risk:IncreaseCollateral rdfs:comment "A control action that raises the value or quantity of collateral pledged to secure a loan, typically in response to heightened credit or market risk" .
+  
+  risk:InterestRateCalculation rdfs:comment "Event reflecting the calculation of interest" .
+  
+  risk:InterestRateReset rdfs:comment "Event reflecting a potential adjustment to an interest rate, typically corresponding to a change in the underlying benchmark interest rate or index specified in the contract" .
+  
+  risk:LoanServicing rdfs:comment "The ongoing management of the loan between disbursement and payoff" .
+  
+  risk:LowRiskLevel rdfs:comment "Classification indicating that a risk has a low probability of occurrence and/or minimal impact" .
+  
+  risk:MediumRiskLevel rdfs:comment "Classification indicating that a risk has a moderate likelihood of occurrence or impact" .
+  
+  risk:MitigateRisk rdfs:comment "A risk treatment option that reduces the likelihood or impact of a risk through preventive or corrective actions, such as controls, safeguards, or process improvements." .
+  
+  risk:ReschedulePayment rdfs:comment "A control action that revises the payment schedule of a loan or mortgage, extending or rearranging due dates to accommodate borrower circumstances" .
+  
+  risk:Transfer rdfs:comment "Transfer of funds between accounts" .
+  
+  risk:TransferOperation rdfs:comment "A control action that moves rights, obligations, or ownership of a contract, asset, or risk from one party to another" .
+  
+  prod:hasGuarantor rdfs:label "Defines the person acting as a guarantor for the mortgage contract",
+      "hasGuarantor" .
+  
+  fil:accountID rdfs:label "accountID" .
+  
+  fil:accountStatus rdfs:label "accountStatus" .
+  
+  fil:addressID rdfs:label "addressID" .
+  
+  fil:arrearsLimitCount rdfs:label "arrearsLimitCount" .
+  
+  fil:balanceAmount rdfs:label "balanceAmount" .
+  
+  fil:birthDate rdfs:label "birthDate" .
+  
+  fil:branchID rdfs:label "branchID" .
+  
+  fil:city rdfs:label "city" .
+  
+  fil:contractID rdfs:label "contractID" .
+  
+  fil:contractStatus rdfs:label "contractStatus" .
+  
+  fil:country rdfs:label "country" .
+  
+  fil:currentInterest rdfs:label "currentInterest" .
+  
+  fil:documentID rdfs:label "documentID" .
+  
+  fil:downPayment rdfs:label "downPayment" .
+  
+  fil:expenseAmount rdfs:label "expenseAmount" .
+  
+  fil:expenseID rdfs:label "expenseID" .
+  
+  fil:expiryDate rdfs:label "expiryDate" .
+  
+  fil:firstName rdfs:label "firstName" .
+  
+  fil:firstPaymentDate rdfs:label "firstPaymentDate" .
+  
+  fil:incomeAmount rdfs:label "incomeAmount" .
+  
+  fil:incomeID rdfs:label "incomeID" .
+  
+  fil:issueDate rdfs:label "issueDate" .
+  
+  fil:lastName rdfs:label "lastName" .
+  
+  fil:liabilityAmount rdfs:label "liabilityAmount" .
+  
+  fil:liabilityID rdfs:label "liabilityID" .
+  
+  fil:loanAgeMonth rdfs:label "loanAgeMonth" .
+  
+  fil:loanBalanceAmount rdfs:label "loanBalanceAmount" .
+  
+  fil:loanID rdfs:label "loanID" .
+  
+  fil:loanTermMonths rdfs:label "loanTermMonths" .
+  
+  fil:maturityDate rdfs:label "maturityDate" .
+  
+  fil:mortgageInterestRate rdfs:label "mortgageInterestRate" .
+  
+  fil:orgID rdfs:label "orgID" .
+  
+  fil:orgName rdfs:label "orgName" .
+  
+  fil:orgType rdfs:label "orgType" .
+  
+  fil:passportNumber rdfs:label "passportNumber" .
+  
+  fil:personID rdfs:label "personID" .
+  
+  fil:postalCode rdfs:label "postalCode" .
+  
+  fil:prepayPenalty rdfs:label "prepayPenalty" .
+  
+  fil:principalAmount rdfs:label "principalAmount" .
+  
+  fil:remainingTerm rdfs:label "remainingTerm" .
+  
+  fil:street rdfs:label "street" .
+  
+  prod:applicationID rdfs:label "applicationID" .
+  
+  prod:applicationStatus rdfs:label "applicationStatus" .
+  
+  prod:assetID rdfs:label "assetID" .
+  
+  prod:combinedLoanToValueRatio rdfs:label "combinedLoanToValueRatio" .
+  
+  prod:creditCheckStatus rdfs:label "creditCheckStatus" .
+  
+  prod:debtToIncomeRatio rdfs:label "debtToIncomeRatio" .
+  
+  prod:documentCheckStatus rdfs:label "documentCheckStatus" .
+  
+  prod:eventID rdfs:label "eventID" .
+  
+  prod:insuranceId rdfs:label "insuranceID" .
+  
+  prod:interestRate rdfs:label "interestRate" .
+  
+  prod:interestStatus rdfs:label "interestStatus" .
+  
+  prod:limitCount rdfs:label "limitCount" .
+  
+  prod:loanPurpose rdfs:label "loanPurpose" .
+  
+  prod:loanToValueRatio rdfs:label "loanToValueRatio" .
+  
+  prod:marketValue rdfs:label "marketValue" .
+  
+  prod:missedCount rdfs:label "missedCount" .
+  
+  prod:recordCheckStatus rdfs:label "recordCheckStatus" .
+  
+  prod:remainingCredit rdfs:label "remainingCredit" .
+  
+  prod:requestedAmount rdfs:label "requestedAmount" .
+  
+  prod:scheduleID rdfs:label "scheduleID" .
+  
+  prod:valuationDate rdfs:label "valuationDate" .
+  
+  risk:actualPrincipal rdfs:label "actualPrincipal" .
+  
+  risk:assessedValueAmount rdfs:label "assessedValueAmount" .
+  
+  risk:coverageAmount rdfs:label "coverageAmount" .
+  
+  risk:dueDate rdfs:label "dueDate" .
+  
+  risk:impact rdfs:label "impact" .
+  
+  risk:likelihood rdfs:label "likelihood" .
+  
+  risk:paymentDate rdfs:label "paymentDate" .
+  
+  risk:paymentHistoryCode rdfs:label "paymentHistoryCode" .
+  
+  risk:paymentID rdfs:label "paymentID" .
+  
+  risk:requiredAmount rdfs:label "requiredAmount" .
+  
+  risk:riskID rdfs:label "riskID" .
+  
+  risk:riskScore rdfs:label "riskScore" .
+  
+  risk:scheduledPrincipal rdfs:label "scheduledPrincipal" .
+  
+  risk:staged rdfs:label "stageID" .
+  
+  risk:totalPrincipal rdfs:label "totalPrincipal" .
+  
+  risk:transactionAmount rdfs:label "transactionAmount" .
+  
+  risk:transactionDate rdfs:label "transactionDate" .
+  
+  risk:transactionID rdfs:label "transactionID" .
+  
+  risk:RiskSource rdfs:label "RiskSource" .
+  
+  risk:AssessmentEvent rdfs:label "AssessmentEvent" .
+  
+  risk:AvoidRisk rdfs:label "AvoidRisk" .
+  
+  risk:Calculation rdfs:label "Calculation" .
+  
+  risk:ContractTermination rdfs:label "ContractTermination" .
+  
+  risk:EarlyPayment rdfs:label "EarlyPayment" .
+  
+  risk:Exposure rdfs:label "Exposure" .
+  
+  risk:FeePayment rdfs:label "FeePayment" .
+  
+  risk:FinancialExposure rdfs:label "FinancialExposure" .
+  
+  risk:HighRiskLevel rdfs:label "HighRiskLevel" .
+  
+  risk:IncreaseCollateral rdfs:label "IncreaseCollateral" .
+  
+  risk:InterestRateCalculation rdfs:label "InterestRateCalculation";
+    owl:disjointWith risk:InterestRateReset .
+  
+  risk:InterestRateReset rdfs:label "InterestRateReset" .
+  
+  risk:LoanServicing rdfs:label "LoanServicing" .
+  
+  risk:LowRiskLevel rdfs:label "LowRiskLevel" .
+  
+  risk:MediumRiskLevel rdfs:label "MediumRiskLevel" .
+  
+  risk:MitigateRisk rdfs:label "MitigateRisk" .
+  
+  risk:ReschedulePayment rdfs:label "ReschedulePayment" .
+  
+  risk:Transfer rdfs:label "Transfer" .
+  
+  risk:TransferOperation rdfs:label "TransferOperation" .
+  
+  <https://w3id.org/financialDT> rdfs:seeAlso "https://spec.edmcouncil.org/fibo/";
+    owl:versionIRI <https://w3id.org/financialDT>;
+    owl:imports <http://www.w3.org/2006/time#>;
+    <http://purl.org/dc/terms/creator> "Nizar Al-Ahmad, Anelia Kurteva, Yuting Zhang";
+    <http://purl.org/dc/terms/description> """Financial Digital Twin Ontology (financialDT) is a proof-of-concept ontology developed to investigate the use of semantic technologies in modelling financial operational risk through multi-modal data integration. The ontology provides a formal conceptual framework for constructing knowledge graphs capable of representing financial institutional structures, product lifecycles, and risk dynamics in a unified semantic model.
+
+The ontology adopts a layered modular architecture comprising three principal layers: the Financial Institutional Layer (FIL), the Risk Layer, and the Financial Product Layer.
+
+The Financial Institutional Layer is conceptually aligned with principles from FIBO and models the core organisational, contractual, and account-level semantics required to represent financial institutions and their operational structure.
+
+The Risk Layer is inspired by ISO 31000 and provides a structured representation of risk sources, risk events, exposures, assessments, mitigation strategies, and control actions. It enables explicit modelling of risk identification, analysis, evaluation, and treatment within a financial digital twin context.
+
+The Financial Product Layer captures the semantics necessary to represent financial products and their lifecycle states. Mortgages are used as a proof-of-concept instantiation to demonstrate how product structures interact with institutional entities and risk mechanisms.
+
+The layered modular structure allows individual components of the ontology to be reused independently or integrated selectively, supporting interoperability with institution-specific organisational models and product definitions while preserving a coherent global risk reasoning framework.""";
+    <http://purl.org/dc/terms/license> """This ontology is released under the Creative Commons Attribution 4.0 International (CC BY 4.0) licence.
+
+It conceptually aligns with and reuses ideas from the Financial Industry Business Ontology (FIBO) without importing it.
+Users who reuse FIBO-aligned concepts or mappings from this ontology remain responsible for complying with the
+original FIBO licensing terms as published by the EDM Council and the Object Management Group (OMG).""" .
+  
+  _:node1 owl:unionOf _:node2 .
+  
+  _:node5 owl:unionOf _:node6 .
+  
+  _:node9 owl:unionOf _:node10 .
+  
+  _:node12 owl:unionOf _:node13 .
+  
+  _:node15 owl:unionOf _:node16 .
+  
+  _:node19 owl:unionOf _:node20 .
+  
+  _:node22 owl:unionOf _:node23 .
+  
+  _:node25 owl:unionOf _:node26 .
+  
+  _:node28 owl:unionOf _:node29 .
+  
+  _:node31 owl:unionOf _:node32 .
+  
+  _:node40 owl:unionOf _:node41 .
+  
+  _:node48 owl:unionOf _:node49 .
+  
+  _:node51 owl:unionOf _:node52 .
+  
+  _:node55 owl:unionOf _:node56 .
+  
+  _:node59 owl:unionOf _:node60 .
+  
+  _:node63 owl:unionOf _:node64 .
+  
+  _:node67 owl:unionOf _:node68 .
+  
+  _:node70 owl:unionOf _:node71 .
+  
+  _:node73 owl:unionOf _:node74 .
+  
+  _:node81 owl:unionOf _:node82 .
+  
+  _:node90 owl:unionOf _:node91 .
+  
+  _:node94 owl:unionOf _:node95 .
+  
+  _:node98 owl:unionOf _:node99 .
+  
+  _:node103 owl:unionOf _:node104 .
+  
+  _:node108 owl:unionOf _:node109 .
+  
+  _:node111 owl:unionOf _:node112 .
+  
+  _:node114 owl:unionOf _:node115 .
+  
+  _:node118 owl:unionOf _:node119 .
+  
+  _:node121 owl:unionOf _:node122 .
+  
+  _:node124 owl:unionOf _:node125 .
+  
+  _:node127 owl:unionOf _:node128 .
+  
+  _:node130 owl:unionOf _:node131 .
+  
+  _:node133 owl:unionOf _:node134 .
+  
+  _:node136 owl:unionOf _:node137 .
+  
+  _:node143 owl:unionOf _:node144 .
+  
+  _:node150 owl:unionOf _:node151 .
+  
+  _:node159 owl:unionOf _:node160 .
+  
+  _:node167 owl:unionOf _:node168 .
+  
+  _:node175 owl:unionOf _:node176 .
+  
+  _:node184 owl:unionOf _:node185 .
+  
+  _:node187 owl:unionOf _:node188 .
+  
+  _:node194 owl:unionOf _:node195 .
+  
+  _:node201 owl:unionOf _:node202 .
+  
+  _:node204 owl:unionOf _:node205 .
+  
+  _:node207 owl:unionOf _:node208 .
+  
+  _:node213 owl:unionOf _:node214 .
+  
+  _:node216 owl:unionOf _:node217 .
+  
+  _:node220 owl:unionOf _:node221 .
+  
+  _:node223 owl:unionOf _:node224 .
+  
+  _:node227 owl:unionOf _:node228 .
+  
+  _:node236 owl:unionOf _:node237 .
+  
+  _:node239 owl:unionOf _:node240 .
+  
+  _:node246 owl:unionOf _:node247 .
+  
+  _:node252 owl:unionOf _:node253 .
+  
+  _:node255 owl:unionOf _:node256 .
+  
+  _:node261 owl:unionOf _:node262 .
+  
+  prod:CreditBalance owl:disjointWith prod:DebtBalance .
+  
+  prod:DocumentCheck owl:disjointWith prod:RecordCheck .
+  
+  prod:Borrower owl:disjointWith prod:Guarantor .
+  
+  fil:BirthCertificate owl:disjointWith fil:DeathCertificate .
+  
+  fil:DriverLicence owl:disjointWith fil:Passport .
+  
+  fil:CreditCardAccount owl:disjointWith fil:LoanAccount .
+  
+  fil:DepositAccount owl:disjointWith fil:InvestmentAccount .
+  
+  prod:FX owl:disjointWith prod:Mortgage .
+  
+  _:node264 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+    owl:onClass prod:CreditBalance .
+  
+  _:node267 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+    owl:onClass fil:LoanAccount .
+  
+  _:node273 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+    owl:onClass fil:MortgageContract .
+  
+  _:node265 owl:onClass prod:Arrears;
+    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger .
+  
+  _:node266 owl:onClass prod:Asset;
+    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger .
+  
+  _:node268 owl:onClass fil:IdentityDocument;
+    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger .
+  
+  _:node269 owl:onClass fil:Address;
+    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger .
+  
+  _:node270 owl:onClass fil:Expense;
+    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger .
+  
+  _:node271 owl:onClass fil:Income;
+    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger .
+  
+  _:node272 owl:onClass fil:Liability;
+    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger .
+  
+  _:node274 owl:onClass prod:MortgageApplication;
+    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger .
+  
+  _:node275 owl:onClass prod:Borrower;
+    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger .
+  
+  _:node276 owl:onClass prod:CreditCheck;
+    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger .
+  
+  _:node277 owl:onClass risk:PropertyInspection;
+    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger .
+  
+  _:node278 owl:members _:node279 .
+  
+  _:node282 owl:members _:node283 .
+  
+  _:node286 owl:members _:node287 .
+  
+  _:node291 owl:members _:node292 .
+  
+  _:node297 owl:members _:node298 .
+  
+  _:node302 owl:members _:node303 .
+  
+  _:node306 owl:members _:node307 .
+  
+  _:node311 owl:members _:node312 .
+  
+  _:node319 owl:members _:node320 .
+  
+  _:node327 owl:members _:node328 .
+  
+  _:node335 owl:members _:node336 .
+  
+  _:node340 owl:members _:node341 .
+  
+  _:node344 owl:members _:node345 .
+}
