@@ -1,0 +1,4 @@
+applicationID,loanID,contractID,coBorrowerCreditScore,deptToIncomeRatio,loanToValueReturn,combinedLoanToValueRation,loanPurpose,requestedAmount,amountToPay,applicationStatus,hasStatus,personID,stage,riskLevel,mortgageID
+a45422752_122019,45422752,c45422752_1497,797,28,78,78,R,166000,236160,P,0,JE0,ApplicationStage,LowLevelRisk,M1
+a45422765_012019,45422765,c45422765_1497,714,41,83,83,R,228000,307200,P,0,MJ0,ApplicationStage,LowLevelRisk,M2
+a45476383_012019,45476383,c45476383_1497,700,35,80,80,R,148000,210480,P,2,MG0,ApplicationStage,LowLevelRisk,M3
