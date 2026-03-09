@@ -1,0 +1,65 @@
+@base <https://w3id.org/financialDT#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fil: <https://w3id.org/financialDT/financialInstitute#> .
+@prefix prod: <https://w3id.org/financialDT/product#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+:c45422752_1497 a fil:MortgageContract;
+  fil:contractID "c45422752_1497";
+  fil:loanID "45422752_1497";
+  fil:loanTermMonths 240;
+  fil:prepayPenalty false;
+  fil:mortgageInterestRate 0.0375;
+  fil:maturityDate "2037-09-15"^^xsd:date;
+  fil:firstPaymentDate "2017-09-15"^^xsd:date;
+  fil:arrearsLimitCount 3;
+  fil:downPayment 46820.51;
+  fil:principalAmount 236160.0;
+  fil:contractStatus "accepted";
+  fil:opens :45422752_1497;
+  fil:signedBy :FM1497, :JE0;
+  fil:issuedByOrg :FM1497;
+  fil:loanCurrency :cu001;
+  prod:hasGuarantor :ML0;
+  prod:mortgageInStage :UnderwritingStage;
+  prod:hasAmortisationType :FRM .
+
+:c45422765_1497 a fil:MortgageContract;
+  fil:contractID "c45422765_1497";
+  fil:loanID "45422765_1497";
+  fil:loanTermMonths 180;
+  fil:prepayPenalty false;
+  fil:mortgageInterestRate 0.03125;
+  fil:maturityDate "2032-09-15"^^xsd:date;
+  fil:firstPaymentDate "2017-09-15"^^xsd:date;
+  fil:arrearsLimitCount 2;
+  fil:downPayment 46698.8;
+  fil:principalAmount 307200.0;
+  fil:contractStatus "accepted";
+  fil:opens :45422765_1497;
+  fil:signedBy :FM1497, :MJ0;
+  fil:issuedByOrg :FM1497;
+  fil:loanCurrency :cu002;
+  prod:hasGuarantor :NJ0;
+  prod:mortgageInStage :UnderwritingStage;
+  prod:hasAmortisationType :FRM .
+
+:c45476383_1497 a fil:MortgageContract;
+  fil:contractID "c45476383_1497";
+  fil:loanID "45476383_1497";
+  fil:loanTermMonths 240;
+  fil:prepayPenalty false;
+  fil:mortgageInterestRate 0.0375;
+  fil:maturityDate "2037-09-15"^^xsd:date;
+  fil:firstPaymentDate "2017-09-15"^^xsd:date;
+  fil:arrearsLimitCount 2;
+  fil:downPayment 37000.0;
+  fil:principalAmount 148000.0;
+  fil:contractStatus "accepted";
+  fil:opens :45476383_1497;
+  fil:signedBy :FM1497, :MG0;
+  fil:issuedByOrg :FM1497;
+  fil:loanCurrency :cu003;
+  prod:hasGuarantor :KA0;
+  prod:mortgageInStage :UnderwritingStage;
+  prod:hasAmortisationType :FRM .

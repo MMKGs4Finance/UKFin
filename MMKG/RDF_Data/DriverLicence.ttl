@@ -1,0 +1,52 @@
+@base <https://w3id.org/financialDT#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fil: <https://w3id.org/financialDT/financialInstitute#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+:MG_Doc0 a fil:DriverLicence;
+  fil:documentID "MG_Doc0";
+  fil:lastName "MILLER ";
+  fil:firstName "GILBERT ";
+  fil:issueDate "2012-06-12"^^xsd:date;
+  fil:expiryDate "2022-06-12"^^xsd:date;
+  fil:personID "MG0" .
+
+:MJ_Doc0 a fil:DriverLicence;
+  fil:documentID "MJ_Doc0";
+  fil:lastName "MORROW ";
+  fil:firstName "JOSEPH";
+  fil:issueDate "2010-06-12"^^xsd:date;
+  fil:expiryDate "2020-06-12"^^xsd:date;
+  fil:personID "MJ0" .
+
+:JE_Doc0 a fil:DriverLicence;
+  fil:documentID "JE_Doc0";
+  fil:lastName "JUAREZ ";
+  fil:firstName "EMILY";
+  fil:issueDate "2003-12-12"^^xsd:date;
+  fil:expiryDate "2023-12-12"^^xsd:date;
+  fil:personID "JE0" .
+
+:ML_Doc0 a fil:DriverLicence;
+  fil:documentID "ML_Doc0";
+  fil:lastName "Mike ";
+  fil:firstName "Like";
+  fil:issueDate "2015-01-01"^^xsd:date;
+  fil:expiryDate "2030-01-01"^^xsd:date;
+  fil:personID "ML0" .
+
+:NJ_Doc0 a fil:DriverLicence;
+  fil:documentID "NJ_Doc0";
+  fil:lastName "Nicol ";
+  fil:firstName "July";
+  fil:issueDate "2015-02-01"^^xsd:date;
+  fil:expiryDate "2030-01-02"^^xsd:date;
+  fil:personID "NJ0" .
+
+:KA_Doc0 a fil:DriverLicence;
+  fil:documentID "KA_Doc0";
+  fil:lastName "Kim ";
+  fil:firstName "April";
+  fil:issueDate "2015-01-03"^^xsd:date;
+  fil:expiryDate "2030-01-03"^^xsd:date;
+  fil:personID "KA0" .

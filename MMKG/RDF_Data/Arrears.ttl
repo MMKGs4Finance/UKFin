@@ -1,0 +1,630 @@
+@base <https://w3id.org/financialDT#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prod: <https://w3id.org/financialDT/product#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+<Arrears_45422752_092017> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+:45422752 prod:hasArrears <Arrears_45422752_092017>, <Arrears_45422752_102017>, <Arrears_45422752_112017>,
+    <Arrears_45422752_122017>, <Arrears_45422752_012018>, <Arrears_45422752_022018>, <Arrears_45422752_032018>,
+    <Arrears_45422752_042018>, <Arrears_45422752_052018>, <Arrears_45422752_062018>, <Arrears_45422752_072018>,
+    <Arrears_45422752_082018>, <Arrears_45422752_092018>, <Arrears_45422752_102018>, <Arrears_45422752_112018>,
+    <Arrears_45422752_122018>, <Arrears_45422752_022019>, <Arrears_45422752_032019>, <Arrears_45422752_042019>,
+    <Arrears_45422752_052019>, <Arrears_45422752_062019>, <Arrears_45422752_072019>, <Arrears_45422752_082019>,
+    <Arrears_45422752_092019>, <Arrears_45422752_102019>, <Arrears_45422752_112019>, <Arrears_45422752_122019>,
+    <Arrears_45422752_012020>, <Arrears_45422752_022020>, <Arrears_45422752_032020>, <Arrears_45422752_042020>,
+    <Arrears_45422752_052020>, <Arrears_45422752_062020>, <Arrears_45422752_072020>, <Arrears_45422752_082020>,
+    <Arrears_45422752_092020>, <Arrears_45422752_102020>, <Arrears_45422752_112020>, <Arrears_45422752_122020>,
+    <Arrears_45422752_012021>, <Arrears_45422752_022021>, <Arrears_45422752_032021>, <Arrears_45422752_042021>,
+    <Arrears_45422752_052021>, <Arrears_45422752_062021>, <Arrears_45422752_072021>, <Arrears_45422752_082021>,
+    <Arrears_45422752_092021> .
+
+<Arrears_45422752_102017> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -200.0 .
+
+<Arrears_45422752_112017> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_122017> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_012018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -200.0 .
+
+<Arrears_45422752_022018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -200.0 .
+
+<Arrears_45422752_032018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -200.0 .
+
+<Arrears_45422752_042018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_052018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_062018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_072018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_082018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_092018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_102018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_112018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_122018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_022019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -1306.71 .
+
+<Arrears_45422752_032019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_042019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -79.17 .
+
+<Arrears_45422752_052019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_062019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_072019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_082019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_092019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_102019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -103.37 .
+
+<Arrears_45422752_112019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_122019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_012020> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_022020> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_032020> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -749.97 .
+
+<Arrears_45422752_042020> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_052020> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -335.81 .
+
+<Arrears_45422752_062020> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_072020> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_082020> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_092020> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_102020> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_112020> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_122020> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_012021> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_022021> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -515.81 .
+
+<Arrears_45422752_032021> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -1015.81 .
+
+<Arrears_45422752_042021> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_052021> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_062021> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_072021> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_082021> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422752_092021> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422765_092017> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+:45422765 prod:hasArrears <Arrears_45422765_092017>, <Arrears_45422765_102017>, <Arrears_45422765_112017>,
+    <Arrears_45422765_122017>, <Arrears_45422765_012018>, <Arrears_45422765_022018>, <Arrears_45422765_032018>,
+    <Arrears_45422765_042018>, <Arrears_45422765_052018>, <Arrears_45422765_062018>, <Arrears_45422765_072018>,
+    <Arrears_45422765_082018>, <Arrears_45422765_092018>, <Arrears_45422765_102018>, <Arrears_45422765_112018>,
+    <Arrears_45422765_122018>, <Arrears_45422765_012019>, <Arrears_45422765_022019>, <Arrears_45422765_032019>,
+    <Arrears_45422765_042019>, <Arrears_45422765_052019>, <Arrears_45422765_062019>, <Arrears_45422765_072019>,
+    <Arrears_45422765_082019>, <Arrears_45422765_092019>, <Arrears_45422765_102019>, <Arrears_45422765_112019>,
+    <Arrears_45422765_122019>, <Arrears_45422765_012020>, <Arrears_45422765_022020>, <Arrears_45422765_032020>,
+    <Arrears_45422765_042020>, <Arrears_45422765_052020>, <Arrears_45422765_062020>, <Arrears_45422765_072020>,
+    <Arrears_45422765_082020>, <Arrears_45422765_092020>, <Arrears_45422765_102020>, <Arrears_45422765_112020>,
+    <Arrears_45422765_122020>, <Arrears_45422765_012021>, <Arrears_45422765_022021>, <Arrears_45422765_032021>,
+    <Arrears_45422765_042021>, <Arrears_45422765_052021>, <Arrears_45422765_062021>, <Arrears_45422765_072021>,
+    <Arrears_45422765_082021>, <Arrears_45422765_092021> .
+
+<Arrears_45422765_102017> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422765_112017> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422765_122017> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422765_012018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422765_022018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422765_032018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422765_042018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422765_052018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422765_062018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422765_072018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 214.03 .
+
+<Arrears_45422765_082018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 211.26 .
+
+<Arrears_45422765_092018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 208.47 .
+
+<Arrears_45422765_102018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 205.68 .
+
+<Arrears_45422765_112018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 202.89 .
+
+<Arrears_45422765_122018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -1720.0 .
+
+<Arrears_45422765_012019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 197.27 .
+
+<Arrears_45422765_022019> a prod:Arrears;
+  prod:missedCount 1;
+  prod:limitCount 1280.0 .
+
+<Arrears_45422765_032019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -1280.0 .
+
+<Arrears_45422765_042019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422765_052019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422765_062019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422765_072019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422765_082019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422765_092019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422765_102019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422765_112019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422765_122019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422765_012020> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422765_022020> a prod:Arrears;
+  prod:missedCount 1;
+  prod:limitCount 1280.0 .
+
+<Arrears_45422765_032020> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -220.0 .
+
+<Arrears_45422765_042020> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -220.0 .
+
+<Arrears_45422765_052020> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -220.0 .
+
+<Arrears_45422765_062020> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -220.0 .
+
+<Arrears_45422765_072020> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -220.0 .
+
+<Arrears_45422765_082020> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -200.0 .
+
+<Arrears_45422765_092020> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422765_102020> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422765_112020> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422765_122020> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422765_012021> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422765_022021> a prod:Arrears;
+  prod:missedCount 1;
+  prod:limitCount 1280.0 .
+
+<Arrears_45422765_032021> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -220.0 .
+
+<Arrears_45422765_042021> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -220.0 .
+
+<Arrears_45422765_052021> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -220.0 .
+
+<Arrears_45422765_062021> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -220.0 .
+
+<Arrears_45422765_072021> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -200.0 .
+
+<Arrears_45422765_082021> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45422765_092021> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 0.0 .
+
+<Arrears_45476383_092017> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -2.53 .
+
+:45476383 prod:hasArrears <Arrears_45476383_092017>, <Arrears_45476383_102017>, <Arrears_45476383_112017>,
+    <Arrears_45476383_122017>, <Arrears_45476383_012018>, <Arrears_45476383_022018>, <Arrears_45476383_032018>,
+    <Arrears_45476383_042018>, <Arrears_45476383_052018>, <Arrears_45476383_062018>, <Arrears_45476383_072018>,
+    <Arrears_45476383_082018>, <Arrears_45476383_092018>, <Arrears_45476383_102018>, <Arrears_45476383_112018>,
+    <Arrears_45476383_122018>, <Arrears_45476383_012019>, <Arrears_45476383_022019>, <Arrears_45476383_032019>,
+    <Arrears_45476383_042019>, <Arrears_45476383_052019>, <Arrears_45476383_062019>, <Arrears_45476383_072019>,
+    <Arrears_45476383_082019>, <Arrears_45476383_092019>, <Arrears_45476383_102019>, <Arrears_45476383_112019>,
+    <Arrears_45476383_122019>, <Arrears_45476383_012020>, <Arrears_45476383_022020>, <Arrears_45476383_032020>,
+    <Arrears_45476383_042020>, <Arrears_45476383_052020>, <Arrears_45476383_062020>, <Arrears_45476383_072020>,
+    <Arrears_45476383_082020>, <Arrears_45476383_092020>, <Arrears_45476383_102020>, <Arrears_45476383_112020>,
+    <Arrears_45476383_122020>, <Arrears_45476383_012021>, <Arrears_45476383_022021>, <Arrears_45476383_032021>,
+    <Arrears_45476383_042021>, <Arrears_45476383_052021>, <Arrears_45476383_062021>, <Arrears_45476383_072021>,
+    <Arrears_45476383_082021>, <Arrears_45476383_092021> .
+
+<Arrears_45476383_102017> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -2.53 .
+
+<Arrears_45476383_112017> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -2.53 .
+
+<Arrears_45476383_122017> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -2.53 .
+
+<Arrears_45476383_012018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -2.53 .
+
+<Arrears_45476383_022018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 77.47 .
+
+<Arrears_45476383_032018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 77.47 .
+
+<Arrears_45476383_042018> a prod:Arrears;
+  prod:missedCount 1;
+  prod:limitCount 877.47 .
+
+<Arrears_45476383_052018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -2.53 .
+
+<Arrears_45476383_062018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -2.53 .
+
+<Arrears_45476383_072018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -2.53 .
+
+<Arrears_45476383_082018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -2.53 .
+
+<Arrears_45476383_092018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -322.53 .
+
+<Arrears_45476383_102018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount -322.53 .
+
+<Arrears_45476383_112018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 77.47 .
+
+<Arrears_45476383_122018> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 77.47 .
+
+<Arrears_45476383_012019> a prod:Arrears;
+  prod:missedCount 1;
+  prod:limitCount 877.47 .
+
+<Arrears_45476383_022019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 77.47 .
+
+<Arrears_45476383_032019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 77.47 .
+
+<Arrears_45476383_042019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 77.47 .
+
+<Arrears_45476383_052019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 77.47 .
+
+<Arrears_45476383_062019> a prod:Arrears;
+  prod:missedCount 1;
+  prod:limitCount 877.47 .
+
+<Arrears_45476383_072019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 477.47 .
+
+<Arrears_45476383_082019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 477.47 .
+
+<Arrears_45476383_092019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 677.47 .
+
+<Arrears_45476383_102019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 627.47 .
+
+<Arrears_45476383_112019> a prod:Arrears;
+  prod:missedCount 0;
+  prod:limitCount 627.47 .
+
+<Arrears_45476383_122019> a prod:Arrears;
+  prod:missedCount 1;
+  prod:limitCount 0.0 .
+
+<Arrears_45476383_012020> a prod:Arrears;
+  prod:missedCount 2;
+  prod:limitCount 0.0 .
+
+<Arrears_45476383_022020> a prod:Arrears;
+  prod:missedCount 3;
+  prod:limitCount 0.0 .
+
+<Arrears_45476383_032020> a prod:Arrears;
+  prod:missedCount 3;
+  prod:limitCount 0.0 .
+
+<Arrears_45476383_042020> a prod:Arrears;
+  prod:missedCount 3;
+  prod:limitCount 0.0 .
+
+<Arrears_45476383_052020> a prod:Arrears;
+  prod:missedCount 3;
+  prod:limitCount 0.0 .
+
+<Arrears_45476383_062020> a prod:Arrears;
+  prod:missedCount 3;
+  prod:limitCount 0.0 .
+
+<Arrears_45476383_072020> a prod:Arrears;
+  prod:missedCount 3;
+  prod:limitCount 0.0 .
+
+<Arrears_45476383_082020> a prod:Arrears;
+  prod:missedCount 3;
+  prod:limitCount 0.0 .
+
+<Arrears_45476383_092020> a prod:Arrears;
+  prod:missedCount 3;
+  prod:limitCount 0.0 .
+
+<Arrears_45476383_102020> a prod:Arrears;
+  prod:missedCount 3;
+  prod:limitCount 0.0 .
+
+<Arrears_45476383_112020> a prod:Arrears;
+  prod:missedCount 3;
+  prod:limitCount 0.0 .
+
+<Arrears_45476383_122020> a prod:Arrears;
+  prod:missedCount 3;
+  prod:limitCount 0.0 .
+
+<Arrears_45476383_012021> a prod:Arrears;
+  prod:missedCount 3;
+  prod:limitCount 0.0 .
+
+<Arrears_45476383_022021> a prod:Arrears;
+  prod:missedCount 3;
+  prod:limitCount 0.0 .
+
+<Arrears_45476383_032021> a prod:Arrears;
+  prod:missedCount 3;
+  prod:limitCount 0.0 .
+
+<Arrears_45476383_042021> a prod:Arrears;
+  prod:missedCount 3;
+  prod:limitCount 0.0 .
+
+<Arrears_45476383_052021> a prod:Arrears;
+  prod:missedCount 3;
+  prod:limitCount 0.0 .
+
+<Arrears_45476383_062021> a prod:Arrears;
+  prod:missedCount 3;
+  prod:limitCount 0.0 .
+
+<Arrears_45476383_072021> a prod:Arrears;
+  prod:missedCount 3;
+  prod:limitCount 0.0 .
+
+<Arrears_45476383_082021> a prod:Arrears;
+  prod:missedCount 3;
+  prod:limitCount 0.0 .
+
+<Arrears_45476383_092021> a prod:Arrears;
+  prod:missedCount 3;
+  prod:limitCount 0.0 .

@@ -1,0 +1,18 @@
+@base <https://w3id.org/financialDT#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prod: <https://w3id.org/financialDT/product#> .
+
+<Interest_45422752_1497> a prod:Interest;
+  prod:loanID "45422752_1497";
+  prod:interestStatus "Fixed";
+  prod:interestRate 0.0375 .
+
+<Interest_45422765_1497> a prod:Interest;
+  prod:loanID "45422765_1497";
+  prod:interestStatus "Fixed";
+  prod:interestRate 0.03125 .
+
+<Interest_45476383_1497> a prod:Interest;
+  prod:loanID "45476383_1497";
+  prod:interestStatus "Fixed";
+  prod:interestRate 0.0375 .

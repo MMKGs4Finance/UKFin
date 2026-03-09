@@ -1,0 +1,12 @@
+@base <https://w3id.org/financialDT#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix risk: <https://w3id.org/financialDT/risk#> .
+@prefix prod: <https://w3id.org/financialDT/product#> .
+@prefix fil: <https://w3id.org/financialDT/financialInstitute#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+:EVT1A3FF2 a risk:ForeclosureEvent;
+  risk:eventID "EVT1A3FF2";
+  risk:requiredAmount 192260.0;
+  prod:recoversAsset :45476383Asset;
+  prod:closes :c45476383_1497, :45476383_1497 .

@@ -1,0 +1,23 @@
+@base <https://w3id.org/financialDT#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix risk: <https://w3id.org/financialDT/risk#> .
+@prefix prod: <https://w3id.org/financialDT/product#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+:PI83asset1 a risk:PropertyInspection;
+  risk:eventID "PI83asset1";
+  prod:provides :EVT1A3F .
+
+:a45476383_032018 prod:requires :PI83asset1 .
+
+:PI65asset1 a risk:PropertyInspection;
+  risk:eventID "PI65asset1";
+  prod:provides :EVT4C7Q .
+
+:a45422765_022018 prod:requires :PI65asset1 .
+
+:PI52asset1 a risk:PropertyInspection;
+  risk:eventID "PI52asset1";
+  prod:provides :EVT9M2K .
+
+:a45422752_122020 prod:requires :PI52asset1 .

@@ -1,0 +1,46 @@
+@base <https://w3id.org/financialDT#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fil: <https://w3id.org/financialDT/financialInstitute#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+:MG_Doc2 a fil:BirthCertificate;
+  fil:firstName "GILBERT ";
+  fil:lastName "MILLER ";
+  fil:birthDate "1999-11-21"^^xsd:date;
+  fil:documentID "MG_Doc2";
+  fil:personID "MG0" .
+
+:MJ_Doc2 a fil:BirthCertificate;
+  fil:firstName "JOSEPH";
+  fil:lastName "MORROW ";
+  fil:birthDate "1994-07-28"^^xsd:date;
+  fil:documentID "MJ_Doc2";
+  fil:personID "MJ0" .
+
+:JE_Doc2 a fil:BirthCertificate;
+  fil:firstName "EMILY";
+  fil:lastName "JUAREZ ";
+  fil:birthDate "1977-07-20"^^xsd:date;
+  fil:documentID "JE_Doc2";
+  fil:personID "JE0" .
+
+:ML_Doc2 a fil:BirthCertificate;
+  fil:firstName "Like";
+  fil:lastName "Mike ";
+  fil:birthDate "1990-08-15"^^xsd:date;
+  fil:documentID "ML_Doc2";
+  fil:personID "ML0" .
+
+:NJ_Doc2 a fil:BirthCertificate;
+  fil:firstName "July";
+  fil:lastName "Nicol ";
+  fil:birthDate "2000-10-10"^^xsd:date;
+  fil:documentID "NJ_Doc2";
+  fil:personID "NJ0" .
+
+:KA_Doc2 a fil:BirthCertificate;
+  fil:firstName "April";
+  fil:lastName "Kim ";
+  fil:birthDate "1996-05-05"^^xsd:date;
+  fil:documentID "KA_Doc2";
+  fil:personID "KA0" .

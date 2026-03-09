@@ -1,0 +1,27 @@
+@base <https://w3id.org/financialDT#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix risk: <https://w3id.org/financialDT/risk#> .
+@prefix prod: <https://w3id.org/financialDT/product#> .
+@prefix fil: <https://w3id.org/financialDT/financialInstitute#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+:EVT1A3F a risk:ValueAssessment;
+  risk:eventID "EVT1A3F";
+  risk:assessedValueAmount 325000.0;
+  risk:applicationID "a45476383_042019";
+  prod:issues :VAR83;
+  risk:assesses :45476383Asset .
+
+:EVT4C7Q a risk:ValueAssessment;
+  risk:eventID "EVT4C7Q";
+  risk:assessedValueAmount 410000.0;
+  risk:applicationID "a45422765_052018";
+  prod:issues :VAR65;
+  risk:assesses :45422765Asset .
+
+:EVT9M2K a risk:ValueAssessment;
+  risk:eventID "EVT9M2K";
+  risk:assessedValueAmount 287500.0;
+  risk:applicationID "a45422752_102017";
+  prod:issues :VAR52;
+  risk:assesses :45422752Asset .

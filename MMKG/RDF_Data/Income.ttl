@@ -1,0 +1,26 @@
+@base <https://w3id.org/financialDT#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fil: <https://w3id.org/financialDT/financialInstitute#> .
+@prefix prod: <https://w3id.org/financialDT/product#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+:MG0_Income a fil:Income;
+  fil:incomeID "MG0_Income";
+  fil:incomeAmount 114000.0;
+  fil:personID "MG0" .
+
+:MG0 prod:hasIncome :MG0_Income .
+
+:MJ0_Income a fil:Income;
+  fil:incomeID "MJ0_Income";
+  fil:incomeAmount 128000.0;
+  fil:personID "MJ0" .
+
+:MJ0 prod:hasIncome :MJ0_Income .
+
+:JE0_Income a fil:Income;
+  fil:incomeID "JE0_Income";
+  fil:incomeAmount 121500.0;
+  fil:personID "JE0" .
+
+:JE0 prod:hasIncome :JE0_Income .

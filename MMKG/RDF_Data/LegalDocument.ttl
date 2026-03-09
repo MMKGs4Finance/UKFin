@@ -1,0 +1,109 @@
+@base <https://w3id.org/financialDT#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fil: <https://w3id.org/financialDT/financialInstitute#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+:MG_Doc0 a fil:LegalDocument;
+  fil:issueDate "2012-07-12"^^xsd:date;
+  fil:expiryDate "2025-07-12"^^xsd:date;
+  fil:documentID "MG_Doc0" .
+
+:MJ_Doc0 a fil:LegalDocument;
+  fil:issueDate "2010-07-12"^^xsd:date;
+  fil:expiryDate "2025-07-12"^^xsd:date;
+  fil:documentID "MJ_Doc0" .
+
+:JE_Doc0 a fil:LegalDocument;
+  fil:issueDate "2013-07-12"^^xsd:date;
+  fil:expiryDate "2028-07-12"^^xsd:date;
+  fil:documentID "JE_Doc0" .
+
+:ML_Doc0 a fil:LegalDocument;
+  fil:issueDate "2015-01-01"^^xsd:date;
+  fil:expiryDate "2030-01-01"^^xsd:date;
+  fil:documentID "ML_Doc0" .
+
+:NJ_Doc0 a fil:LegalDocument;
+  fil:issueDate "2015-01-02"^^xsd:date;
+  fil:expiryDate "2030-01-02"^^xsd:date;
+  fil:documentID "NJ_Doc0" .
+
+:KA_Doc0 a fil:LegalDocument;
+  fil:issueDate "2015-01-03"^^xsd:date;
+  fil:expiryDate "2030-01-03"^^xsd:date;
+  fil:documentID "KA_Doc0" .
+
+:MG_Doc1 a fil:LegalDocument;
+  fil:issueDate "2012-07-10"^^xsd:date;
+  fil:expiryDate "2025-08-12"^^xsd:date;
+  fil:documentID "MG_Doc1" .
+
+:MJ_Doc1 a fil:LegalDocument;
+  fil:issueDate "2010-09-12"^^xsd:date;
+  fil:expiryDate "2025-06-12"^^xsd:date;
+  fil:documentID "MJ_Doc1" .
+
+:JE_Doc1 a fil:LegalDocument;
+  fil:issueDate "2012-07-12"^^xsd:date;
+  fil:expiryDate "2028-07-12"^^xsd:date;
+  fil:documentID "JE_Doc1" .
+
+:ML_Doc1 a fil:LegalDocument;
+  fil:issueDate "2015-01-01"^^xsd:date;
+  fil:expiryDate "2030-01-01"^^xsd:date;
+  fil:documentID "ML_Doc1" .
+
+:NJ_Doc1 a fil:LegalDocument;
+  fil:issueDate "2015-01-02"^^xsd:date;
+  fil:expiryDate "2030-01-02"^^xsd:date;
+  fil:documentID "NJ_Doc1" .
+
+:KA_Doc1 a fil:LegalDocument;
+  fil:issueDate "2015-01-03"^^xsd:date;
+  fil:expiryDate "2030-01-03"^^xsd:date;
+  fil:documentID "KA_Doc1" .
+
+:MG_Doc2 a fil:LegalDocument;
+  fil:issueDate "2012-08-12"^^xsd:date;
+  fil:expiryDate "2025-08-11"^^xsd:date;
+  fil:documentID "MG_Doc2" .
+
+:MJ_Doc2 a fil:LegalDocument;
+  fil:issueDate "2010-07-07"^^xsd:date;
+  fil:expiryDate "2025-07-12"^^xsd:date;
+  fil:documentID "MJ_Doc2" .
+
+:JE_Doc2 a fil:LegalDocument;
+  fil:issueDate "2012-07-10"^^xsd:date;
+  fil:expiryDate "2028-07-12"^^xsd:date;
+  fil:documentID "JE_Doc2" .
+
+:ML_Doc2 a fil:LegalDocument;
+  fil:issueDate "2015-01-01"^^xsd:date;
+  fil:expiryDate "2030-01-01"^^xsd:date;
+  fil:documentID "ML_Doc2" .
+
+:NJ_Doc2 a fil:LegalDocument;
+  fil:issueDate "2015-01-02"^^xsd:date;
+  fil:expiryDate "2030-01-02"^^xsd:date;
+  fil:documentID "NJ_Doc2" .
+
+:KA_Doc2 a fil:LegalDocument;
+  fil:issueDate "2015-01-03"^^xsd:date;
+  fil:expiryDate "2030-01-03"^^xsd:date;
+  fil:documentID "KA_Doc2" .
+
+:MG_Doc3 a fil:LegalDocument;
+  fil:issueDate "2012-07-11"^^xsd:date;
+  fil:expiryDate "2020-09-12"^^xsd:date;
+  fil:documentID "MG_Doc3" .
+
+:MJ_Doc3 a fil:LegalDocument;
+  fil:issueDate "2010-12-12"^^xsd:date;
+  fil:expiryDate "2021-07-12"^^xsd:date;
+  fil:documentID "MJ_Doc3" .
+
+:JE_Doc3 a fil:LegalDocument;
+  fil:issueDate "2012-07-12"^^xsd:date;
+  fil:expiryDate "2028-07-12"^^xsd:date;
+  fil:documentID "JE_Doc3" .

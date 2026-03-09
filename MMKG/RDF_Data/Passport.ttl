@@ -1,0 +1,46 @@
+@base <https://w3id.org/financialDT#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fil: <https://w3id.org/financialDT/financialInstitute#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+:MG_Doc1 a fil:Passport;
+  fil:documentID "MG_Doc1";
+  fil:lastName "MILLER ";
+  fil:firstName "GILBERT ";
+  fil:passportNumber "199373860";
+  fil:personID "MG0" .
+
+:MJ_Doc1 a fil:Passport;
+  fil:documentID "MJ_Doc1";
+  fil:lastName "MORROW ";
+  fil:firstName "JOSEPH";
+  fil:passportNumber "926807835";
+  fil:personID "MJ0" .
+
+:JE_Doc1 a fil:Passport;
+  fil:documentID "JE_Doc1";
+  fil:lastName "JUAREZ ";
+  fil:firstName "EMILY";
+  fil:passportNumber "306607483";
+  fil:personID "JE0" .
+
+:ML_Doc1 a fil:Passport;
+  fil:documentID "ML_Doc1";
+  fil:lastName "Mike ";
+  fil:firstName "Like";
+  fil:passportNumber "996584225";
+  fil:personID "ML0" .
+
+:NJ_Doc1 a fil:Passport;
+  fil:documentID "NJ_Doc1";
+  fil:lastName "Nicol ";
+  fil:firstName "July";
+  fil:passportNumber "336985417";
+  fil:personID "NJ0" .
+
+:KA_Doc1 a fil:Passport;
+  fil:documentID "KA_Doc1";
+  fil:lastName "Kim ";
+  fil:firstName "April";
+  fil:passportNumber "112569847";
+  fil:personID "KA0" .

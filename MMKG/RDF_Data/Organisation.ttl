@@ -1,0 +1,16 @@
+@base <https://w3id.org/financialDT#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fil: <https://w3id.org/financialDT/financialInstitute#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+:FM1497 a fil:Organisation;
+  fil:orgID "FM1497";
+  fil:orgName "Fannie Mae";
+  fil:orgType "R";
+  fil:locatedAt :12564B1B .
+
+:SC175 a fil:Organisation;
+  fil:orgID "SC175";
+  fil:orgName "Safe Cash";
+  fil:orgType "R";
+  fil:locatedAt :1562B2B .

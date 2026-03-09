@@ -1,0 +1,14 @@
+@base <https://w3id.org/financialDT#> .
+@prefix prod: <https://w3id.org/financialDT/product#> .
+@prefix fil: <https://w3id.org/financialDT/financialInstitute#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+:MG001 a prod:Product .
+
+:FM1497 fil:offersProduct prod:MG001, prod:FX001 .
+
+:FX001 a prod:Product .
+
+:INC001 a prod:Product .
+
+:SC175 fil:offersProduct prod:INC001 .

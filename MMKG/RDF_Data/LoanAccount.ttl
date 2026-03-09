@@ -1,0 +1,22 @@
+@base <https://w3id.org/financialDT#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fil: <https://w3id.org/financialDT/financialInstitute#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+:45422752_1497 a fil:LoanAccount;
+  fil:loanID "45422752";
+  fil:loanBalanceAmount 236160.0;
+  fil:accountStatus "Active";
+  fil:accountID "45422752_1497" .
+
+:45422765_1497 a fil:LoanAccount;
+  fil:loanID "45422765";
+  fil:loanBalanceAmount 307200.0;
+  fil:accountStatus "Active";
+  fil:accountID "45422765_1497" .
+
+:45476383_1497 a fil:LoanAccount;
+  fil:loanID "45476383";
+  fil:loanBalanceAmount 210480.0;
+  fil:accountStatus "Active";
+  fil:accountID "45476383_1497" .

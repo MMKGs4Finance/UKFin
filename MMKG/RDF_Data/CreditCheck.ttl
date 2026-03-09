@@ -1,0 +1,22 @@
+@base <https://w3id.org/financialDT#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prod: <https://w3id.org/financialDT/product#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+:CC45476383_1497 a prod:CreditCheck;
+  prod:creditCheckStatus "Pass";
+  prod:eventID "CC45476383_1497" .
+
+:a45476383_062019 prod:requires :CC45476383_1497 .
+
+:CC45422765_1497 a prod:CreditCheck;
+  prod:creditCheckStatus "Pass";
+  prod:eventID "CC45422765_1497" .
+
+:a45422765_062018 prod:requires :CC45422765_1497 .
+
+:CC45422752_1497 a prod:CreditCheck;
+  prod:creditCheckStatus "Pass";
+  prod:eventID "CC45422752_1497" .
+
+:a45422752_122019 prod:requires :CC45422752_1497 .

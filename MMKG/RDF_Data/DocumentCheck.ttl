@@ -1,0 +1,19 @@
+@base <https://w3id.org/financialDT#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prod: <https://w3id.org/financialDT/product#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+:docCheckID83 a prod:DocumentCheck;
+  prod:eventID "docCheckID83";
+  prod:documentCheckStatus "Pass";
+  prod:involves :MG_Doc0 .
+
+:docCheckID65 a prod:DocumentCheck;
+  prod:eventID "docCheckID65";
+  prod:documentCheckStatus "Pass";
+  prod:involves :MJ_Doc0 .
+
+:docCheckID52 a prod:DocumentCheck;
+  prod:eventID "docCheckID52";
+  prod:documentCheckStatus "Pass";
+  prod:involves :JE_Doc0 .

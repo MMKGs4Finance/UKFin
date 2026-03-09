@@ -1,0 +1,23 @@
+@base <https://w3id.org/financialDT#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fil: <https://w3id.org/financialDT/financialInstitute#> .
+@prefix prod: <https://w3id.org/financialDT/product#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+:MG0_expense a fil:Expense;
+  fil:expenseAmount 14000.0;
+  fil:expenseID "MG0_expense" .
+
+:MG0 prod:hasExpenses :MG0_expense .
+
+:MJ0_expense a fil:Expense;
+  fil:expenseAmount 28000.0;
+  fil:expenseID "MJ0_expense" .
+
+:MJ0 prod:hasExpenses :MJ0_expense .
+
+:JE0_expense a fil:Expense;
+  fil:expenseAmount 21500.0;
+  fil:expenseID "JE0_expense" .
+
+:JE0 prod:hasExpenses :JE0_expense .

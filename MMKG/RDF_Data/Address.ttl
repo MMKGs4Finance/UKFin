@@ -1,0 +1,53 @@
+@base <https://w3id.org/financialDT#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fil: <https://w3id.org/financialDT/financialInstitute#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+:45476383Va a fil:Address;
+  fil:addressID "45476383Va";
+  fil:city "Vatican";
+  fil:country "United States";
+  fil:street "The Holy See, Apostolic Palace";
+  fil:postalCode "B120" .
+
+:45422765MH a fil:Address;
+  fil:addressID "45422765MH";
+  fil:city "Maple Hill";
+  fil:country "United States";
+  fil:street "137 Willow Crest Drive_x000B_";
+  fil:postalCode "97452" .
+
+:45422752Br a fil:Address;
+  fil:addressID "45422752Br";
+  fil:city "Brookvale";
+  fil:country "United States";
+  fil:street "2197 Copper Ridge Way_x000B_Brookvale";
+  fil:postalCode "80429" .
+
+:12564B1B a fil:Address;
+  fil:addressID "12564B1B";
+  fil:city "Sprinfield";
+  fil:country "United States";
+  fil:street "123 Steert";
+  fil:postalCode "B115" .
+
+:454227ML a fil:Address;
+  fil:addressID "454227ML";
+  fil:city "Sprinfield";
+  fil:country "United States";
+  fil:street "321 Street";
+  fil:postalCode "B12 00D" .
+
+:454227NJ a fil:Address;
+  fil:addressID "454227NJ";
+  fil:city "Sprinfield";
+  fil:country "United States";
+  fil:street "65 No where steet";
+  fil:postalCode "B1178" .
+
+:454227KA a fil:Address;
+  fil:addressID "454227KA";
+  fil:city "Sprinfield";
+  fil:country "United States";
+  fil:street "18 anystreet";
+  fil:postalCode "AD LS11" .

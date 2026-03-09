@@ -1,0 +1,329 @@
+@base <https://w3id.org/financialDT#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix risk: <https://w3id.org/financialDT/risk#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+:45422752_RCrisk0 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 0;
+  risk:riskID "45422752_RCrisk0";
+  risk:concerns :EVT1A3F;
+  risk:hasRiskSource :BadRecord .
+
+:45422765_RCrisk0 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 0;
+  risk:riskID "45422765_RCrisk0";
+  risk:concerns :EVT4C7Q;
+  risk:hasRiskSource :BadRecord .
+
+:45476383_RCrisk0 a risk:Risk;
+  risk:riskScore 4;
+  risk:likelihood "MediumRiskLevel";
+  risk:impact 5;
+  risk:riskID "45476383_RCrisk0";
+  risk:concerns :EVT9M2K;
+  risk:hasRiskSource :BadRecord;
+  risk:controlledBy :AdjustInterestRate%20 .
+
+:45422752_DCrisk0 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 0;
+  risk:riskID "45422752_DCrisk0";
+  risk:concerns :DocumentCheck_docCheckID52;
+  risk:hasRiskSource :FraudulentDocument .
+
+:45422765_DCrisk0 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 0;
+  risk:riskID "45422765_DCrisk0";
+  risk:concerns :DocumentCheck_docCheckID65;
+  risk:hasRiskSource :FraudulentDocument .
+
+:45476383_DCrisk0 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 0;
+  risk:riskID "45476383_DCrisk0";
+  risk:concerns :DocumentCheck_docCheckID83;
+  risk:hasRiskSource :FraudulentDocument .
+
+:45422752_ATrisk0 a risk:Risk;
+  risk:riskScore 2;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 2;
+  risk:riskID "45422752_ATrisk0";
+  risk:concerns :45422752Asset;
+  risk:hasRiskSource :DegradationInAssetValue;
+  risk:controlledBy :IncreaseCollateral%20 .
+
+:45422765_ATrisk0 a risk:Risk;
+  risk:riskScore 2;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 2;
+  risk:riskID "45422765_ATrisk0";
+  risk:concerns :45422765Asset;
+  risk:hasRiskSource :DegradationInAssetValue;
+  risk:controlledBy :IncreaseCollateral%20 .
+
+:45476383_ATrisk0 a risk:Risk;
+  risk:riskScore 2;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 2;
+  risk:riskID "45476383_ATrisk0";
+  risk:concerns :45476383Asset;
+  risk:hasRiskSource :DegradationInAssetValue;
+  risk:controlledBy :IncreaseCollateral%20 .
+
+:45422752_CCrisk0 a risk:Risk;
+  risk:riskScore 2;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 1;
+  risk:riskID "45422752_CCrisk0";
+  risk:concerns :CC45422752_1497;
+  risk:hasRiskSource :BadRecord .
+
+:45422765_CCrisk0 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 0;
+  risk:riskID "45422765_CCrisk0";
+  risk:concerns :CC45422765_1497;
+  risk:hasRiskSource :BadRecord .
+
+:45476383_CCrisk0 a risk:Risk;
+  risk:riskScore 4;
+  risk:likelihood "MediumRiskLevel";
+  risk:impact 5;
+  risk:riskID "45476383_CCrisk0";
+  risk:concerns :CC45476383_1497;
+  risk:hasRiskSource :BadRecord;
+  risk:controlledBy :AdjustInterestRate%20 .
+
+:45422765_ARrisk0 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 3;
+  risk:riskID "45422765_ARrisk0";
+  risk:hasRiskSource :ArrearsLimitExceeded;
+  risk:controlledBy :AdjustInterestRate%20 .
+
+:45422765_ARrisk1 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 3;
+  risk:riskID "45422765_ARrisk1";
+  risk:hasRiskSource :ArrearsLimitExceeded;
+  risk:controlledBy :AdjustInterestRate%20 .
+
+:45422765_ARrisk2 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 3;
+  risk:riskID "45422765_ARrisk2";
+  risk:hasRiskSource :ArrearsLimitExceeded;
+  risk:controlledBy :AdjustInterestRate%20 .
+
+:45422765_ARrisk3 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 3;
+  risk:riskID "45422765_ARrisk3";
+  risk:hasRiskSource :ArrearsLimitExceeded;
+  risk:controlledBy :AdjustInterestRate%20 .
+
+:45422765_ARrisk4 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 3;
+  risk:riskID "45422765_ARrisk4";
+  risk:hasRiskSource :ArrearsLimitExceeded;
+  risk:controlledBy :AdjustInterestRate%20 .
+
+:45422765_ARrisk5 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 3;
+  risk:riskID "45422765_ARrisk5";
+  risk:hasRiskSource :ArrearsLimitExceeded;
+  risk:controlledBy :AdjustInterestRate%20 .
+
+:45422765_MPrisk0 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "HighRiskLevel";
+  risk:impact 10;
+  risk:riskID "45422765_MPrisk0";
+  risk:hasRiskSource :MissingPaymentEvent;
+  risk:controlledBy :ReschedulePayment%20 .
+
+:45422765_LPrisk0 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "MediumRiskLevel";
+  risk:impact 5;
+  risk:riskID "45422765_LPrisk0";
+  risk:hasRiskSource :LatePaymentEvent;
+  risk:controlledBy :AdjustInterestRate%20 .
+
+:45422765_MPrisk1 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "HighRiskLevel";
+  risk:impact 10;
+  risk:riskID "45422765_MPrisk1";
+  risk:hasRiskSource :MissingPaymentEvent;
+  risk:controlledBy :ReschedulePayment%20 .
+
+:45422765_MPrisk2 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "HighRiskLevel";
+  risk:impact 10;
+  risk:riskID "45422765_MPrisk2";
+  risk:hasRiskSource :MissingPaymentEvent;
+  risk:controlledBy :ReschedulePayment%20 .
+
+:45476383_ARrisk0 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 3;
+  risk:riskID "45476383_ARrisk0";
+  risk:hasRiskSource :ArrearsLimitExceeded;
+  risk:controlledBy :AdjustInterestRate%20 .
+
+:45476383_ARrisk1 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 3;
+  risk:riskID "45476383_ARrisk1";
+  risk:hasRiskSource :ArrearsLimitExceeded;
+  risk:controlledBy :AdjustInterestRate%20 .
+
+:45476383_MPrisk0 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "HighRiskLevel";
+  risk:impact 10;
+  risk:riskID "45476383_MPrisk0";
+  risk:hasRiskSource :MissingPaymentEvent;
+  risk:controlledBy :ReschedulePayment%20 .
+
+:45476383_ARrisk2 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 3;
+  risk:riskID "45476383_ARrisk2";
+  risk:hasRiskSource :ArrearsLimitExceeded;
+  risk:controlledBy :AdjustInterestRate%20 .
+
+:45476383_ARrisk3 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 3;
+  risk:riskID "45476383_ARrisk3";
+  risk:hasRiskSource :ArrearsLimitExceeded;
+  risk:controlledBy :AdjustInterestRate%20 .
+
+:45476383_MPrisk1 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "HighRiskLevel";
+  risk:impact 10;
+  risk:riskID "45476383_MPrisk1";
+  risk:hasRiskSource :MissingPaymentEvent, :MissingPaymentEvent%20;
+  risk:controlledBy :ReschedulePayment%20 .
+
+:45476383_ARrisk4 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 3;
+  risk:riskID "45476383_ARrisk4";
+  risk:hasRiskSource :ArrearsLimitExceeded;
+  risk:controlledBy :AdjustInterestRate%20 .
+
+:45476383_ARrisk5 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 3;
+  risk:riskID "45476383_ARrisk5";
+  risk:hasRiskSource :ArrearsLimitExceeded%20;
+  risk:controlledBy :AdjustInterestRate%20 .
+
+:45476383_ARrisk6 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 3;
+  risk:riskID "45476383_ARrisk6";
+  risk:hasRiskSource :ArrearsLimitExceeded%20;
+  risk:controlledBy :AdjustInterestRate%20 .
+
+:45476383_ARrisk7 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 3;
+  risk:riskID "45476383_ARrisk7";
+  risk:hasRiskSource :ArrearsLimitExceeded%20;
+  risk:controlledBy :AdjustInterestRate%20 .
+
+:45476383_ARrisk8 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 3;
+  risk:riskID "45476383_ARrisk8";
+  risk:hasRiskSource :ArrearsLimitExceeded%20;
+  risk:controlledBy :AdjustInterestRate%20 .
+
+:45476383_ARrisk9 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 3;
+  risk:riskID "45476383_ARrisk9";
+  risk:hasRiskSource :ArrearsLimitExceeded%20;
+  risk:controlledBy :AdjustInterestRate%20 .
+
+:45476383_ARrisk10 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 3;
+  risk:riskID "45476383_ARrisk10";
+  risk:hasRiskSource :ArrearsLimitExceeded%20;
+  risk:controlledBy :AdjustInterestRate%20 .
+
+:45476383_ARrisk11 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 3;
+  risk:riskID "45476383_ARrisk11";
+  risk:hasRiskSource :ArrearsLimitExceeded%20;
+  risk:controlledBy :AdjustInterestRate%20 .
+
+:45476383_ARrisk12 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "LowRiskLevel";
+  risk:impact 3;
+  risk:riskID "45476383_ARrisk12";
+  risk:hasRiskSource :ArrearsLimitExceeded%20;
+  risk:controlledBy :AdjustInterestRate%20 .
+
+:45476383_MPrisk2 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "HighRiskLevel";
+  risk:impact 10;
+  risk:riskID "45476383_MPrisk2";
+  risk:hasRiskSource :MissingPaymentEvent%20;
+  risk:controlledBy :ReschedulePayment%20 .
+
+:45476383_MPrisk3 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "HighRiskLevel";
+  risk:impact 10;
+  risk:riskID "45476383_MPrisk3";
+  risk:hasRiskSource :MissingPaymentEvent%20;
+  risk:controlledBy :ReschedulePayment%20 .
+
+:45476383_MPrisk4 a risk:Risk;
+  risk:riskScore 1;
+  risk:likelihood "HighRiskLevel";
+  risk:impact 10;
+  risk:riskID "45476383_MPrisk4";
+  risk:hasRiskSource :MissingPaymentEvent%20;
+  risk:controlledBy :ContractTermination%20 .

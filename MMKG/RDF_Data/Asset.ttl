@@ -1,0 +1,29 @@
+@base <https://w3id.org/financialDT#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prod: <https://w3id.org/financialDT/product#> .
+@prefix fil: <https://w3id.org/financialDT/financialInstitute#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+:45476383Asset a prod:Asset;
+  prod:assetID "45476383Asset";
+  prod:valuationDate "2016-10-15"^^xsd:date;
+  prod:marketValue 389000.0;
+  fil:locatedAt :45476383Va .
+
+:c45476383_1497 fil:holdsCollateral :45476383Asset .
+
+:45422765Asset a prod:Asset;
+  prod:assetID "45422765Asset";
+  prod:valuationDate "2017-01-16"^^xsd:date;
+  prod:marketValue 372500.0;
+  fil:locatedAt :45422765MH .
+
+:c45422765_1497 fil:holdsCollateral :45422765Asset .
+
+:45422752Asset a prod:Asset;
+  prod:assetID "45422752Asset";
+  prod:valuationDate "2016-12-17"^^xsd:date;
+  prod:marketValue 401200.0;
+  fil:locatedAt :45422752Br .
+
+:c45422752_1497 fil:holdsCollateral :45422752Asset .

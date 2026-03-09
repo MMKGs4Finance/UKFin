@@ -1,0 +1,9 @@
+@base <https://w3id.org/financialDT#> .
+@prefix fil: <https://w3id.org/financialDT/financialInstitute#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+:cu001 a fil:Currency .
+
+:cu002 a fil:Currency .
+
+:cu003 a fil:Currency .

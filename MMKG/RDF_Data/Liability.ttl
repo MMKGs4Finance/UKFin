@@ -1,0 +1,23 @@
+@base <https://w3id.org/financialDT#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fil: <https://w3id.org/financialDT/financialInstitute#> .
+@prefix prod: <https://w3id.org/financialDT/product#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+:MG0_liability a fil:Liability;
+  fil:liabilityID "MG0_liability";
+  fil:liabilityAmount 24000.0 .
+
+:MG0 prod:hasLiability :MG0_liability .
+
+:MJ0_liability a fil:Liability;
+  fil:liabilityID "MJ0_liability";
+  fil:liabilityAmount 88000.0 .
+
+:MJ0 prod:hasLiability :MJ0_liability .
+
+:JE0_liability a fil:Liability;
+  fil:liabilityID "JE0_liability";
+  fil:liabilityAmount 51500.0 .
+
+:JE0 prod:hasLiability :JE0_liability .

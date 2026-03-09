@@ -1,0 +1,19 @@
+@base <https://w3id.org/financialDT#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prod: <https://w3id.org/financialDT/product#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+:RecordCheck_EVT1A3F a prod:RecordCheck;
+  prod:eventID "RecordCheck_EVT1A3F";
+  prod:recordCheckStatus "Verified";
+  prod:applicationID "a45476383_012018" .
+
+:RecordCheck_EVT4C7Q a prod:RecordCheck;
+  prod:eventID "RecordCheck_EVT4C7Q";
+  prod:recordCheckStatus "Verified";
+  prod:applicationID "a45422765_012021" .
+
+:RecordCheck_EVT9M2K a prod:RecordCheck;
+  prod:eventID "RecordCheck_EVT9M2K";
+  prod:recordCheckStatus "Verified";
+  prod:applicationID "a45422752_102020" .

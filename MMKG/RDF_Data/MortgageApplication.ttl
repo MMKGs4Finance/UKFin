@@ -1,0 +1,57 @@
+@base <https://w3id.org/financialDT#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prod: <https://w3id.org/financialDT/product#> .
+@prefix fil: <https://w3id.org/financialDT/financialInstitute#> .
+@prefix risk: <https://w3id.org/financialDT/risk#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+:a45422752_122019 a prod:MortgageApplication;
+  prod:applicationID "a45422752_122019";
+  prod:loanID "45422752_1497";
+  prod:applicationStatus "P";
+  prod:requestedAmount 166000.0;
+  prod:loanPurpose "R";
+  prod:debtToIncomeRatio 28.0;
+  prod:loanToValueRatio 78.0;
+  prod:combinedLoanToValueRatio 78.0;
+  prod:startsContract :c45422752_1497;
+  prod:hasApplicant :JE0;
+  risk:hasRiskLevel :LowLevelRisk;
+  prod:mortgageInStage :ApplicationStage .
+
+:M1 a prod:Mortgage;
+  prod:hasApplication :a45422752_122019 .
+
+:a45422765_012019 a prod:MortgageApplication;
+  prod:applicationID "a45422765_012019";
+  prod:loanID "45422765_1497";
+  prod:applicationStatus "P";
+  prod:requestedAmount 228000.0;
+  prod:loanPurpose "R";
+  prod:debtToIncomeRatio 41.0;
+  prod:loanToValueRatio 83.0;
+  prod:combinedLoanToValueRatio 83.0;
+  prod:startsContract :c45422765_1497;
+  prod:hasApplicant :MJ0;
+  risk:hasRiskLevel :LowLevelRisk;
+  prod:mortgageInStage :ApplicationStage .
+
+:M2 a prod:Mortgage;
+  prod:hasApplication :a45422765_012019 .
+
+:a45476383_012019 a prod:MortgageApplication;
+  prod:applicationID "a45476383_012019";
+  prod:loanID "45476383_1497";
+  prod:applicationStatus "P";
+  prod:requestedAmount 148000.0;
+  prod:loanPurpose "R";
+  prod:debtToIncomeRatio 35.0;
+  prod:loanToValueRatio 80.0;
+  prod:combinedLoanToValueRatio 80.0;
+  prod:startsContract :c45476383_1497;
+  prod:hasApplicant :MG0;
+  risk:hasRiskLevel :LowLevelRisk;
+  prod:mortgageInStage :ApplicationStage .
+
+:M3 a prod:Mortgage;
+  prod:hasApplication :a45476383_012019 .

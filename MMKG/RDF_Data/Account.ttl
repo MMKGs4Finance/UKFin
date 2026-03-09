@@ -1,0 +1,22 @@
+@base <https://w3id.org/financialDT#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fil: <https://w3id.org/financialDT/financialInstitute#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+:45476383_1497 a fil:Account;
+  fil:accountID "45476383_1497";
+  fil:balanceAmount 185000.0;
+  fil:currentInterest 0.0375;
+  fil:hasAccountHolder :MG0 .
+
+:45422765_1497 a fil:Account;
+  fil:accountID "45422765_1497";
+  fil:balanceAmount 242500.0;
+  fil:currentInterest 0.03125;
+  fil:hasAccountHolder :MJ0 .
+
+:45422752_1497 a fil:Account;
+  fil:accountID "45422752_1497";
+  fil:balanceAmount 193800.0;
+  fil:currentInterest 0.0375;
+  fil:hasAccountHolder :JE0 .

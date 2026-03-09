@@ -1,0 +1,1423 @@
+@base <https://w3id.org/financialDT#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix risk: <https://w3id.org/financialDT/risk#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+:45422752_092017 a risk:Payment;
+  risk:paymentID "45422752_092017";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2017-09-01"^^xsd:date;
+  risk:dueDate "2017-09-15"^^xsd:date;
+  risk:transactionID "T45422752_092017";
+  risk:totalPrincipal 236160.0;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_102017 a risk:Payment;
+  risk:paymentID "45422752_102017";
+  risk:actualPrincipal 1184.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2017-10-01"^^xsd:date;
+  risk:dueDate "2017-10-15"^^xsd:date;
+  risk:transactionID "T45422752_102017";
+  risk:totalPrincipal 235175.81;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_112017 a risk:Payment;
+  risk:paymentID "45422752_112017";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2017-11-01"^^xsd:date;
+  risk:dueDate "2017-11-15"^^xsd:date;
+  risk:transactionID "T45422752_112017";
+  risk:totalPrincipal 233991.62;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_122017 a risk:Payment;
+  risk:paymentID "45422752_122017";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2017-12-01"^^xsd:date;
+  risk:dueDate "2017-12-15"^^xsd:date;
+  risk:transactionID "T45422752_122017";
+  risk:totalPrincipal 233007.43;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_012018 a risk:Payment;
+  risk:paymentID "45422752_012018";
+  risk:actualPrincipal 1184.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2018-01-01"^^xsd:date;
+  risk:dueDate "2018-01-15"^^xsd:date;
+  risk:transactionID "T45422752_012018";
+  risk:totalPrincipal 232023.24;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_022018 a risk:Payment;
+  risk:paymentID "45422752_022018";
+  risk:actualPrincipal 1184.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2018-02-01"^^xsd:date;
+  risk:dueDate "2018-02-15"^^xsd:date;
+  risk:transactionID "T45422752_022018";
+  risk:totalPrincipal 230839.05;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_032018 a risk:Payment;
+  risk:paymentID "45422752_032018";
+  risk:actualPrincipal 1184.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2018-03-01"^^xsd:date;
+  risk:dueDate "2018-03-15"^^xsd:date;
+  risk:transactionID "T45422752_032018";
+  risk:totalPrincipal 229654.86;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_042018 a risk:Payment;
+  risk:paymentID "45422752_042018";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2018-04-01"^^xsd:date;
+  risk:dueDate "2018-04-15"^^xsd:date;
+  risk:transactionID "T45422752_042018";
+  risk:totalPrincipal 228470.67;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_052018 a risk:Payment;
+  risk:paymentID "45422752_052018";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2018-05-01"^^xsd:date;
+  risk:dueDate "2018-05-15"^^xsd:date;
+  risk:transactionID "T45422752_052018";
+  risk:totalPrincipal 227486.48;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_062018 a risk:Payment;
+  risk:paymentID "45422752_062018";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2018-06-01"^^xsd:date;
+  risk:dueDate "2018-06-15"^^xsd:date;
+  risk:transactionID "T45422752_062018";
+  risk:totalPrincipal 226502.29;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_072018 a risk:Payment;
+  risk:paymentID "45422752_072018";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2018-07-01"^^xsd:date;
+  risk:dueDate "2018-07-15"^^xsd:date;
+  risk:transactionID "T45422752_072018";
+  risk:totalPrincipal 225518.1;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_082018 a risk:Payment;
+  risk:paymentID "45422752_082018";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2018-08-01"^^xsd:date;
+  risk:dueDate "2018-08-15"^^xsd:date;
+  risk:transactionID "T45422752_082018";
+  risk:totalPrincipal 224533.91;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_092018 a risk:Payment;
+  risk:paymentID "45422752_092018";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2018-09-01"^^xsd:date;
+  risk:dueDate "2018-09-15"^^xsd:date;
+  risk:transactionID "T45422752_092018";
+  risk:totalPrincipal 223549.72;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_102018 a risk:Payment;
+  risk:paymentID "45422752_102018";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2018-10-01"^^xsd:date;
+  risk:dueDate "2018-10-15"^^xsd:date;
+  risk:transactionID "T45422752_102018";
+  risk:totalPrincipal 222565.53;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_112018 a risk:Payment;
+  risk:paymentID "45422752_112018";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2018-11-01"^^xsd:date;
+  risk:dueDate "2018-11-15"^^xsd:date;
+  risk:transactionID "T45422752_112018";
+  risk:totalPrincipal 221581.34;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_122018 a risk:Payment;
+  risk:paymentID "45422752_122018";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2018-12-01"^^xsd:date;
+  risk:dueDate "2018-12-15"^^xsd:date;
+  risk:transactionID "T45422752_122018";
+  risk:totalPrincipal 220597.15;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_022019 a risk:Payment;
+  risk:paymentID "45422752_022019";
+  risk:actualPrincipal 2290.9;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2019-02-01"^^xsd:date;
+  risk:dueDate "2019-02-15"^^xsd:date;
+  risk:transactionID "T45422752_022019";
+  risk:totalPrincipal 219612.96;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_032019 a risk:Payment;
+  risk:paymentID "45422752_032019";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2019-03-01"^^xsd:date;
+  risk:dueDate "2019-03-15"^^xsd:date;
+  risk:transactionID "T45422752_032019";
+  risk:totalPrincipal 217322.06;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_042019 a risk:Payment;
+  risk:paymentID "45422752_042019";
+  risk:actualPrincipal 1063.36;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2019-04-01"^^xsd:date;
+  risk:dueDate "2019-04-15"^^xsd:date;
+  risk:transactionID "T45422752_042019";
+  risk:totalPrincipal 216337.87;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_052019 a risk:Payment;
+  risk:paymentID "45422752_052019";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2019-05-01"^^xsd:date;
+  risk:dueDate "2019-05-15"^^xsd:date;
+  risk:transactionID "T45422752_052019";
+  risk:totalPrincipal 215274.51;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_062019 a risk:Payment;
+  risk:paymentID "45422752_062019";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2019-06-01"^^xsd:date;
+  risk:dueDate "2019-06-15"^^xsd:date;
+  risk:transactionID "T45422752_062019";
+  risk:totalPrincipal 214290.32;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_072019 a risk:Payment;
+  risk:paymentID "45422752_072019";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2019-07-01"^^xsd:date;
+  risk:dueDate "2019-07-15"^^xsd:date;
+  risk:transactionID "T45422752_072019";
+  risk:totalPrincipal 213306.13;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_082019 a risk:Payment;
+  risk:paymentID "45422752_082019";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2019-08-01"^^xsd:date;
+  risk:dueDate "2019-08-15"^^xsd:date;
+  risk:transactionID "T45422752_082019";
+  risk:totalPrincipal 212321.94;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_092019 a risk:Payment;
+  risk:paymentID "45422752_092019";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2019-09-01"^^xsd:date;
+  risk:dueDate "2019-09-15"^^xsd:date;
+  risk:transactionID "T45422752_092019";
+  risk:totalPrincipal 211337.75;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_102019 a risk:Payment;
+  risk:paymentID "45422752_102019";
+  risk:actualPrincipal 1087.56;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2019-10-01"^^xsd:date;
+  risk:dueDate "2019-10-15"^^xsd:date;
+  risk:transactionID "T45422752_102019";
+  risk:totalPrincipal 210353.56;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_112019 a risk:Payment;
+  risk:paymentID "45422752_112019";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2019-11-01"^^xsd:date;
+  risk:dueDate "2019-11-15"^^xsd:date;
+  risk:transactionID "T45422752_112019";
+  risk:totalPrincipal 209266.0;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_122019 a risk:Payment;
+  risk:paymentID "45422752_122019";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2019-12-01"^^xsd:date;
+  risk:dueDate "2019-12-15"^^xsd:date;
+  risk:transactionID "T45422752_122019";
+  risk:totalPrincipal 208281.81;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_012020 a risk:Payment;
+  risk:paymentID "45422752_012020";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2020-01-01"^^xsd:date;
+  risk:dueDate "2020-01-15"^^xsd:date;
+  risk:transactionID "T45422752_012020";
+  risk:totalPrincipal 207297.62;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_022020 a risk:Payment;
+  risk:paymentID "45422752_022020";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2020-02-01"^^xsd:date;
+  risk:dueDate "2020-02-15"^^xsd:date;
+  risk:transactionID "T45422752_022020";
+  risk:totalPrincipal 206313.43;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_032020 a risk:Payment;
+  risk:paymentID "45422752_032020";
+  risk:actualPrincipal 1734.16;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2020-03-01"^^xsd:date;
+  risk:dueDate "2020-03-15"^^xsd:date;
+  risk:transactionID "T45422752_032020";
+  risk:totalPrincipal 205329.24;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_042020 a risk:Payment;
+  risk:paymentID "45422752_042020";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2020-04-01"^^xsd:date;
+  risk:dueDate "2020-04-15"^^xsd:date;
+  risk:transactionID "T45422752_042020";
+  risk:totalPrincipal 203595.08;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_052020 a risk:Payment;
+  risk:paymentID "45422752_052020";
+  risk:actualPrincipal 1320.0;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2020-05-01"^^xsd:date;
+  risk:dueDate "2020-05-15"^^xsd:date;
+  risk:transactionID "T45422752_052020";
+  risk:totalPrincipal 202610.89;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_062020 a risk:Payment;
+  risk:paymentID "45422752_062020";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2020-06-01"^^xsd:date;
+  risk:dueDate "2020-06-15"^^xsd:date;
+  risk:transactionID "T45422752_062020";
+  risk:totalPrincipal 201290.89;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_072020 a risk:Payment;
+  risk:paymentID "45422752_072020";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2020-07-01"^^xsd:date;
+  risk:dueDate "2020-07-15"^^xsd:date;
+  risk:transactionID "T45422752_072020";
+  risk:totalPrincipal 200306.7;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_082020 a risk:Payment;
+  risk:paymentID "45422752_082020";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2020-08-01"^^xsd:date;
+  risk:dueDate "2020-08-15"^^xsd:date;
+  risk:transactionID "T45422752_082020";
+  risk:totalPrincipal 199322.51;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_092020 a risk:Payment;
+  risk:paymentID "45422752_092020";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2020-09-01"^^xsd:date;
+  risk:dueDate "2020-09-15"^^xsd:date;
+  risk:transactionID "T45422752_092020";
+  risk:totalPrincipal 198338.32;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_102020 a risk:Payment;
+  risk:paymentID "45422752_102020";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2020-10-01"^^xsd:date;
+  risk:dueDate "2020-10-15"^^xsd:date;
+  risk:transactionID "T45422752_102020";
+  risk:totalPrincipal 197354.13;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_112020 a risk:Payment;
+  risk:paymentID "45422752_112020";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2020-11-01"^^xsd:date;
+  risk:dueDate "2020-11-15"^^xsd:date;
+  risk:transactionID "T45422752_112020";
+  risk:totalPrincipal 196369.94;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_122020 a risk:Payment;
+  risk:paymentID "45422752_122020";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2020-12-01"^^xsd:date;
+  risk:dueDate "2020-12-15"^^xsd:date;
+  risk:transactionID "T45422752_122020";
+  risk:totalPrincipal 195385.75;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_012021 a risk:Payment;
+  risk:paymentID "45422752_012021";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2021-01-01"^^xsd:date;
+  risk:dueDate "2021-01-15"^^xsd:date;
+  risk:transactionID "T45422752_012021";
+  risk:totalPrincipal 194401.56;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_022021 a risk:Payment;
+  risk:paymentID "45422752_022021";
+  risk:actualPrincipal 1500.0;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2021-02-01"^^xsd:date;
+  risk:dueDate "2021-02-15"^^xsd:date;
+  risk:transactionID "T45422752_022021";
+  risk:totalPrincipal 193417.37;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_032021 a risk:Payment;
+  risk:paymentID "45422752_032021";
+  risk:actualPrincipal 2000.0;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2021-03-01"^^xsd:date;
+  risk:dueDate "2021-03-15"^^xsd:date;
+  risk:transactionID "T45422752_032021";
+  risk:totalPrincipal 191917.37;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_042021 a risk:Payment;
+  risk:paymentID "45422752_042021";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2021-04-01"^^xsd:date;
+  risk:dueDate "2021-04-15"^^xsd:date;
+  risk:transactionID "T45422752_042021";
+  risk:totalPrincipal 189917.37;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_052021 a risk:Payment;
+  risk:paymentID "45422752_052021";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2021-05-01"^^xsd:date;
+  risk:dueDate "2021-05-15"^^xsd:date;
+  risk:transactionID "T45422752_052021";
+  risk:totalPrincipal 188933.18;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_062021 a risk:Payment;
+  risk:paymentID "45422752_062021";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2021-06-01"^^xsd:date;
+  risk:dueDate "2021-06-15"^^xsd:date;
+  risk:transactionID "T45422752_062021";
+  risk:totalPrincipal 187948.99;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_072021 a risk:Payment;
+  risk:paymentID "45422752_072021";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2021-07-01"^^xsd:date;
+  risk:dueDate "2021-07-15"^^xsd:date;
+  risk:transactionID "T45422752_072021";
+  risk:totalPrincipal 186964.8;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_082021 a risk:Payment;
+  risk:paymentID "45422752_082021";
+  risk:actualPrincipal 984.19;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2021-08-01"^^xsd:date;
+  risk:dueDate "2021-08-15"^^xsd:date;
+  risk:transactionID "T45422752_082021";
+  risk:totalPrincipal 185980.61;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422752_092021 a risk:Payment;
+  risk:paymentID "45422752_092021";
+  risk:actualPrincipal 185980.61;
+  risk:scheduledPrincipal 984.19;
+  risk:paymentDate "2021-09-01"^^xsd:date;
+  risk:dueDate "2021-09-15"^^xsd:date;
+  risk:transactionID "T45422752_092021";
+  risk:totalPrincipal 0.0;
+  risk:paymentHistoryCode "45422752hist20172175" .
+
+:45422765_092017 a risk:Payment;
+  risk:paymentID "45422765_092017";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2017-09-01"^^xsd:date;
+  risk:dueDate "2017-09-15"^^xsd:date;
+  risk:transactionID "T45422765_092017";
+  risk:totalPrincipal 307200.0;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_102017 a risk:Payment;
+  risk:paymentID "45422765_102017";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2017-10-01"^^xsd:date;
+  risk:dueDate "2017-10-15"^^xsd:date;
+  risk:transactionID "T45422765_102017";
+  risk:totalPrincipal 305920.0;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_112017 a risk:Payment;
+  risk:paymentID "45422765_112017";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2017-11-01"^^xsd:date;
+  risk:dueDate "2017-11-15"^^xsd:date;
+  risk:transactionID "T45422765_112017";
+  risk:totalPrincipal 304640.0;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_122017 a risk:Payment;
+  risk:paymentID "45422765_122017";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2017-12-01"^^xsd:date;
+  risk:dueDate "2017-12-15"^^xsd:date;
+  risk:transactionID "T45422765_122017";
+  risk:totalPrincipal 303360.0;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_012018 a risk:Payment;
+  risk:paymentID "45422765_012018";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2018-01-01"^^xsd:date;
+  risk:dueDate "2018-01-15"^^xsd:date;
+  risk:transactionID "T45422765_012018";
+  risk:totalPrincipal 302080.0;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_022018 a risk:Payment;
+  risk:paymentID "45422765_022018";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2018-02-01"^^xsd:date;
+  risk:dueDate "2018-02-15"^^xsd:date;
+  risk:transactionID "T45422765_022018";
+  risk:totalPrincipal 300800.0;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_032018 a risk:Payment;
+  risk:paymentID "45422765_032018";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2018-03-01"^^xsd:date;
+  risk:dueDate "2018-03-15"^^xsd:date;
+  risk:transactionID "T45422765_032018";
+  risk:totalPrincipal 299520.0;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_042018 a risk:Payment;
+  risk:paymentID "45422765_042018";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2018-04-01"^^xsd:date;
+  risk:dueDate "2018-04-15"^^xsd:date;
+  risk:transactionID "T45422765_042018";
+  risk:totalPrincipal 298240.0;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_052018 a risk:Payment;
+  risk:paymentID "45422765_052018";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2018-05-01"^^xsd:date;
+  risk:dueDate "2018-05-15"^^xsd:date;
+  risk:transactionID "T45422765_052018";
+  risk:totalPrincipal 296960.0;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_062018 a risk:Payment;
+  risk:paymentID "45422765_062018";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2018-06-01"^^xsd:date;
+  risk:dueDate "2018-06-15"^^xsd:date;
+  risk:transactionID "T45422765_062018";
+  risk:totalPrincipal 295680.0;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_072018 a risk:Payment;
+  risk:paymentID "45422765_072018";
+  risk:actualPrincipal 1065.97;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2018-07-01"^^xsd:date;
+  risk:dueDate "2018-07-15"^^xsd:date;
+  risk:transactionID "T45422765_072018";
+  risk:totalPrincipal 294400.0;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_082018 a risk:Payment;
+  risk:paymentID "45422765_082018";
+  risk:actualPrincipal 1068.74;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2018-08-01"^^xsd:date;
+  risk:dueDate "2018-08-15"^^xsd:date;
+  risk:transactionID "T45422765_082018";
+  risk:totalPrincipal 293334.03;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_092018 a risk:Payment;
+  risk:paymentID "45422765_092018";
+  risk:actualPrincipal 1071.53;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2018-09-01"^^xsd:date;
+  risk:dueDate "2018-09-15"^^xsd:date;
+  risk:transactionID "T45422765_092018";
+  risk:totalPrincipal 292265.29;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_102018 a risk:Payment;
+  risk:paymentID "45422765_102018";
+  risk:actualPrincipal 1074.32;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2018-10-01"^^xsd:date;
+  risk:dueDate "2018-10-15"^^xsd:date;
+  risk:transactionID "T45422765_102018";
+  risk:totalPrincipal 291193.76;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_112018 a risk:Payment;
+  risk:paymentID "45422765_112018";
+  risk:actualPrincipal 1077.11;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2018-11-01"^^xsd:date;
+  risk:dueDate "2018-11-15"^^xsd:date;
+  risk:transactionID "T45422765_112018";
+  risk:totalPrincipal 290119.44;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_122018 a risk:Payment;
+  risk:paymentID "45422765_122018";
+  risk:actualPrincipal 3000.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2018-12-01"^^xsd:date;
+  risk:dueDate "2018-12-15"^^xsd:date;
+  risk:transactionID "T45422765_122018";
+  risk:totalPrincipal 289042.33;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_012019 a risk:Payment;
+  risk:paymentID "45422765_012019";
+  risk:actualPrincipal 1082.73;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2019-01-01"^^xsd:date;
+  risk:dueDate "2019-01-15"^^xsd:date;
+  risk:transactionID "T45422765_012019";
+  risk:totalPrincipal 286042.33;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_022019 a risk:Payment;
+  risk:paymentID "45422765_022019";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2019-02-01"^^xsd:date;
+  risk:dueDate "2019-02-15"^^xsd:date;
+  risk:transactionID "T45422765_022019";
+  risk:totalPrincipal 284959.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_032019 a risk:Payment;
+  risk:paymentID "45422765_032019";
+  risk:actualPrincipal 2560.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2019-03-01"^^xsd:date;
+  risk:dueDate "2019-03-15"^^xsd:date;
+  risk:transactionID "T45422765_032019";
+  risk:totalPrincipal 284959.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_042019 a risk:Payment;
+  risk:paymentID "45422765_042019";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2019-04-01"^^xsd:date;
+  risk:dueDate "2019-04-15"^^xsd:date;
+  risk:transactionID "T45422765_042019";
+  risk:totalPrincipal 282399.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_052019 a risk:Payment;
+  risk:paymentID "45422765_052019";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2019-05-01"^^xsd:date;
+  risk:dueDate "2019-05-15"^^xsd:date;
+  risk:transactionID "T45422765_052019";
+  risk:totalPrincipal 281119.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_062019 a risk:Payment;
+  risk:paymentID "45422765_062019";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2019-06-01"^^xsd:date;
+  risk:dueDate "2019-06-15"^^xsd:date;
+  risk:transactionID "T45422765_062019";
+  risk:totalPrincipal 279839.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_072019 a risk:Payment;
+  risk:paymentID "45422765_072019";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2019-07-01"^^xsd:date;
+  risk:dueDate "2019-07-15"^^xsd:date;
+  risk:transactionID "T45422765_072019";
+  risk:totalPrincipal 278559.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_082019 a risk:Payment;
+  risk:paymentID "45422765_082019";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2019-08-01"^^xsd:date;
+  risk:dueDate "2019-08-15"^^xsd:date;
+  risk:transactionID "T45422765_082019";
+  risk:totalPrincipal 277279.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_092019 a risk:Payment;
+  risk:paymentID "45422765_092019";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2019-09-20"^^xsd:date;
+  risk:dueDate "2019-09-15"^^xsd:date;
+  risk:transactionID "T45422765_092019";
+  risk:totalPrincipal 275999.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_102019 a risk:Payment;
+  risk:paymentID "45422765_102019";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2019-10-01"^^xsd:date;
+  risk:dueDate "2019-10-15"^^xsd:date;
+  risk:transactionID "T45422765_102019";
+  risk:totalPrincipal 274719.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_112019 a risk:Payment;
+  risk:paymentID "45422765_112019";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2019-11-01"^^xsd:date;
+  risk:dueDate "2019-11-15"^^xsd:date;
+  risk:transactionID "T45422765_112019";
+  risk:totalPrincipal 273439.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_122019 a risk:Payment;
+  risk:paymentID "45422765_122019";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2019-12-01"^^xsd:date;
+  risk:dueDate "2019-12-15"^^xsd:date;
+  risk:transactionID "T45422765_122019";
+  risk:totalPrincipal 272159.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_012020 a risk:Payment;
+  risk:paymentID "45422765_012020";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2020-01-01"^^xsd:date;
+  risk:dueDate "2020-01-15"^^xsd:date;
+  risk:transactionID "T45422765_012020";
+  risk:totalPrincipal 270879.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_022020 a risk:Payment;
+  risk:paymentID "45422765_022020";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2020-02-01"^^xsd:date;
+  risk:dueDate "2020-02-15"^^xsd:date;
+  risk:transactionID "T45422765_022020";
+  risk:totalPrincipal 269599.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_032020 a risk:Payment;
+  risk:paymentID "45422765_032020";
+  risk:actualPrincipal 1500.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2020-03-01"^^xsd:date;
+  risk:dueDate "2020-03-15"^^xsd:date;
+  risk:transactionID "T45422765_032020";
+  risk:totalPrincipal 269599.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_042020 a risk:Payment;
+  risk:paymentID "45422765_042020";
+  risk:actualPrincipal 1500.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2020-04-01"^^xsd:date;
+  risk:dueDate "2020-04-15"^^xsd:date;
+  risk:transactionID "T45422765_042020";
+  risk:totalPrincipal 268099.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_052020 a risk:Payment;
+  risk:paymentID "45422765_052020";
+  risk:actualPrincipal 1500.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2020-05-01"^^xsd:date;
+  risk:dueDate "2020-05-15"^^xsd:date;
+  risk:transactionID "T45422765_052020";
+  risk:totalPrincipal 266599.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_062020 a risk:Payment;
+  risk:paymentID "45422765_062020";
+  risk:actualPrincipal 1500.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2020-06-01"^^xsd:date;
+  risk:dueDate "2020-06-15"^^xsd:date;
+  risk:transactionID "T45422765_062020";
+  risk:totalPrincipal 265099.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_072020 a risk:Payment;
+  risk:paymentID "45422765_072020";
+  risk:actualPrincipal 1500.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2020-07-01"^^xsd:date;
+  risk:dueDate "2020-07-15"^^xsd:date;
+  risk:transactionID "T45422765_072020";
+  risk:totalPrincipal 263599.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_082020 a risk:Payment;
+  risk:paymentID "45422765_082020";
+  risk:actualPrincipal 1480.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2020-08-01"^^xsd:date;
+  risk:dueDate "2020-08-15"^^xsd:date;
+  risk:transactionID "T45422765_082020";
+  risk:totalPrincipal 262099.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_092020 a risk:Payment;
+  risk:paymentID "45422765_092020";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2020-09-01"^^xsd:date;
+  risk:dueDate "2020-09-15"^^xsd:date;
+  risk:transactionID "T45422765_092020";
+  risk:totalPrincipal 260619.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_102020 a risk:Payment;
+  risk:paymentID "45422765_102020";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2020-10-01"^^xsd:date;
+  risk:dueDate "2020-10-15"^^xsd:date;
+  risk:transactionID "T45422765_102020";
+  risk:totalPrincipal 259339.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_112020 a risk:Payment;
+  risk:paymentID "45422765_112020";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2020-11-01"^^xsd:date;
+  risk:dueDate "2020-11-15"^^xsd:date;
+  risk:transactionID "T45422765_112020";
+  risk:totalPrincipal 258059.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_122020 a risk:Payment;
+  risk:paymentID "45422765_122020";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2020-12-01"^^xsd:date;
+  risk:dueDate "2020-12-15"^^xsd:date;
+  risk:transactionID "T45422765_122020";
+  risk:totalPrincipal 256779.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_012021 a risk:Payment;
+  risk:paymentID "45422765_012021";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2021-01-01"^^xsd:date;
+  risk:dueDate "2021-01-15"^^xsd:date;
+  risk:transactionID "T45422765_012021";
+  risk:totalPrincipal 255499.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_022021 a risk:Payment;
+  risk:paymentID "45422765_022021";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2021-02-01"^^xsd:date;
+  risk:dueDate "2021-02-15"^^xsd:date;
+  risk:transactionID "T45422765_022021";
+  risk:totalPrincipal 254219.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_032021 a risk:Payment;
+  risk:paymentID "45422765_032021";
+  risk:actualPrincipal 1500.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2021-03-01"^^xsd:date;
+  risk:dueDate "2021-03-15"^^xsd:date;
+  risk:transactionID "T45422765_032021";
+  risk:totalPrincipal 254219.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_042021 a risk:Payment;
+  risk:paymentID "45422765_042021";
+  risk:actualPrincipal 1500.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2021-04-01"^^xsd:date;
+  risk:dueDate "2021-04-15"^^xsd:date;
+  risk:transactionID "T45422765_042021";
+  risk:totalPrincipal 252719.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_052021 a risk:Payment;
+  risk:paymentID "45422765_052021";
+  risk:actualPrincipal 1500.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2021-05-01"^^xsd:date;
+  risk:dueDate "2021-05-15"^^xsd:date;
+  risk:transactionID "T45422765_052021";
+  risk:totalPrincipal 251219.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_062021 a risk:Payment;
+  risk:paymentID "45422765_062021";
+  risk:actualPrincipal 1500.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2021-06-01"^^xsd:date;
+  risk:dueDate "2021-06-15"^^xsd:date;
+  risk:transactionID "T45422765_062021";
+  risk:totalPrincipal 249719.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_072021 a risk:Payment;
+  risk:paymentID "45422765_072021";
+  risk:actualPrincipal 1480.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2021-07-01"^^xsd:date;
+  risk:dueDate "2021-07-15"^^xsd:date;
+  risk:transactionID "T45422765_072021";
+  risk:totalPrincipal 248219.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_082021 a risk:Payment;
+  risk:paymentID "45422765_082021";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2021-08-01"^^xsd:date;
+  risk:dueDate "2021-08-15"^^xsd:date;
+  risk:transactionID "T45422765_082021";
+  risk:totalPrincipal 246739.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45422765_092021 a risk:Payment;
+  risk:paymentID "45422765_092021";
+  risk:actualPrincipal 1280.0;
+  risk:scheduledPrincipal 1280.0;
+  risk:paymentDate "2021-09-01"^^xsd:date;
+  risk:dueDate "2021-09-15"^^xsd:date;
+  risk:transactionID "T45422765_092021";
+  risk:totalPrincipal 245459.6;
+  risk:paymentHistoryCode "45422765hist20171752" .
+
+:45476383_092017 a risk:Payment;
+  risk:paymentID "45476383_092017";
+  risk:actualPrincipal 880.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2017-09-01"^^xsd:date;
+  risk:dueDate "2017-09-15"^^xsd:date;
+  risk:transactionID "T45476383_092017";
+  risk:totalPrincipal 210480.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_102017 a risk:Payment;
+  risk:paymentID "45476383_102017";
+  risk:actualPrincipal 880.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2017-10-01"^^xsd:date;
+  risk:dueDate "2017-10-15"^^xsd:date;
+  risk:transactionID "T45476383_102017";
+  risk:totalPrincipal 209600.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_112017 a risk:Payment;
+  risk:paymentID "45476383_112017";
+  risk:actualPrincipal 880.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2017-11-01"^^xsd:date;
+  risk:dueDate "2017-11-15"^^xsd:date;
+  risk:transactionID "T45476383_112017";
+  risk:totalPrincipal 208720.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_122017 a risk:Payment;
+  risk:paymentID "45476383_122017";
+  risk:actualPrincipal 880.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2017-12-01"^^xsd:date;
+  risk:dueDate "2017-12-15"^^xsd:date;
+  risk:transactionID "T45476383_122017";
+  risk:totalPrincipal 207840.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_012018 a risk:Payment;
+  risk:paymentID "45476383_012018";
+  risk:actualPrincipal 880.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2018-01-01"^^xsd:date;
+  risk:dueDate "2018-01-15"^^xsd:date;
+  risk:transactionID "T45476383_012018";
+  risk:totalPrincipal 206960.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_022018 a risk:Payment;
+  risk:paymentID "45476383_022018";
+  risk:actualPrincipal 800.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2018-02-01"^^xsd:date;
+  risk:dueDate "2018-02-15"^^xsd:date;
+  risk:transactionID "T45476383_022018";
+  risk:totalPrincipal 206080.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_032018 a risk:Payment;
+  risk:paymentID "45476383_032018";
+  risk:actualPrincipal 800.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2018-03-01"^^xsd:date;
+  risk:dueDate "2018-03-15"^^xsd:date;
+  risk:transactionID "T45476383_032018";
+  risk:totalPrincipal 205280.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_042018 a risk:Payment;
+  risk:paymentID "45476383_042018";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2018-04-01"^^xsd:date;
+  risk:dueDate "2018-04-15"^^xsd:date;
+  risk:transactionID "T45476383_042018";
+  risk:totalPrincipal 204480.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_052018 a risk:Payment;
+  risk:paymentID "45476383_052018";
+  risk:actualPrincipal 880.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2018-05-01"^^xsd:date;
+  risk:dueDate "2018-05-15"^^xsd:date;
+  risk:transactionID "T45476383_052018";
+  risk:totalPrincipal 204480.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_062018 a risk:Payment;
+  risk:paymentID "45476383_062018";
+  risk:actualPrincipal 880.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2018-06-01"^^xsd:date;
+  risk:dueDate "2018-06-15"^^xsd:date;
+  risk:transactionID "T45476383_062018";
+  risk:totalPrincipal 203600.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_072018 a risk:Payment;
+  risk:paymentID "45476383_072018";
+  risk:actualPrincipal 880.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2018-07-01"^^xsd:date;
+  risk:dueDate "2018-07-15"^^xsd:date;
+  risk:transactionID "T45476383_072018";
+  risk:totalPrincipal 202720.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_082018 a risk:Payment;
+  risk:paymentID "45476383_082018";
+  risk:actualPrincipal 880.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2018-08-01"^^xsd:date;
+  risk:dueDate "2018-08-15"^^xsd:date;
+  risk:transactionID "T45476383_082018";
+  risk:totalPrincipal 201840.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_092018 a risk:Payment;
+  risk:paymentID "45476383_092018";
+  risk:actualPrincipal 1200.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2018-09-01"^^xsd:date;
+  risk:dueDate "2018-09-15"^^xsd:date;
+  risk:transactionID "T45476383_092018";
+  risk:totalPrincipal 200960.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_102018 a risk:Payment;
+  risk:paymentID "45476383_102018";
+  risk:actualPrincipal 1200.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2018-10-01"^^xsd:date;
+  risk:dueDate "2018-10-15"^^xsd:date;
+  risk:transactionID "T45476383_102018";
+  risk:totalPrincipal 199760.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_112018 a risk:Payment;
+  risk:paymentID "45476383_112018";
+  risk:actualPrincipal 800.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2018-11-01"^^xsd:date;
+  risk:dueDate "2018-11-15"^^xsd:date;
+  risk:transactionID "T45476383_112018";
+  risk:totalPrincipal 198560.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_122018 a risk:Payment;
+  risk:paymentID "45476383_122018";
+  risk:actualPrincipal 800.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2018-12-01"^^xsd:date;
+  risk:dueDate "2018-12-15"^^xsd:date;
+  risk:transactionID "T45476383_122018";
+  risk:totalPrincipal 197760.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_012019 a risk:Payment;
+  risk:paymentID "45476383_012019";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2019-01-01"^^xsd:date;
+  risk:dueDate "2019-01-15"^^xsd:date;
+  risk:transactionID "T45476383_012019";
+  risk:totalPrincipal 196960.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_022019 a risk:Payment;
+  risk:paymentID "45476383_022019";
+  risk:actualPrincipal 800.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2019-02-01"^^xsd:date;
+  risk:dueDate "2019-02-15"^^xsd:date;
+  risk:transactionID "T45476383_022019";
+  risk:totalPrincipal 196960.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_032019 a risk:Payment;
+  risk:paymentID "45476383_032019";
+  risk:actualPrincipal 800.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2019-03-01"^^xsd:date;
+  risk:dueDate "2019-03-15"^^xsd:date;
+  risk:transactionID "T45476383_032019";
+  risk:totalPrincipal 196160.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_042019 a risk:Payment;
+  risk:paymentID "45476383_042019";
+  risk:actualPrincipal 800.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2019-04-01"^^xsd:date;
+  risk:dueDate "2019-04-15"^^xsd:date;
+  risk:transactionID "T45476383_042019";
+  risk:totalPrincipal 195360.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_052019 a risk:Payment;
+  risk:paymentID "45476383_052019";
+  risk:actualPrincipal 800.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2019-05-01"^^xsd:date;
+  risk:dueDate "2019-05-15"^^xsd:date;
+  risk:transactionID "T45476383_052019";
+  risk:totalPrincipal 194560.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_062019 a risk:Payment;
+  risk:paymentID "45476383_062019";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2019-06-01"^^xsd:date;
+  risk:dueDate "2019-06-15"^^xsd:date;
+  risk:transactionID "T45476383_062019";
+  risk:totalPrincipal 193760.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_072019 a risk:Payment;
+  risk:paymentID "45476383_072019";
+  risk:actualPrincipal 400.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2019-07-01"^^xsd:date;
+  risk:dueDate "2019-07-15"^^xsd:date;
+  risk:transactionID "T45476383_072019";
+  risk:totalPrincipal 193760.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_082019 a risk:Payment;
+  risk:paymentID "45476383_082019";
+  risk:actualPrincipal 400.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2019-08-01"^^xsd:date;
+  risk:dueDate "2019-08-15"^^xsd:date;
+  risk:transactionID "T45476383_082019";
+  risk:totalPrincipal 193360.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_092019 a risk:Payment;
+  risk:paymentID "45476383_092019";
+  risk:actualPrincipal 200.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2019-09-01"^^xsd:date;
+  risk:dueDate "2019-09-15"^^xsd:date;
+  risk:transactionID "T45476383_092019";
+  risk:totalPrincipal 192960.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_102019 a risk:Payment;
+  risk:paymentID "45476383_102019";
+  risk:actualPrincipal 250.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2019-10-01"^^xsd:date;
+  risk:dueDate "2019-10-15"^^xsd:date;
+  risk:transactionID "T45476383_102019";
+  risk:totalPrincipal 192760.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_112019 a risk:Payment;
+  risk:paymentID "45476383_112019";
+  risk:actualPrincipal 250.0;
+  risk:scheduledPrincipal 877.47;
+  risk:paymentDate "2019-11-01"^^xsd:date;
+  risk:dueDate "2019-11-15"^^xsd:date;
+  risk:transactionID "T45476383_112019";
+  risk:totalPrincipal 192510.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_122019 a risk:Payment;
+  risk:paymentID "45476383_122019";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 877.47;
+  risk:dueDate "2019-12-15"^^xsd:date;
+  risk:transactionID "T45476383_122019";
+  risk:totalPrincipal 192260.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_012020 a risk:Payment;
+  risk:paymentID "45476383_012020";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 877.47;
+  risk:dueDate "2020-01-15"^^xsd:date;
+  risk:transactionID "T45476383_012020";
+  risk:totalPrincipal 192260.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_022020 a risk:Payment;
+  risk:paymentID "45476383_022020";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 877.47;
+  risk:dueDate "2020-02-15"^^xsd:date;
+  risk:transactionID "T45476383_022020";
+  risk:totalPrincipal 192260.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_032020 a risk:Payment;
+  risk:paymentID "45476383_032020";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 877.47;
+  risk:dueDate "2020-03-15"^^xsd:date;
+  risk:totalPrincipal 192260.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_042020 a risk:Payment;
+  risk:paymentID "45476383_042020";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 877.47;
+  risk:dueDate "2020-04-15"^^xsd:date;
+  risk:totalPrincipal 192260.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_052020 a risk:Payment;
+  risk:paymentID "45476383_052020";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 877.47;
+  risk:dueDate "2020-05-15"^^xsd:date;
+  risk:totalPrincipal 192260.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_062020 a risk:Payment;
+  risk:paymentID "45476383_062020";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 877.47;
+  risk:dueDate "2020-06-15"^^xsd:date;
+  risk:totalPrincipal 192260.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_072020 a risk:Payment;
+  risk:paymentID "45476383_072020";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 877.47;
+  risk:dueDate "2020-07-15"^^xsd:date;
+  risk:totalPrincipal 192260.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_082020 a risk:Payment;
+  risk:paymentID "45476383_082020";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 877.47;
+  risk:dueDate "2020-08-15"^^xsd:date;
+  risk:totalPrincipal 192260.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_092020 a risk:Payment;
+  risk:paymentID "45476383_092020";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 877.47;
+  risk:dueDate "2020-09-15"^^xsd:date;
+  risk:totalPrincipal 192260.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_102020 a risk:Payment;
+  risk:paymentID "45476383_102020";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 877.47;
+  risk:dueDate "2020-10-15"^^xsd:date;
+  risk:totalPrincipal 192260.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_112020 a risk:Payment;
+  risk:paymentID "45476383_112020";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 877.47;
+  risk:dueDate "2020-11-15"^^xsd:date;
+  risk:totalPrincipal 192260.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_122020 a risk:Payment;
+  risk:paymentID "45476383_122020";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 877.47;
+  risk:dueDate "2020-12-15"^^xsd:date;
+  risk:totalPrincipal 192260.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_012021 a risk:Payment;
+  risk:paymentID "45476383_012021";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 877.47;
+  risk:dueDate "2021-01-15"^^xsd:date;
+  risk:totalPrincipal 192260.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_022021 a risk:Payment;
+  risk:paymentID "45476383_022021";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 877.47;
+  risk:dueDate "2021-02-15"^^xsd:date;
+  risk:totalPrincipal 192260.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_032021 a risk:Payment;
+  risk:paymentID "45476383_032021";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 877.47;
+  risk:dueDate "2021-03-15"^^xsd:date;
+  risk:totalPrincipal 192260.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_042021 a risk:Payment;
+  risk:paymentID "45476383_042021";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 877.47;
+  risk:dueDate "2021-04-15"^^xsd:date;
+  risk:totalPrincipal 192260.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_052021 a risk:Payment;
+  risk:paymentID "45476383_052021";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 877.47;
+  risk:dueDate "2021-05-15"^^xsd:date;
+  risk:totalPrincipal 192260.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_062021 a risk:Payment;
+  risk:paymentID "45476383_062021";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 877.47;
+  risk:dueDate "2021-06-15"^^xsd:date;
+  risk:totalPrincipal 192260.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_072021 a risk:Payment;
+  risk:paymentID "45476383_072021";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 877.47;
+  risk:dueDate "2021-07-15"^^xsd:date;
+  risk:totalPrincipal 192260.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_082021 a risk:Payment;
+  risk:paymentID "45476383_082021";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 877.47;
+  risk:dueDate "2021-08-15"^^xsd:date;
+  risk:totalPrincipal 192260.0;
+  risk:paymentHistoryCode "45476383hist20173564" .
+
+:45476383_092021 a risk:Payment;
+  risk:paymentID "45476383_092021";
+  risk:actualPrincipal 0.0;
+  risk:scheduledPrincipal 877.47;
+  risk:dueDate "2021-09-15"^^xsd:date;
+  risk:totalPrincipal 192260.0;
+  risk:paymentHistoryCode "45476383hist20173564" .

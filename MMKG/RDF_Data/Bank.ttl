@@ -1,0 +1,9 @@
+@base <https://w3id.org/financialDT#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fil: <https://w3id.org/financialDT/financialInstitute#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+:1497branch a fil:Bank;
+  fil:branchID "1497branch";
+  fil:orgID "FM1497";
+  fil:loanID "45476383_1497", "45422765_1497", "45422752_1497" .

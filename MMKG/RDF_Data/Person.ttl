@@ -1,0 +1,38 @@
+@base <https://w3id.org/financialDT#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fil: <https://w3id.org/financialDT/financialInstitute#> .
+@prefix prod: <https://w3id.org/financialDT/product#> .
+@prefix : <https://w3id.org/financialDT#> .
+
+:MG0 a fil:Person;
+  fil:personID "MG0";
+  fil:hasID :MG_Doc0;
+  fil:locatedAt :45476383Va;
+  fil:owns :45476383Asset .
+
+:MJ0 a fil:Person;
+  fil:personID "MJ0";
+  fil:hasID :MJ_Doc0;
+  fil:locatedAt :45422765MH;
+  fil:owns :45422765Asset .
+
+:JE0 a fil:Person;
+  fil:personID "JE0";
+  fil:hasID :JE_Doc0;
+  fil:locatedAt :45422752Br;
+  fil:owns :45422752Asset .
+
+:ML0 a fil:Person;
+  fil:personID "ML0";
+  fil:hasID :ML_Doc0;
+  fil:locatedAt :454227ML .
+
+:NJ0 a fil:Person;
+  fil:personID "NJ0";
+  fil:hasID :NJ_Doc0;
+  fil:locatedAt :454227NJ .
+
+:KA0 a fil:Person;
+  fil:personID "KA0";
+  fil:hasID :KA_Doc0;
+  fil:locatedAt :454227KA .
